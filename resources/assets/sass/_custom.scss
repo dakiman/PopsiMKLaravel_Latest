@@ -1,0 +1,40 @@
+// GENERATE CUSTOM COLOR SCHEMES FOR ALL BOTSTRAP ELEMENTS
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #ddd !default;
+$gray-300: #ccc !default;
+$gray-400: #bbb !default;
+$gray-500: #adb5bd !default;
+$gray-600: #777 !default;
+$gray-700: #444 !default;
+$gray-800: #373a3c !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #9B479F !default;
+$pink:    #e83e8c !default;
+$red:     #FF0000;
+$orange:  #D9831F !default;
+$yellow:  #ffc107 !default;
+$green:   #469408 !default;
+$teal:    #20c997 !default;
+$cyan:    #029ACF !default;
+
+
+// DOESNT WORK PROPERLY
+// BEST LEAVE ALL COLORS PRESENT IN THE MAP
+$theme-colors: (
+  primary: blue,
+  secondary: $white,
+  success: $red,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800,
+  any-custom-color: #bcaa9a,
+  any-other-custom-color: $pink
+);
