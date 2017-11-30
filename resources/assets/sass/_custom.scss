@@ -27,14 +27,15 @@ $cyan:    #029ACF !default;
 // DOESNT WORK PROPERLY
 // BEST LEAVE ALL COLORS PRESENT IN THE MAP
 $theme-colors: (
-  primary: blue,
+  primary: $red,
   secondary: $white,
-  success: $red,
+  success: $green,
   info: $cyan,
-  warning: $yellow,
-  danger: $red,
-  light: $gray-100,
+  warning: $purple,
+  danger: $orange,
+  light: $white,
   dark: $gray-800,
   any-custom-color: #bcaa9a,
   any-other-custom-color: $pink
+  
 );
