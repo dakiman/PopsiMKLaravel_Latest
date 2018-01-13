@@ -1,5 +1,6 @@
 body {
     padding-top: 54px;
+    background: rgba(128, 128, 128, 0.1);
   }
   
   @media (min-width: 992px) {
@@ -38,6 +39,40 @@ body {
     height: 20px;
     margin: 10px;
     background-color: #ff0000a4;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.35);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.35);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.35);
+}
+
+.card {
+  display:inline-block;
+}
+.card > img {
+  height: 180px;
+  width: 100%;
+}
+
+.item-card {
+  width: 100%;
+}
+.item-card > img {
+  /* width: 100%; */
+  max-width: 150px;
+}
+
+@media (max-width: 850px) {
+  .categories-container {
+    margin-top: 10px;
+  }
+  .card {
+    margin-top: 3px;
+  }
+  .card > img {
+    width: 150px;
+  }
 }
 
   
