@@ -7,3 +7,11 @@
     // color: $primary-color;
     color: white;
 }
+
+.item-card {
+    border-top: solid 3px $primary-color;
+}
+
+.carousel-indicators .active {
+    background-color: $primary-color;    
+}

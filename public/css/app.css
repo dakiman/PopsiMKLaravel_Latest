@@ -9501,5 +9501,13 @@ a.text-any-other-custom-color:hover {
   color: white;
 }
 
+.item-card {
+  border-top: solid 3px #41B565;
+}
+
+.carousel-indicators .active {
+  background-color: #41B565;
+}
+
 
 /*# sourceMappingURL=app.css.map*/
