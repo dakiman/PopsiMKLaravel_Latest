@@ -16,9 +16,9 @@ class HomepageController extends Controller
 
     public function changeLocale($locale = null) {
         if($locale != null) {
-            if($locale != 'mk' && $locale != 'en') {
-                $locale = 'mk';
-            }
+            // if($locale != 'mk' && $locale != 'en') {
+            //     $locale = 'mk';
+            // }
             cookie()->forever('locale', $locale);
         }
         return redirect()->back()->withCookie('locale', $locale);

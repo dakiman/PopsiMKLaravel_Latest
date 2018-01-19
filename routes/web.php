@@ -14,3 +14,9 @@
 Route::get('/', 'HomepageController@home');
 Route::get('/changelocale/{locale}', 'HomepageController@changeLocale');
 
+
+Route::namespace('Auth')->group(function () {
+    Route::get('/login', 'LoginController@showLoginForm');
+    Route::post('/login', 'LoginController@login');
+    Route::get('/logout', 'LoginController@logoutUser');
+});

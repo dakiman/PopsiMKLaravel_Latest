@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="csrf-token" content="{{ csrf_token() }}">
-	<title>Document</title>
+	<title>Popsi Lageri</title>
 	<link rel="stylesheet" href="{{asset('css/app.css')}}">
 	<link rel="stylesheet" href="{{asset('css/home.css')}}">
 	<script src="https://use.fontawesome.com/daa2b1f496.js"></script>
@@ -83,7 +83,6 @@
 		</div>
 		<!-- /.container -->
 	</footer>
-
 	<script src="{{asset('js/app.js')}}"></script>
 	<script>
 		App.getHomeView();
