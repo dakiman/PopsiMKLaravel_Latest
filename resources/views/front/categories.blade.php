@@ -6,7 +6,7 @@
         <div class="card border mx-2 border-primary rounded">
           <img class="card-img-top mx-auto" src="/img/categories/{{$category->picture}}" alt="Card image cap">
           <div class="card-body text-center border border-bottom-0 border-left-0 border-right-0">
-            <h5 class="card-title ">{{ $category->title_en }}</h5>
+            <h5 class="card-title ">{{ $category->translateTitle() }}</h5>
           </div>
         </div>
         @endforeach

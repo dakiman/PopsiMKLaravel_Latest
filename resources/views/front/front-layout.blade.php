@@ -24,7 +24,7 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="about.html">About {{app()->getLocale() }}</a>
+						<a class="nav-link" href="about.html">About</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="services.html">Services</a>
@@ -34,14 +34,11 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Other Pages
+							Language
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-							<a class="dropdown-item" href="full-width.html">Full Width Page</a>
-							<a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-							<a class="dropdown-item" href="faq.html">FAQ</a>
-							<a class="dropdown-item" href="404.html">404</a>
-							<a class="dropdown-item" href="pricing.html">Pricing Table</a>
+							<a class="dropdown-item" href="/changelocale/mk">Macedonian</a>
+							<a class="dropdown-item" href="/changelocale/en">English</a>
 						</div>
 					</li>
 				</ul>
