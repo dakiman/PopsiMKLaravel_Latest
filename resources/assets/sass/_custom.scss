@@ -17,6 +17,7 @@ $indigo:  #6610f2 !default;
 $purple:  #9B479F !default;
 $pink:    #e83e8c !default;
 // $red:     rgba(226, 54, 54, 0.755);
+$primary-color: #41B565;
 $red:     #41B565;
 $orange:  #D9831F !default;
 $yellow:  #ffc107 !default;
@@ -28,7 +29,7 @@ $cyan:    #029ACF !default;
 // DOESNT WORK PROPERLY
 // BEST LEAVE ALL COLORS PRESENT IN THE MAP
 $theme-colors: (
-  primary: $red,
+  primary: $primary-color,
   secondary: $white,
   success: $green,
   info: $cyan,
@@ -40,3 +41,6 @@ $theme-colors: (
   any-other-custom-color: $pink
   
 );
+
+
+

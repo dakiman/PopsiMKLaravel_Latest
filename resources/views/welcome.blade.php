@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="{{asset('css/app.css')}}">
 	<link rel="stylesheet" href="{{asset('css/home.css')}}">
+	<script src="https://use.fontawesome.com/daa2b1f496.js"></script>
 
 </head>
 
@@ -71,6 +72,17 @@
 	</header>
 
 	<!-- Page Content -->
+	<div class="container-fluid">
+		<div class="row py-2">
+			<div class="col-md-4 text-center mx-auto">
+				<span style="font-size: 40px;" class="text-primary">PRODUCTS</span>
+				<br>
+				<i style="font-size: 35px;font-weight: bold;" class="fa fa-2x fa-angle-down text-muted"></i>
+				<hr>
+			</div>
+		</div>
+	</div>
+
 	<div class="container-fluid ">
 		<div class="row categories-container">
 			<div class="col-md-11 text-center mx-auto mt-3">
@@ -130,10 +142,10 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-11 mx-auto mt-4">
-				<div style="width:100%;" class="card">
-					<div  class="card-header ">
-            <div style="font-size: 30px;" class="text-primary font-weight-bold">Category Name</div>
+			<div class="col-md-11 mx-auto px-2 mt-4">
+				<div style="width:100%;" class="card border-primary">
+					<div  style="" class="card-header ">
+            <div style="font-size: 30px;" class="text-primary font-weight-bold">Codex Belts</div>
             <hr>
             <div style="font-size: 20px;" class="pl-3 text-muted font-weight-italic ">	Изработени се по стандардни мерки и ознаки, издржливи се, отпорни и тестирани. Поради нивната голема трајност се намалуваат трошоците за одржување и овозможуваат непречено работење.</div>
 					</div>
@@ -242,6 +254,8 @@
 			</div>
 		</div>
 	</div>
+
+
 
 	<!-- /.container -->
 	<br>

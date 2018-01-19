@@ -9497,5 +9497,9 @@ a.text-any-other-custom-color:hover {
   visibility: hidden !important;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
 
 /*# sourceMappingURL=app.css.map*/
