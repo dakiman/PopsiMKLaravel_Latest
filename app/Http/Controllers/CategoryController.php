@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -14,7 +15,6 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -24,7 +24,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.add-category');        
     }
 
     /**
@@ -35,7 +35,13 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = Category::create($request->all());
+        $imageName = $request->cat_img->getClientOriginalName();
+        // $imageName = 'testing.' . $request->cat_img->getClientOriginalExtension();
+        Storage::disk('local')->put('/public/categories/'.$imageName, file_get_contents($request->cat_img));
+        $category->picture = $imageName;
+        $category->save();
+        return redirect()->back();
     }
 
     /**

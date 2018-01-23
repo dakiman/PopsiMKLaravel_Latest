@@ -16,7 +16,12 @@ Route::get('/changelocale/{locale}', 'HomepageController@changeLocale');
 
 
 Route::namespace('Auth')->group(function () {
-    Route::get('/login', 'LoginController@showLoginForm');
+    Route::get('/login', 'LoginController@showLoginForm')->name('login');
     Route::post('/login', 'LoginController@login');
     Route::get('/logout', 'LoginController@logoutUser');
+});
+
+Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
+    Route::get('/', 'AdminController@index');
+    Route::resource('categories', 'CategoryController');
 });

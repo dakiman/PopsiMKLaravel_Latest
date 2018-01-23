@@ -4,7 +4,7 @@
       <div class="card-deck">
         @foreach ($categories as $category)
         <div class="card border mx-2 border-primary rounded">
-          <img class="card-img-top mx-auto" src="/img/categories/{{$category->picture}}" alt="Card image cap">
+          <img class="card-img-top mx-auto" src="{{Storage::url('/categories/'.$category->picture)}}" alt="Card image cap">
           <div class="card-body text-center border border-bottom-0 border-left-0 border-right-0">
             <h5 class="card-title ">{{ $category->translateTitle() }}</h5>
           </div>
@@ -29,7 +29,7 @@
           <div class="row mx-auto">
             <div class="col-md-2 px-1 py-1 ">
               <div class="card item-card text-center border-muted rounded">
-                <img class="card-img-top" src="http://lageri.mk/Images/ExtremeBearings.gif" alt="Card image cap">
+                <img class="card-img-top" src="" alt="Card image cap">
                 <div class="card-body text-center border border-bottom-0 border-left-0 border-right-0">
                   <h5 class="card-title ">Card title</h5>
                 </div>

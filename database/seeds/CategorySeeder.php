@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
 
 class CategorySeeder extends Seeder
 {
@@ -18,5 +19,12 @@ class CategorySeeder extends Seeder
                 'category_id' => $category->id,
             ]);
         }
+
+        User::create([
+            'name' => "Daki",
+            'email' => 'daki@daki',
+            'password' => bcrypt('daki'),
+        ]);
+
     }
 }
