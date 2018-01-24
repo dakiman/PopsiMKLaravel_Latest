@@ -105,4 +105,14 @@ class CategoryController extends Controller
     {
         //
     }
+
+    public function toggle(Category $category) {
+        try{
+            $category->active = !$category->active;
+            $category->save();
+            return $category->active ? 1 : 0 ;
+        } catch( \Exception $e ) {
+            return $e->getMessage();
+        }
+    }
 }

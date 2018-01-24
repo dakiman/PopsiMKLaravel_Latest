@@ -19,6 +19,7 @@ class CreateCategoriesTable extends Migration
             $table->string('title_mk');
             $table->text('description_en');
             $table->text('description_mk');
+            $table->boolean('active')->default(true);
             $table->string('picture')->nullable();
             $table->timestamps();
         });

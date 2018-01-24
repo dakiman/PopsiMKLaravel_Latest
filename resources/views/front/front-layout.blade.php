@@ -85,7 +85,7 @@
 	</footer>
 	<script src="{{asset('js/app.js')}}"></script>
 	<script>
-		App.getHomeView();
+		App.getHomeView();	
 	</script>
 </body>
 </html>

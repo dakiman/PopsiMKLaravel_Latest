@@ -1,3 +1,6 @@
+import axios from 'axios';
+import $ = require('jquery');
+
 class HomeView {
 
     constructor() {
@@ -5,7 +8,7 @@ class HomeView {
     }
 
     initHome() {
-        // alert('');
+        // alert('yuh');
     }
     
 }

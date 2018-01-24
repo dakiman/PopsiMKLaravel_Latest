@@ -10,7 +10,7 @@ use App\Category;
 class HomepageController extends Controller
 {
     public function home() {
-        $categories = Category::get();
+        $categories = Category::where('active', 1)->get();
         return view('front.home', ['categories'=>$categories]);
     }
 
