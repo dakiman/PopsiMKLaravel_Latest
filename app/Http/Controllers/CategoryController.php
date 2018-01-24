@@ -15,6 +15,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        $categories = Category::all();
+        return view('admin.category-display', ['categories' => $categories]);
     }
 
     /**
@@ -24,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.add-category');        
+        return view('admin.category-add');        
     }
 
     /**
@@ -36,12 +38,15 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $category = Category::create($request->all());
-        $imageName = $request->cat_img->getClientOriginalName();
-        // $imageName = 'testing.' . $request->cat_img->getClientOriginalExtension();
+        $imageName = $request->title_en . '.' . $request->cat_img->getClientOriginalExtension();
         Storage::disk('local')->put('/public/categories/'.$imageName, file_get_contents($request->cat_img));
         $category->picture = $imageName;
-        $category->save();
-        return redirect()->back();
+        if($category->save()){
+            $message = "Успешно додадено.";
+        } else {
+            $message = "Имаше проблем при додавање.";
+        }
+        return redirect()->back()->with('message', $message);
     }
 
     /**
@@ -63,7 +68,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('admin.category-edit', ['category' => $category]);
     }
 
     /**
@@ -75,7 +80,19 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        if($category->fill($request->all()) && $category->save()){
+            $message = "Податоците се подесени.";
+        } else {
+            $message = "Проблем при промени.";
+        }
+        return redirect()->back()->with([
+            'message' => $message,
+        ]);
+    }
+
+    public function delete(Category $category) {
+        $category->delete();
+        return redirect()->back();
     }
 
     /**

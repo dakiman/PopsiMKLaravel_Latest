@@ -22,6 +22,9 @@ class AppServiceProvider extends ServiceProvider
                 app()->setLocale(request()->cookie('locale'));
             }
         });
+        view()->composer(['admin.category-*'], function($view){
+            $view->with('view', 'category');
+        });
     }
 
     /**

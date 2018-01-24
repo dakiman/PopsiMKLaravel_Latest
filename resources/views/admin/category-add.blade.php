@@ -1,9 +1,9 @@
 @extends('admin.admin-layout') 
 @section('optional-scripts')
-<script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+{{--  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
 <script>
     feather.replace()
-</script>
+</script>  --}}
 @endsection
  
 @section('content')
@@ -12,6 +12,11 @@
         <div class="col-md-8 col-md-offset-2">
             <form enctype="multipart/form-data" method="POST" action="/admin/categories">
             {{csrf_field()}}
+            @if(session('message'))
+            <div style="font-size:24px;font-weight: bold;" class="text-center alert alert-success">
+                {{session('message')}}
+            </div>
+            @endif
             <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -35,8 +40,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <input type="file" name="cat_img" id="cat_img" required>
+                    <div class="form-group col-md-6 col-md-offset-3">
+                        <label for="cat_img">Додади слика: </label>
+                        <input class="form-control m-b-3" type="file" name="cat_img" id="cat_img" required>
                         <button class="btn btn-primary btn-block">Додади</button>
                     </div>
                 </div>
