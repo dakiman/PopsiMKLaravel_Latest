@@ -23,6 +23,10 @@ Route::namespace('Auth')->group(function () {
 
 Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'AdminController@index');
+
     Route::resource('categories', 'CategoryController');
     Route::get('/categories/delete/{category}', 'CategoryController@delete');
+    
+    Route::resource('items', 'ItemController');
+    Route::get('/items/delete/{item}', 'ItemController@delete');
 });

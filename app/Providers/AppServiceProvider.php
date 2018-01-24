@@ -25,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
         view()->composer(['admin.category-*'], function($view){
             $view->with('view', 'category');
         });
+        view()->composer(['admin.item-*'], function($view){
+            $view->with('view', 'item');
+        });
     }
 
     /**

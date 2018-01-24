@@ -34,11 +34,11 @@
                 <li class="px-nav-item">
                     <a href="#"><i class="px-nav-icon fa fa-hand-paper-o"></i><span class="px-nav-label">Link3</span></a>
                 </li>
-                <li class="px-nav-item px-nav-dropdown">
-                    <a href="#"><i class="px-nav-icon fa fa-hand-peace-o"></i><span class="px-nav-label">Dropdown2</span></a>
+                <li class="px-nav-item px-nav-dropdown" @if($view == 'category') active px-open @endif>
+                    <a href="#"><i class="px-nav-icon fa fa-hand-peace-o"></i><span class="px-nav-label">Артикли</span></a>
                     <ul class="px-nav-dropdown-menu">
-                        <li class="px-nav-item"><a href="#"><span class="px-nav-label">Link3</span></a></li>
-                        <li class="px-nav-item"><a href="#"><span class="px-nav-label">Link4</span></a></li>
+                            <li class="px-nav-item"><a href="/admin/items/create"><span class="px-nav-label">Додади</span></a></li>
+                            <li class="px-nav-item"><a href="/admin/items"><span class="px-nav-label">Промени</span></a></li>
                     </ul>
                 </li>
             </ul>
@@ -58,7 +58,6 @@
                     </li>
                 </ul>
             </div>
-            
         </nav>
         <div class="px-content">
             @yield('content')
@@ -67,24 +66,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     <!-- Content -->
-
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-        <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{asset('js/pixeladmin.min.js')}}"></script>
     <script>
         $(function() {

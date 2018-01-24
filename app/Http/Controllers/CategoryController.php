@@ -38,7 +38,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         $category = Category::create($request->all());
-        $imageName = $request->title_en . '.' . $request->cat_img->getClientOriginalExtension();
+        $imageName = time() . '.' . $request->cat_img->getClientOriginalExtension();
         Storage::disk('local')->put('/public/categories/'.$imageName, file_get_contents($request->cat_img));
         $category->picture = $imageName;
         if($category->save()){
