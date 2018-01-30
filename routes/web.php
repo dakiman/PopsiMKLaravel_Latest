@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomepageController@home');
+Route::get('/catalogue', 'HomepageController@catalogue');
 Route::get('/changelocale/{locale}', 'HomepageController@changeLocale');
 
 

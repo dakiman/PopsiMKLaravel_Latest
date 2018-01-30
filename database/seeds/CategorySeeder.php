@@ -20,6 +20,8 @@ class CategorySeeder extends Seeder
             ]);
         }
 
+        factory(App\News::class, 5)->create();
+
         User::create([
             'name' => "Daki",
             'email' => 'daki@daki',
