@@ -12,4 +12,8 @@ class Category extends TranslatableModel
     public function items() {
         return $this->hasMany('App\Item');
     }
+
+    public function activeItems() {
+        return $this->items->where('active', 1);
+    }
 }
