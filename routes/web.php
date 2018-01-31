@@ -15,7 +15,6 @@ Route::get('/', 'HomepageController@home');
 Route::get('/catalogue', 'HomepageController@catalogue');
 Route::get('/changelocale/{locale}', 'HomepageController@changeLocale');
 
-
 Route::namespace('Auth')->group(function () {
     Route::get('/login', 'LoginController@showLoginForm')->name('login');
     Route::post('/login', 'LoginController@login');
@@ -30,4 +29,7 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
     
     Route::resource('items', 'ItemController');
     Route::get('/items/delete/{item}', 'ItemController@delete');
+   
+    Route::resource('news', 'NewsController');
+    Route::get('/news/delete/{news}', 'NewsController@delete');
 });

@@ -19,7 +19,8 @@ class CreateNewsTable extends Migration
             $table->string('title_en');
             $table->text('description_mk');
             $table->text('description_en');
-            $table->text('pictures');
+            $table->string('pictures')->nullable();
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

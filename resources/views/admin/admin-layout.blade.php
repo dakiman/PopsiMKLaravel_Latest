@@ -42,6 +42,13 @@
                             <li class="px-nav-item"><a href="/admin/items"><span class="px-nav-label">Промени</span></a></li>
                     </ul>
                 </li>
+                <li class="px-nav-item px-nav-dropdown" @if($view == 'news') active px-open @endif>
+                    <a href="#"><i class="px-nav-icon fa fa-hand-peace-o"></i><span class="px-nav-label">Новости</span></a>
+                    <ul class="px-nav-dropdown-menu">
+                            <li class="px-nav-item"><a href="/admin/news/create"><span class="px-nav-label">Додади</span></a></li>
+                            <li class="px-nav-item"><a href="/admin/news"><span class="px-nav-label">Промени</span></a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <nav class="navbar px-navbar">

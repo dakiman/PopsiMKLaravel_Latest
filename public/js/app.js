@@ -35611,6 +35611,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const HomeView_1 = __webpack_require__(37);
 const CategoriesView_1 = __webpack_require__(38);
 const ItemsView_1 = __webpack_require__(39);
+const NewsView_1 = __webpack_require__(45);
 function getHomeView() {
     return new HomeView_1.default();
 }
@@ -35623,6 +35624,10 @@ function getCategoriesView() {
     return new CategoriesView_1.default();
 }
 exports.getCategoriesView = getCategoriesView;
+function getNewsView() {
+    return new NewsView_1.default();
+}
+exports.getNewsView = getNewsView;
 
 
 /***/ }),
@@ -35721,6 +35726,37 @@ exports.default = ItemsView;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const axios_1 = __webpack_require__(3);
+const $ = __webpack_require__(1);
+class NewsView {
+    constructor() {
+        this.activateitem = (e) => {
+            let checker = e.currentTarget;
+            let id = $(checker).attr('id');
+            axios_1.default.post('/api/news/' + id)
+                .then((result) => { })
+                .catch((error) => console.log(error));
+        };
+        this.initNews();
+    }
+    initNews() {
+        $('.active-check').on('click', this.activateitem);
+    }
+}
+exports.default = NewsView;
+
 
 /***/ })
 /******/ ]);
