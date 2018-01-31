@@ -5,7 +5,7 @@
         @foreach ($news as $news)
         <div class="col-md-2 panel text-center m-x-2">
             <div class="panel-body">
-                <img style="height:150px;width:150px;" src="{{Storage::url('/news/'.$news->picture)}}" alt="">
+                <img style="height:150px;width:150px;" src="{{Storage::url('/news/'.$news->pictures)}}" alt="">
                 <h1>{{$news->title_mk}}</h1>
                 <a href="/admin/news/{{$news->id}}/edit"><button class="btn btn-success btn-block m-b-1">Промени</button></a>
                 <a href="/admin/news/delete/{{$news->id}}"><button class="btn btn-danger btn-block m-b-1">Избриши</button></a>
