@@ -13,7 +13,8 @@
     <link href="{{asset('css/muffin-theme.min.css')}}" rel="stylesheet" type="text/css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
     <script src="https://use.fontawesome.com/daa2b1f496.js"></script>
-    <link rel="stylesheet" href="{{asset('css/admin.css')}}"> @yield('optional-styles')
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}"> 
+    @yield('optional-styles')
 </head>
 <body>
     <div style="min-height: 300px; overflow: hidden;" class="clearfix">

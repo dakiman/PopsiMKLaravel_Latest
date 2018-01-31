@@ -11,5 +11,9 @@
 }
 
 .carousel-indicators .active {
-    background-color: $primary-color;    
+    background-color: transparentize($primary-color, 0.3);    
+}
+
+.active-category {
+    background: $primary-color;
 }

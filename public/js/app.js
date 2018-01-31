@@ -35641,13 +35641,10 @@ class HomeView {
             if (!$(currentCard).hasClass('active-category')) {
                 $('.active-category').removeClass('active-category');
                 $(currentCard).addClass('active-category');
-                $('.active-items').addClass('inactive-items');
+                $('.active-items').hide();
                 $('.active-items').removeClass('active-items');
-                $(itemsToShow).removeClass('inactive-items');
+                $(itemsToShow).show();
                 $(itemsToShow).addClass('active-items');
-                console.log(itemsToShow);
-            }
-            else {
             }
         };
         this.initHome();

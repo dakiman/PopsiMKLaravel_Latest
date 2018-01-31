@@ -3,7 +3,7 @@
 use Faker\Generator as Faker;
 
 $factory->define(App\Item::class, function (Faker $faker) {
-    $images = ['bearings.bmp', 'codex_chains.bmp'];
+    $images = ['bearings.bmp', 'codex_chains.bmp', 'codex1.png', 'codex4.bmp', 'codex8.bmp', 'codex25.bmp' ];
     return [
         'category_id' => 1,
         'title_en' => ucfirst($faker->word) . "_en",

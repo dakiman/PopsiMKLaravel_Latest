@@ -9506,7 +9506,11 @@ a.text-any-other-custom-color:hover {
 }
 
 .carousel-indicators .active {
-  background-color: #41B565;
+  background-color: rgba(65, 181, 101, 0.7);
+}
+
+.active-category {
+  background: #41B565;
 }
 
 
