@@ -21,7 +21,7 @@
 <div class="container-fluid">
 	<div class="row py-2">
 		<div class="col-md-4 text-center mx-auto">
-			<span style="font-size: 40px;" class="text-primary">PRODUCTS</span>
+			<span style="font-size: 40px;" class="text-primary">@lang('messages.products')</span>
 			<br>
 			<i style="font-size: 35px;font-weight: bold;" class="fa fa-2x fa-angle-down text-muted"></i>
 			<hr>
