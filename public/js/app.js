@@ -35707,7 +35707,6 @@ class ItemsView {
                 .catch((error) => console.log(error));
         };
         this.getItems = (e) => {
-            console.log('yuh');
             let select = e.currentTarget;
             window.location.replace('/admin/items?cat=' + $(select).val());
         };

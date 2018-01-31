@@ -69,6 +69,7 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
+        $news = News::find($id);
         return view('admin.news-edit', ['news' => $news]);
     }
 
@@ -79,7 +80,7 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, News $news)
     {
         if($news->fill($request->all()) && $news->save()){
             $message = "Податоците се подесени.";

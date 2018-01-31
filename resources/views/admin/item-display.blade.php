@@ -1,8 +1,8 @@
 @extends('admin.admin-layout') 
 @section('content')
 <div class="container-fluid">
-    <div class="row my-4">
-        <div class="col-md-8 col-md-offset-2 ">
+    <div style="margin: 15px 0 15px 0;" class="row">
+        <div class="col-md-8 col-md-offset-2">
             <label for="sel1">Избери категорија</label>
             <select class="form-control" id="selector">
                 <option selected="selected"></option>

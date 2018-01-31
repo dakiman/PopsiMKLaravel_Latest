@@ -21,7 +21,6 @@ class ItemsView {
     }
 
     getItems = (e:JQuery.Event) => {
-        console.log('yuh');
         let select = e.currentTarget as HTMLSelectElement;
         window.location.replace('/admin/items?cat=' + $(select).val());
     }    
