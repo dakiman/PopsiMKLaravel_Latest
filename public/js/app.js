@@ -35632,12 +35632,28 @@ exports.getCategoriesView = getCategoriesView;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+const $ = __webpack_require__(1);
 class HomeView {
     constructor() {
+        this.displayItems = (e) => {
+            let currentCard = e.currentTarget;
+            let itemsToShow = '.' + currentCard.dataset['target'];
+            if (!$(currentCard).hasClass('active-category')) {
+                $('.active-category').removeClass('active-category');
+                $(currentCard).addClass('active-category');
+                $('.active-items').addClass('inactive-items');
+                $('.active-items').removeClass('active-items');
+                $(itemsToShow).removeClass('inactive-items');
+                $(itemsToShow).addClass('active-items');
+                console.log(itemsToShow);
+            }
+            else {
+            }
+        };
         this.initHome();
     }
     initHome() {
-        // alert('yuh');
+        $('.category-card').on('click', this.displayItems);
     }
 }
 exports.default = HomeView;

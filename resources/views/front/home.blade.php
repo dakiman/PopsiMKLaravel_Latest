@@ -7,11 +7,13 @@
 			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 		</ol>
 		<div class="carousel-inner" role="listbox">
-			<div class="carousel-item active" style="background-image: url('/img/carousel/banner4.jpg');"></div>
-			<div class="carousel-item" style="background-image: url('/img/carousel/Banner-Bearing-LUAN-DUNG-JSC-LDC.jpg')"></div>
-			<div class="carousel-item" style="background-image: url('/img/carousel/kms-banner.jpg')"> </div>
+			<div class="carousel-item active" style="background-image: url('/img/carousel/05_Ruedas_dentadas_engranajes_cadenas_titanio.jpg');"></div>
+			<div class="carousel-item" style="background-image: url('/img/carousel/cuscinetti.png')"></div>
+			<div class="carousel-item" style="background-image: url('/img/carousel/pexels-photo-190574.jpeg')"> </div>
+			<div class="carousel-item" style="background-image: url('/img/carousel/pexels-photo-290297.jpeg')"> </div>
 		</div>
 	</div>
 </header>
