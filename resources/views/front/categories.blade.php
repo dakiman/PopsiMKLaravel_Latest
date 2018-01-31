@@ -6,7 +6,7 @@
         <div data-target="{{$category->id}}" class="@if($category->id == $categories[0]["id"]) active-category @endif category-card card border mx-2 border-primary rounded">
           <img class="card-img-top mx-auto" src="{{Storage::url('/categories/'.$category->picture)}}" alt="Card image cap">
           <div class="card-body text-center">
-            <h5 class="card-title ">{{ $category->translateTitle() }}</h5>
+            <div class="card-title ">{{ $category->translateTitle() }}</div>
           </div>
         </div>
         @endforeach
@@ -18,7 +18,7 @@
   @foreach ($categories as $category)
   <div class="row {{$category->id}} @if($category->id == $categories[0]["id"]) active-items @else inactive-items @endif">
     <div class="col-md-11 mx-auto px-2 mt-4">
-      <div class="card border-primary">
+      <div class="items-container card border-primary">
         <div style="" class="card-header ">
           <div style="font-size: 30px;" class="text-primary font-weight-bold">{{ $category->translateTitle() }}</div>
           <hr>
@@ -31,7 +31,7 @@
               <div class="card item-card text-center border-muted rounded">
                 <img class="card-img-top" src="{{Storage::url('/items/'.$item->pictures)}}" alt="Card image cap">
                 <div class="card-body text-center">
-                  <h5 class="card-title ">{{$item->translateTitle()}}</h5>
+                  <div class="card-title ">{{$item->translateTitle()}}</div>
                 </div>
               </div>
             </div>

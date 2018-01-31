@@ -60,9 +60,18 @@ body {
 .item-card {
   width: 100%;
 }
+
 .item-card > img {
   /* width: 100%; */
-  max-width: 150px;
+  max-width: 100%;
+}
+
+.item-card {
+  width:100%;
+}
+
+.items-container {
+  width: 100%;
 }
 
 .active-items {
@@ -76,6 +85,13 @@ body {
 /* border between picture and category/item name */
 .card-body {
   border-top: 1px solid #ddd;
+  padding: 5px;
+  font-size: 0.83em;
+  /* font-weight: bold; */
+}
+
+.card-title {
+  font-size: 20px;
 }
 
 @media (max-width: 850px) {
