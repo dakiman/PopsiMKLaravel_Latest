@@ -6,9 +6,9 @@
         <div class="col-md-2 panel text-center m-x-2">
             <div class="panel-body">
                 <img style="height:150px;width:150px;" src="{{Storage::url('/categories/'.$category->picture)}}" alt="">
-                <h1>{{$category->title_mk}}</h1>
-                <a href="/admin/categories/{{$category->id}}/edit"><button class="btn btn-success btn-block m-b-1">Промени</button></a>
-                <a href="/admin/categories/delete/{{$category->id}}"><button class="btn btn-danger btn-block m-b-1">Избриши</button></a>
+                <div>{{$category->title_mk}}</div>
+                <a href="/admin/categories/{{$category->id}}/edit"><button class="btn btn-success btn-block m-b-1"><i class="fas fa-edit"></i> Промени</button></a>
+                <a href="/admin/categories/delete/{{$category->id}}"><button class="btn btn-danger btn-block m-b-1"><i class="fas fa-trash-alt"></i> Избриши</button></a>
                 <div class="row">
                     <div style="padding-left: 85px;" class="col m-y-4">
                         <label id="{{$category->id}}-label" for="{{$category->id}}" class="switcher switcher-lg switcher-primary"  >

@@ -10635,6 +10635,12 @@ return jQuery;
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(17);
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 var g;
@@ -10659,12 +10665,6 @@ try {
 
 module.exports = g;
 
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(17);
 
 /***/ }),
 /* 4 */
@@ -13216,7 +13216,7 @@ return Popper;
 })));
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 /* 6 */
@@ -13491,7 +13491,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(40);
+module.exports = __webpack_require__(41);
 
 
 /***/ }),
@@ -13536,7 +13536,7 @@ global.$ = global.jQuery = __webpack_require__(1);
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(3);
+window.axios = __webpack_require__(2);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -13568,7 +13568,7 @@ if (token) {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
 
 /***/ }),
 /* 14 */
@@ -30660,7 +30660,7 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(15)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(15)(module)))
 
 /***/ }),
 /* 15 */
@@ -35611,7 +35611,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const HomeView_1 = __webpack_require__(37);
 const CategoriesView_1 = __webpack_require__(38);
 const ItemsView_1 = __webpack_require__(39);
-const NewsView_1 = __webpack_require__(45);
+const NewsView_1 = __webpack_require__(40);
 function getHomeView() {
     return new HomeView_1.default();
 }
@@ -35668,7 +35668,7 @@ exports.default = HomeView;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(3);
+const axios_1 = __webpack_require__(2);
 const $ = __webpack_require__(1);
 class CategoriesView {
     constructor() {
@@ -35695,7 +35695,7 @@ exports.default = CategoriesView;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(3);
+const axios_1 = __webpack_require__(2);
 const $ = __webpack_require__(1);
 class ItemsView {
     constructor() {
@@ -35722,22 +35722,12 @@ exports.default = ItemsView;
 
 /***/ }),
 /* 40 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(3);
+const axios_1 = __webpack_require__(2);
 const $ = __webpack_require__(1);
 class NewsView {
     constructor() {
@@ -35756,6 +35746,12 @@ class NewsView {
 }
 exports.default = NewsView;
 
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

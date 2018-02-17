@@ -12,9 +12,15 @@
     <link href="{{asset('css/widgets.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/muffin-theme.min.css')}}" rel="stylesheet" type="text/css">
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-    <script src="https://use.fontawesome.com/daa2b1f496.js"></script>
+    {{--  <script src="https://use.fontawesome.com/daa2b1f496.js"></script>  --}}
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="stylesheet" href="{{asset('css/admin.css')}}"> 
     @yield('optional-styles')
+    <style>
+        .px-nav-content, .px-nav-icon {
+            font-size: 26px;
+        }
+    </style>
 </head>
 <body>
     <div style="min-height: 300px; overflow: hidden;" class="clearfix">
@@ -26,33 +32,33 @@
                   </button>
             <ul class="px-nav-content">
                 <li class="px-nav-item px-nav-dropdown  @if($view == 'category') active px-open @endif ">
-                    <a href=""><i class="px-nav-icon fa fa-hand-grab-o"></i><span class="px-nav-label">Категории</span></a>
+                    <a href=""><i class="px-nav-icon fa fa-cogs"></i><span class="px-nav-label"> Категории</span></a>
                     <ul class="px-nav-dropdown-menu">
-                        <li class="px-nav-item"><a href="/admin/categories/create"><span class="px-nav-label">Додади</span></a></li>
-                        <li class="px-nav-item"><a href="/admin/categories"><span class="px-nav-label">Промени</span></a></li>
+                        <li class="px-nav-item"><a href="/admin/categories/create"> <i class="fas fa-plus-circle"></i> <span class="px-nav-label"> Додади</span></a></li>
+                        <li class="px-nav-item"><a href="/admin/categories"> <i class="fas fa-exchange-alt"></i> <span class="px-nav-label">Промени</span></a></li>
                     </ul>
                 </li>
-                <li class="px-nav-item">
-                    <a href="#"><i class="px-nav-icon fa fa-hand-paper-o"></i><span class="px-nav-label">Link3</span></a>
-                </li>
+                {{--  <li class="px-nav-item">
+                    <a href="#"><i class="px-nav-icon fa fa-cog"></i><span class="px-nav-label">Link3</span></a>
+                </li>  --}}
                 <li class="px-nav-item px-nav-dropdown" @if($view == 'category') active px-open @endif>
-                    <a href="#"><i class="px-nav-icon fa fa-hand-peace-o"></i><span class="px-nav-label">Артикли</span></a>
+                    <a href="#"><i class="px-nav-icon fa fa-cog"></i><span class="px-nav-label"> Артикли</span></a>
                     <ul class="px-nav-dropdown-menu">
-                            <li class="px-nav-item"><a href="/admin/items/create"><span class="px-nav-label">Додади</span></a></li>
-                            <li class="px-nav-item"><a href="/admin/items"><span class="px-nav-label">Промени</span></a></li>
+                            <li class="px-nav-item"><a href="/admin/items/create"><i class="fas fa-plus-circle"></i><span class="px-nav-label"> Додади</span></a></li>
+                            <li class="px-nav-item"><a href="/admin/items"> <i class="fas fa-exchange-alt"></i> <span class="px-nav-label">Промени</span></a></li>
                     </ul>
                 </li>
                 <li class="px-nav-item px-nav-dropdown" @if($view == 'news') active px-open @endif>
-                    <a href="#"><i class="px-nav-icon fa fa-hand-peace-o"></i><span class="px-nav-label">Новости</span></a>
+                    <a href="#"><i class="px-nav-icon fa fa-newspaper"></i><span class="px-nav-label"> Новости</span></a>
                     <ul class="px-nav-dropdown-menu">
-                            <li class="px-nav-item"><a href="/admin/news/create"><span class="px-nav-label">Додади</span></a></li>
-                            <li class="px-nav-item"><a href="/admin/news"><span class="px-nav-label">Промени</span></a></li>
+                            <li class="px-nav-item"><a href="/admin/news/create"><i class="fas fa-plus-circle"></i><span class="px-nav-label"> Додади</span></a></li>
+                            <li class="px-nav-item"><a href="/admin/news"> <i class="fas fa-exchange-alt"></i> <span class="px-nav-label">Промени</span></a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <nav class="navbar px-navbar">
-            <div class="navbar-header"><a class="navbar-brand" href="#">Brand</a></div>
+            <div class="navbar-header"><a class="navbar-brand" href="#"> Popsi Admin</a></div>
             <button type="button" class="navbar-toggle collapsed"><i class="navbar-toggle-icon"></i></button>
             <div class="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
