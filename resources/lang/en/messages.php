@@ -1,6 +1,8 @@
 <?php
 return [
     'catalogue' => 'Catalogue',
-    'products' => 'PRODUCTS'
+    'products' => 'PRODUCTS',
+    'news' => 'NEWS',
+    'language' => 'Language'
 
 ];

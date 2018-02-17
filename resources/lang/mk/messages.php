@@ -1,5 +1,8 @@
 <?php
 return [
     'catalogue' => 'Каталог',
-    'products' => 'ПРОДУКТИ'
+    'products' => 'ПРОДУКТИ',
+    'news' => 'НОВОСТИ',
+    'language' => 'Јазик'
+    
 ];

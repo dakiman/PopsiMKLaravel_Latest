@@ -20,7 +20,7 @@ class CategorySeeder extends Seeder
             ]);
         }
 
-        factory(App\News::class, 5)->create();
+        factory(App\News::class, 8)->create();
 
         User::create([
             'name' => "Daki",

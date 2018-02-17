@@ -94,6 +94,61 @@ body {
   font-size: 20px;
 }
 
+.news-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.news-card {
+  white-space: normal;
+  width: 20rem;
+  background: transparent;
+}
+
+.footer-info {
+  color:white;
+  list-style: none;
+  font-size: 18px;
+}
+
+.social-list {
+  list-style: none;
+  text-align: center;
+}
+
+.social-list li {
+  margin: 5px;
+  padding: 20px;
+  display:inline-block;
+  /* border: solid 2px rgba(255, 255, 255, 0.486); */
+}
+
+.social-list li:hover {
+  background: rgba(255, 255, 255, 0.753);
+}
+
+.social-list li:hover .soc-fb {
+  color: #3b5998;
+}
+
+.social-list li:hover .soc-tw {
+  color: #00aced;
+}
+
+.social-list li:hover .soc-ig {
+  color: #cd486b;
+}
+
+.social-list li:hover .soc-yt {
+  color: red;
+}
+
+.social-single {
+  font-size: 28px;
+  color: #35baaf;
+}
+
 @media (max-width: 850px) {
   .categories-container {
     margin-top: 10px;

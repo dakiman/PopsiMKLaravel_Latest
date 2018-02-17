@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\News;
 // use App\Items;
 
 
@@ -11,7 +12,8 @@ class HomepageController extends Controller
 {
     public function home() {
         $categories = Category::where('active', 1)->get();
-        return view('front.home', ['categories'=>$categories]);
+        $news = News::where('active', 1)->get();
+        return view('front.home', ['categories'=>$categories, 'news'=>$news]);
     }
 
     public function catalogue() {

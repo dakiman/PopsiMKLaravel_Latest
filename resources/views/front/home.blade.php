@@ -1,5 +1,4 @@
 @extends('front.front-layout') 
-
 @section('content')
 <header class=" d-none d-sm-block">
 	<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
@@ -28,6 +27,34 @@
 		</div>
 	</div>
 </div>
+	
 @include('front.categories')
+
+<div class="container-fluid">
+	<div class="row py-2">
+		<div class="col-md-4 text-center mx-auto">
+			<span style="font-size: 40px;" class="text-primary">@lang('messages.news')</span>
+			<br>
+			<i style="font-size: 35px;font-weight: bold;" class="fa fa-2x fa-angle-down text-muted"></i>
+			<hr>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-11 text-center mx-auto mt-3">
+			<div class="news-container">
+				@foreach ($news as $singleNews)
+				<div class="card news-card">
+					<img class="card-img-top img-fluid" src="{{Storage::url('/news/' . $singleNews->pictures )}}" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">{{ $singleNews->translateTitle() }}</h5>
+					</div>
+				</div>
+				@endforeach
+			</div>
+		</div>
+	</div>
+</div>
 
 @endsection
