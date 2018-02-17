@@ -56,67 +56,40 @@
 	<br>
 	<br>
 	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<footer class="py-3 bg-dark">
-		{{--
-		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-		</div> --}}
 		<div class="container-fluid">
 			<div class="row">
-				<div class="offset-md-2 col-md-4 mx-auto">
+				<div class="offset-md-1 col-md-4 mx-auto my-auto">
 					<div class="map-box">
 						<iframe width="100%" height="210" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=popsi%20mk&key=AIzaSyDIG6UNz_JspNeBuQEHZSr5CIcvFXoxRmY"
 						 allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="col-md-4 mx-auto my-auto ">
+				<div class="offset-md-1 col-md-4 mx-auto my-auto ">
 					<ul class="footer-info">
 						<li>ПОПСИ-КОМПАНИ дооел</li>
 						<li>бул. Кузман Јосифовски Питу бр.30 Скопје, Македонија</li>
-						<li>Исконтактирајте не на: </li>
-						<li>Е-Mail Адреса: info@popsibearings.com.mk</li>
-						<li>Телефонски број: +389 (0)2 2460 480</li>
+						<li>@lang('messages.contact')</li>
+						<li>@lang('messages.email')</li>
+						<li>@lang('messages.phone')</li>
 					</ul>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-
-						<ul class="social-list ">
-								<li>
-									<i class="social-single soc-fb fa fa-facebook-official"></i>
-								</li>
-								<li>
-									<i class="social-single soc-tw fa fa-twitter"></i>
-								</li>
-								<li>
-									<i class="social-single soc-ig fa fa-instagram"></i>
-								</li>
-								<li>
-									<i class="social-single soc-yt fa fa-youtube-play"></i>
-								</li>
-							</ul>
-
+				<div class="col-md-1 my-auto ">
+					<ul class="social-list ">
+						<li>
+							<i class="social-single soc-fb fa fa-facebook-official"></i>
+						</li>
+						{{--
+						<li>
+							<i class="social-single soc-tw fa fa-twitter"></i>
+						</li>
+						<li>
+							<i class="social-single soc-ig fa fa-instagram"></i>
+						</li> --}}
+						<li>
+							<i class="social-single soc-yt fa fa-youtube-play"></i>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

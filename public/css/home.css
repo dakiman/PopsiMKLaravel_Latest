@@ -110,17 +110,20 @@ body {
   color:white;
   list-style: none;
   font-size: 18px;
+  padding: 0;
 }
 
 .social-list {
   list-style: none;
   text-align: center;
+  padding: 0;
 }
 
 .social-list li {
   margin: 5px;
   padding: 20px;
   display:inline-block;
+  font-size: 25px;
   /* border: solid 2px rgba(255, 255, 255, 0.486); */
 }
 
@@ -142,11 +145,6 @@ body {
 
 .social-list li:hover .soc-yt {
   color: red;
-}
-
-.social-single {
-  font-size: 28px;
-  color: #35baaf;
 }
 
 @media (max-width: 850px) {
