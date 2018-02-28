@@ -57,4 +57,13 @@
 	</div>
 </div>
 
+@desktop
+	asdasdasdasdas
+@enddesktop
+
+@mobile
+
+	aagrgrgrgrgrgrgrgrg
+@endmobile
+
 @endsection
