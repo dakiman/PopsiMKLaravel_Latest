@@ -35655,7 +35655,7 @@ class HomeView {
         this.initHome();
     }
     initHome() {
-        $('.category-card').on('click', this.displayItems);
+        $('.list-group-item').on('click', this.displayItems);
     }
 }
 exports.default = HomeView;

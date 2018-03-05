@@ -8,7 +8,7 @@ class HomeView {
     }
 
     initHome() {
-        $('.category-card').on('click', this.displayItems);
+        $('.list-group-item').on('click', this.displayItems);
     }
     
     displayItems = (e:JQuery.Event) => {
