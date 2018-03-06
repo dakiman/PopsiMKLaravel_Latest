@@ -2,11 +2,17 @@ body {
     padding-top: 54px;
     background: rgba(128, 128, 128, 0.1);
   }
+
+
   
   @media (min-width: 992px) {
     body {
       padding-top: 56px;
     }
+  }
+
+  footer {
+    background-image: url("/img/background.png");
   }
   
   .carousel-item {
@@ -52,6 +58,13 @@ body {
   -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.5);
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.5);
 }
+
+.list-group .list-group-item {
+  -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.9);
+  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.9);
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.9);
+}
+
 .card > img {
   height: 180px;
   width: 100%;
@@ -82,6 +95,11 @@ body {
   display: none;
 }
 
+.news-section {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding-bottom: 50px;
+}
+
 /* border between picture and category/item name */
 .card-body {
   border-top: 1px solid #ddd;
@@ -103,7 +121,7 @@ body {
 .news-card {
   white-space: normal;
   width: 20rem;
-  background: transparent;
+  /* background: transparent; */
 }
 
 .footer-info {

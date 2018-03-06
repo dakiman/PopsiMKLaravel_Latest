@@ -8,11 +8,15 @@
 	<title>Popsi Lageri</title>
 	<link rel="stylesheet" href="{{asset('css/app.css')}}">
 	<link rel="stylesheet" href="{{asset('css/home.css')}}">
-	<script src="https://use.fontawesome.com/daa2b1f496.js"></script>
+	{{--  <script src="https://use.fontawesome.com/daa2b1f496.js"></script>  --}}
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
 </head>
 <body>
 	<!-- Navigation -->
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top p-1 shadow">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top p-1 shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand p-0 m-0" href="/">
 				<img class="d-inline-block align-top " width="100px" height="63px" id="logo" src="/img/logo.jpg" alt="">
@@ -47,15 +51,7 @@
 	</nav>
 	@yield('content')
 	<!-- /.container -->
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
+
 	<footer class="py-3 bg-dark">
 		<div class="container-fluid">
 			<div class="row">
@@ -77,7 +73,7 @@
 				<div class="col-md-1 my-auto ">
 					<ul class="social-list ">
 						<li>
-							<i class="social-single soc-fb fa fa-facebook-official"></i>
+							<i class="social-single soc-fb fab fa-facebook"></i>
 						</li>
 						{{--
 						<li>
@@ -87,7 +83,7 @@
 							<i class="social-single soc-ig fa fa-instagram"></i>
 						</li> --}}
 						<li>
-							<i class="social-single soc-yt fa fa-youtube-play"></i>
+							<i class="social-single soc-yt fab fa-youtube"></i>
 						</li>
 					</ul>
 				</div>

@@ -33,7 +33,3 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
     Route::resource('news', 'NewsController');
     Route::get('/news/delete/{news}', 'NewsController@delete');
 });
-
-Route::any('/shit/da', function () {
-    return "shit";
-});

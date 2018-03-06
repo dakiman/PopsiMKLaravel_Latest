@@ -1,5 +1,5 @@
 @mobile
-<div class="container-fluid ">
+<div class="container-fluid categories-section py-3">
   <div class="row categories-container">
     <div class="col-md-11 text-center mx-auto mt-3">
       <div class="card-deck">
@@ -18,7 +18,7 @@
 @endmobile
 
 @notmobile
-<div class="container-fluid">
+<div class="container-fluid py-3 categories-section">
   <div class="row">
     <div class="col-md-3">
       <div class="list-group">
@@ -42,8 +42,8 @@
             <div class="card-body">
               <div class="row mx-auto">
                 @foreach ($category->activeItems() as $item)
-                <div class="col-md-2 px-1 py-1">
-                  <div class="card item-card text-center border-muted rounded">
+                <div class="col-md-3 px-1 py-1">
+                  <div class="card item-card text-center border-muted rounded mx-auto">
                     <img class="card-img-top" src="{{Storage::url('/items/'.$item->pictures)}}" alt="Card image cap">
                     <div class="card-body text-center">
                       <div class="card-title ">{{$item->translateTitle()}}</div>
