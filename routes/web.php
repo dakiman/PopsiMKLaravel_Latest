@@ -14,6 +14,7 @@
 Route::get('/', 'HomepageController@home');
 Route::get('/catalogue', 'HomepageController@catalogue');
 Route::get('catalogue/categories/{id}', 'HomepageController@category');
+Route::get('catalogue/items/{id}', 'HomepageController@item');
 
 Route::namespace('Auth')->group(function () {
     Route::get('/login', 'LoginController@showLoginForm')->name('login');

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\News;
-// use App\Items;
+use App\Item;
 
 
 class HomepageController extends Controller
@@ -24,6 +24,11 @@ class HomepageController extends Controller
     public function category($id) {
         $category = Category::find($id);
         return view('front.single-category', ['category'=>$category]);        
+    }
+
+    public function item($id) {
+        $item = Item::find($id);
+        return view('front.single-item', ['item'=>$item, 'pictures'=>$item->getPictures()]);
     }
 
     public function changeLocale($locale = null) {

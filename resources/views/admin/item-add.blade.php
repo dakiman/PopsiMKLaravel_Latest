@@ -58,7 +58,7 @@
                         </button>
                         <label for="cat_img" id="pic-label">Додади слика: </label>
                         <input class="form-control m-b-3" type="file" name="cat_img[]">
-                        <button class="btn btn-primary btn-block">Додади</button>
+                        <button class="submit-btn btn btn-primary btn-block">Додади</button>
                     </div>
 
                 </div>
