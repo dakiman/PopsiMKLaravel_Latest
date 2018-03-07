@@ -11,4 +11,9 @@ class Item extends TranslatableModel
     public function category() {
         return $this->hasOne('App\Category');
     }
+
+    public function getCoverPhoto() {
+        $pictures = unserialize($this->pictures);
+        return $pictures[0];
+    }
 }

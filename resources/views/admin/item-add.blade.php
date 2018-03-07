@@ -4,6 +4,7 @@
 <script>
     feather.replace()
 </script>  --}}
+<script>App.getItemsView();</script>
 @endsection
  
 @section('content')
@@ -41,7 +42,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-md-6 col-md-offset-3">
+                        <div class="col-md-2">
+
+                            </div>
+                    <div class="form-group col-md-6 col-md-offset-1">
                             <label for="sel1">Избери категорија:</label>
                             <select name="category_id" id="category_id" class="form-control" id="selector" required>
                             <option selected="selected"></option>
@@ -49,11 +53,14 @@
                             <option value="{{ $category->id }}">{{ $category->title_mk }}</option>
                             @endforeach
                             </select>
-                        <label for="cat_img">Додади слика: </label>
-                        <input class="form-control m-b-3" type="file" name="cat_img" id="cat_img" required>
+                        <button class="btn btn-success btn-block pic-btn" type="button">
+                                +Слика
+                        </button>
+                        <label for="cat_img" id="pic-label">Додади слика: </label>
+                        <input class="form-control m-b-3" type="file" name="cat_img[]">
                         <button class="btn btn-primary btn-block">Додади</button>
-                        
                     </div>
+
                 </div>
             </form>
         </div>

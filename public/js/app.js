@@ -35699,6 +35699,7 @@ const axios_1 = __webpack_require__(2);
 const $ = __webpack_require__(1);
 class ItemsView {
     constructor() {
+        this.fileInput = '<input class="form-control m-b-3" type="file" name="cat_img[]" id="cat_img" >';
         this.activateItem = (e) => {
             let checker = e.currentTarget;
             let id = $(checker).attr('id');
@@ -35710,11 +35711,15 @@ class ItemsView {
             let select = e.currentTarget;
             window.location.replace('/admin/items?cat=' + $(select).val());
         };
+        this.addPictureField = () => {
+            $('#pic-label').append(this.fileInput);
+        };
         this.initItems();
     }
     initItems() {
         $('.active-check').on('click', this.activateItem);
         $('#selector').on('change', this.getItems);
+        $('.pic-btn').on('click', this.addPictureField);
     }
 }
 exports.default = ItemsView;

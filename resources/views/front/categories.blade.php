@@ -44,7 +44,7 @@
                 @foreach ($category->activeItems() as $item)
                 <div class="col-md-3 px-1 py-1">
                   <div class="card item-card text-center border-muted rounded mx-auto">
-                    <img class="card-img-top" src="{{Storage::url('/items/'.$item->pictures)}}" alt="Card image cap">
+                    <img class="card-img-top" src="{{Storage::url('/items/'.$item->getCoverPhoto() )}}" alt="Card image cap">
                     <div class="card-body text-center">
                       <div class="card-title ">{{$item->translateTitle()}}</div>
                     </div>

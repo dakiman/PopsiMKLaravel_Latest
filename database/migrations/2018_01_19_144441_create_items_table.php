@@ -21,7 +21,7 @@ class CreateItemsTable extends Migration
             $table->text('description_en');
             $table->text('description_mk');
             $table->boolean('active')->default(true);
-            $table->string('pictures')->nullable();
+            $table->text('pictures')->nullable();
             $table->timestamps();
         });
     }

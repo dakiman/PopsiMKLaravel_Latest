@@ -42,9 +42,15 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         $item = Item::create($request->all());
-        $imageName = time() . '.' . $request->cat_img->getClientOriginalExtension();
-        Storage::disk('local')->put('/public/items/'.$imageName, file_get_contents($request->cat_img));
-        $item->pictures = $imageName;
+        $pictures = array();
+        $i = 0;
+        foreach($request->cat_img as $image)
+        {
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            Storage::disk('local')->put('/public/items/'.$imageName, file_get_contents($image));
+            array_push($pictures, $imageName);
+        }
+        $item->pictures = serialize($pictures);
         if($item->save()){
             $message = "Успешно додадено.";
         } else {

@@ -3,13 +3,16 @@ import $ = require('jquery');
 
 class ItemsView {
 
+    fileInput:string = '<input class="form-control m-b-3" type="file" name="cat_img[]" id="cat_img" >';
     constructor() {
         this.initItems();
     }
 
+
     initItems() {
         $('.active-check').on('click', this.activateItem);
         $('#selector').on('change', this.getItems);
+        $('.pic-btn').on('click', this.addPictureField);
     }
 
     activateItem = (e:JQuery.Event) => {
@@ -24,6 +27,10 @@ class ItemsView {
         let select = e.currentTarget as HTMLSelectElement;
         window.location.replace('/admin/items?cat=' + $(select).val());
     }    
+
+    addPictureField = () => {
+        $('#pic-label').append(this.fileInput);
+    }
     
 }
 
