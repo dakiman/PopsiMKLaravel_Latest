@@ -37,6 +37,8 @@
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
                             <button class="btn btn-primary btn-block">Промени</button>
+                            <label for="cat_img">Промени слика: </label>
+                            <input class="form-control m-b-3" type="file" name="cat_img" id="cat_img">
                         </div>
                     </div>
                 </form>

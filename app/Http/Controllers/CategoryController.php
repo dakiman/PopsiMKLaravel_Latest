@@ -80,6 +80,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
+        if(isset($request->cat_img)){
+            $imageName = time() . '.' . $request->cat_img->getClientOriginalExtension();
+            Storage::disk('local')->put('/public/categories/'.$imageName, file_get_contents($request->cat_img));
+            $category->picture = $imageName;
+        }
         if($category->fill($request->all()) && $category->save()){
             $message = "Податоците се подесени.";
         } else {
