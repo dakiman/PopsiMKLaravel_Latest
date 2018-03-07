@@ -21,6 +21,11 @@ class HomepageController extends Controller
         return view('front.catalogue', ['categories'=>$categories]);
     }
 
+    public function category($id) {
+        $category = Category::find($id);
+        return view('front.single-category', ['category'=>$category]);        
+    }
+
     public function changeLocale($locale = null) {
         if($locale != null) {
             cookie()->forever('locale', $locale);
