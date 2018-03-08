@@ -46,7 +46,7 @@ class ItemController extends Controller
         $i = 0;
         foreach($request->cat_img as $image)
         {
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $imageName = uniqid('img_') . '.' . $image->getClientOriginalExtension();
             Storage::disk('local')->put('/public/items/'.$imageName, file_get_contents($image));
             array_push($pictures, $imageName);
         }

@@ -309,6 +309,8 @@ class ComposerStaticInit4977697d04990469d28bfba5d7d93a30
     );
 
     public static $classMap = array (
+        'App\\CarouselOrder' => __DIR__ . '/../..' . '/app/CarouselOrder.php',
+        'App\\CarouselPic' => __DIR__ . '/../..' . '/app/CarouselPic.php',
         'App\\Category' => __DIR__ . '/../..' . '/app/Category.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',

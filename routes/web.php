@@ -34,4 +34,8 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
    
     Route::resource('news', 'NewsController');
     Route::get('/news/delete/{news}', 'NewsController@delete');
+
+    Route::get('/gallery', 'GalleryController@edit');
+    Route::get('/gallery/create', 'GalleryController@create');
+    Route::post('/gallery/store', 'GalleryController@store');
 });

@@ -16,7 +16,7 @@
         @foreach ($items as $item)
         <div class="col-md-2 panel text-center m-x-2">
             <div class="panel-body">
-                <img style="height:150px;width:150px;" src="{{Storage::url('/items/'.$item->pictures)}}" alt="">
+                <img style="height:150px;width:150px;" src="{{Storage::url('/items/'.$item->getCoverPhoto())}}" alt="">
                 <div>{{$item->title_mk}}</div>
                 <a href="/admin/items/{{$item->id}}/edit"><button class="btn btn-success btn-block m-b-1"><i class="fas fa-edit"></i> Промени</button></a>
                 <a href="/admin/items/delete/{{$item->id}}"><button class="btn btn-danger btn-block m-b-1"><i class="fas fa-trash-alt"></i> Избриши</button></a>

@@ -41,18 +41,25 @@
                 {{--  <li class="px-nav-item">
                     <a href="#"><i class="px-nav-icon fa fa-cog"></i><span class="px-nav-label">Link3</span></a>
                 </li>  --}}
-                <li class="px-nav-item px-nav-dropdown" @if($view == 'category') active px-open @endif>
+                <li class="px-nav-item px-nav-dropdown @if($view == 'category') active px-open @endif">
                     <a href="#"><i class="px-nav-icon fa fa-cog"></i><span class="px-nav-label"> Артикли</span></a>
                     <ul class="px-nav-dropdown-menu">
                             <li class="px-nav-item"><a href="/admin/items/create"><i class="fas fa-plus-circle"></i><span class="px-nav-label"> Додади</span></a></li>
                             <li class="px-nav-item"><a href="/admin/items"> <i class="fas fa-exchange-alt"></i> <span class="px-nav-label">Промени</span></a></li>
                     </ul>
                 </li>
-                <li class="px-nav-item px-nav-dropdown" @if($view == 'news') active px-open @endif>
+                <li class="px-nav-item px-nav-dropdown @if($view == 'news') active px-open @endif">
                     <a href="#"><i class="px-nav-icon fa fa-newspaper"></i><span class="px-nav-label"> Новости</span></a>
                     <ul class="px-nav-dropdown-menu">
                             <li class="px-nav-item"><a href="/admin/news/create"><i class="fas fa-plus-circle"></i><span class="px-nav-label"> Додади</span></a></li>
                             <li class="px-nav-item"><a href="/admin/news"> <i class="fas fa-exchange-alt"></i> <span class="px-nav-label">Промени</span></a></li>
+                    </ul>
+                </li>
+                <li class="px-nav-item px-nav-dropdown @if($view == 'gallery') active px-open @endif">
+                    <a href="#"><i class="px-nav-icon fa fa-newspaper"></i><span class="px-nav-label"> Галерија </span></a>
+                    <ul class="px-nav-dropdown-menu">
+                            <li class="px-nav-item"><a href="/admin/gallery/create"><i class="fas fa-plus-circle"></i><span class="px-nav-label"> Додади/Избриши </span></a></li>
+                            <li class="px-nav-item"><a href="/admin/gallery"> <i class="fas fa-exchange-alt"></i> <span class="px-nav-label">Промени</span></a></li>
                     </ul>
                 </li>
             </ul>

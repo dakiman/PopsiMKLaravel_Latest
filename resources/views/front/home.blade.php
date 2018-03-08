@@ -1,18 +1,28 @@
 @extends('front.front-layout') 
 @section('content')
+@php
+	$i = 0;
+@endphp
 <header class=" d-none d-sm-block">
 	<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
 		<ol class="carousel-indicators ">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			@foreach ($pictures as $picture)
+			<li data-target="#carouselExampleIndicators" data-slide-to="{{$i}}" class="@if($picture == $pictures[0]) active @endif"></li>
+			@php $i++; @endphp
+			@endforeach
+			{{--  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>  --}}
 		</ol>
 		<div class="carousel-inner" role="listbox">
-			<div class="carousel-item active" style="background-image: url('/img/carousel/05_Ruedas_dentadas_engranajes_cadenas_titanio.jpg');"></div>
-			<div class="carousel-item" style="background-image: url('/img/carousel/cuscinetti.png')"></div>
-			<div class="carousel-item" style="background-image: url('/img/carousel/pexels-photo-190574.jpeg')"> </div>
-			<div class="carousel-item" style="background-image: url('/img/carousel/pexels-photo-290297.jpeg')"> </div>
+			@foreach ($pictures as $picture)
+		<div class="carousel-item @if($picture == $pictures[0]) active @endif" style="background-image: url('{{Storage::url('/carousel/' . $picture )}}');"></div>
+			
+			@endforeach			
+			{{--  <div class="carousel-item active" style="background-image: url('/img/carousel/05_Ruedas_dentadas_engranajes_cadenas_titanio.jpg');"></div>  --}}
+			{{--  <div class="carousel-item" style="background-image: url('/img/carousel/cuscinetti.png')"></div>  --}}
+			{{--  <div class="carousel-item" style="background-image: url('/img/carousel/pexels-photo-190574.jpeg')"> </div>  --}}
+			{{--  <div class="carousel-item" style="background-image: url('/img/carousel/pexels-photo-290297.jpeg')"> </div>  --}}
 		</div>
 	</div>
 </header>

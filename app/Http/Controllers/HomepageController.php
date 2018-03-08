@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\News;
 use App\Item;
+use App\CarouselOrder;
 
 
 class HomepageController extends Controller
@@ -13,7 +14,9 @@ class HomepageController extends Controller
     public function home() {
         $categories = Category::where('active', 1)->get();
         $news = News::where('active', 1)->get();
-        return view('front.home', ['categories'=>$categories, 'news'=>$news]);
+        $order = CarouselOrder::all()->take(1);
+        $pictures = unserialize($order[0]->order);
+        return view('front.home', ['categories'=>$categories, 'news'=>$news, 'pictures'=>$pictures]);
     }
 
     public function catalogue() {

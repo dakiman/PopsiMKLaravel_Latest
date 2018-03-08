@@ -2,6 +2,8 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\CarouselOrder;
+use App\CarouselPic;
 
 class CategorySeeder extends Seeder
 {
@@ -27,6 +29,20 @@ class CategorySeeder extends Seeder
             'email' => 'daki@daki',
             'password' => bcrypt('daki'),
         ]);
+        
+        // $images = ['bearings.bmp', 'codex_chains.bmp', 'codex1.png', 'codex4.bmp', 'codex8.bmp', 'codex25.bmp' ];
+        $images = ['05_Ruedas_dentadas_engranajes_cadenas_titanio.jpg', 'cuscinetti.png', 'pexels-photo-190574.jpeg', 'pexels-photo-290297.jpeg'];
+        
+        foreach($images as $image) {
+            CarouselPic::create([
+                'name' => $image
+            ]);
+        }
+
+        CarouselOrder::create([
+            'order' => serialize($images)
+        ]);
+
 
     }
 }
