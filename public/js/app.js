@@ -13491,7 +13491,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(41);
+module.exports = __webpack_require__(42);
 
 
 /***/ }),
@@ -35612,6 +35612,7 @@ const HomeView_1 = __webpack_require__(37);
 const CategoriesView_1 = __webpack_require__(38);
 const ItemsView_1 = __webpack_require__(39);
 const NewsView_1 = __webpack_require__(40);
+const GalleryView_1 = __webpack_require__(41);
 function getHomeView() {
     return new HomeView_1.default();
 }
@@ -35628,6 +35629,10 @@ function getNewsView() {
     return new NewsView_1.default();
 }
 exports.getNewsView = getNewsView;
+function getGalleryView() {
+    return new GalleryView_1.default();
+}
+exports.getGalleryView = getGalleryView;
 
 
 /***/ }),
@@ -35754,6 +35759,57 @@ exports.default = NewsView;
 
 /***/ }),
 /* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+const $ = __webpack_require__(1);
+class GalleryView {
+    constructor() {
+        this.getPictureDiv = (name) => {
+            return `
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img style="width:150px;height:150px;" src="/storage//carousel/` + name + `" alt="">
+                </div>
+                <div class="cut-text panel-footer">` + name + `</div>
+            </div>
+        </div>
+        `;
+        };
+        this.getPictureInputField = (name) => {
+            return `
+        <input type="text" name="order[]" value="` + name + `">   
+        `;
+        };
+        this.prependPic = (e) => {
+            let button = e.currentTarget;
+            let picture = button.dataset['picture'];
+            $('.gallery-order').prepend(this.getPictureDiv(picture));
+            $('.gallery-order-form').prepend(this.getPictureInputField(picture));
+            $(button).parent().parent().hide();
+        };
+        this.appendPic = (e) => {
+            let button = e.currentTarget;
+            let picture = button.dataset['picture'];
+            $('.gallery-order').append(this.getPictureDiv(picture));
+            $('.gallery-order-form').append(this.getPictureInputField(picture));
+            $(button).parent().parent().hide();
+        };
+        this.initGallery();
+    }
+    initGallery() {
+        $('.prepend-btn').on('click', this.prependPic);
+        $('.append-btn').on('click', this.appendPic);
+    }
+}
+exports.default = GalleryView;
+
+
+/***/ }),
+/* 42 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

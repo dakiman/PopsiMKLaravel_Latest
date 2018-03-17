@@ -8,6 +8,7 @@
     <title>Popsi Admin</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/admin-style.css')}}">
     <link href="{{asset('css/pixeladmin.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/widgets.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('css/muffin-theme.min.css')}}" rel="stylesheet" type="text/css">
@@ -41,7 +42,7 @@
                 {{--  <li class="px-nav-item">
                     <a href="#"><i class="px-nav-icon fa fa-cog"></i><span class="px-nav-label">Link3</span></a>
                 </li>  --}}
-                <li class="px-nav-item px-nav-dropdown @if($view == 'category') active px-open @endif">
+                <li class="px-nav-item px-nav-dropdown @if($view == 'item') active px-open @endif">
                     <a href="#"><i class="px-nav-icon fa fa-cog"></i><span class="px-nav-label"> Артикли</span></a>
                     <ul class="px-nav-dropdown-menu">
                             <li class="px-nav-item"><a href="/admin/items/create"><i class="fas fa-plus-circle"></i><span class="px-nav-label"> Додади</span></a></li>

@@ -22,12 +22,17 @@ class GalleryController extends Controller
     }
 
     public function store(Request $request) {
-        $image = $request->car_img;
-        $imageName = uniqid('carousel_') . '.' . $image->getClientOriginalExtension();
-        Storage::disk('local')->put('/public/carousel/'.$imageName, file_get_contents($image));
-        CarouselPic::create([
-            'name' => $imageName
-        ]);
-        return redirect()->back()->with('message', 'Сликата е успешно додадена!');
+        if($request->car_img != null) {
+            $image = $request->car_img;
+            $imageName = uniqid('car_') . '.' . $image->getClientOriginalExtension();
+            Storage::disk('local')->put('/public/carousel/'.$imageName, file_get_contents($image));
+            CarouselPic::create([
+                'name' => $imageName
+            ]);
+            return redirect()->back()->with('message', 'Сликата е успешно додадена!');
+        } else {
+            return redirect()->back()->with('message', 'Мора да се додаде слика!');
+        }
+
     }
 }

@@ -9541,5 +9541,11 @@ footer {
   border-bottom: 2px solid white;
 }
 
+.cut-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 
 /*# sourceMappingURL=app.css.map*/
