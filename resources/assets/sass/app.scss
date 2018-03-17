@@ -20,7 +20,7 @@
 }
 
 .social-single {
-    color: $primary-color;
+    color: white;
 }
 
 .categories-section {
@@ -31,10 +31,13 @@ $color : rgb(12, 7, 31);
 .navbar {
     // background: #0E062D;
     background: $color;
-    border-bottom: 2px solid white;
+    // border-bottom: 2px solid white;
     // background: red;
 }
-
+footer {
+    /* background-image: url("/img/background.png"); */
+    background-color: $primary-color;
+}
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link{
     border-bottom: 2px solid $color;
 }

@@ -52,7 +52,7 @@
 	@yield('content')
 	<!-- /.container -->
 
-	<footer class="py-3 bg-dark">
+	<footer class="py-3">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="offset-md-1 col-md-4 mx-auto my-auto">

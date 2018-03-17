@@ -41,5 +41,10 @@ class HomepageController extends Controller
         return redirect()->back()->withCookie('locale', $locale);
     }
 
+    public function news($id) {
+        $news = News::find($id);
+        return view ('front.single-news', ['news'=>$news]);
+    }
+
 
 }

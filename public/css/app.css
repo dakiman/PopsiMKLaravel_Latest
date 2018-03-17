@@ -9515,7 +9515,7 @@ a.text-any-other-custom-color:hover {
 }
 
 .social-single {
-  color: #12073D;
+  color: white;
 }
 
 .categories-section {
@@ -9524,7 +9524,11 @@ a.text-any-other-custom-color:hover {
 
 .navbar {
   background: #0c071f;
-  border-bottom: 2px solid white;
+}
+
+footer {
+  /* background-image: url("/img/background.png"); */
+  background-color: #12073D;
 }
 
 .navbar-dark .navbar-nav .nav-link:focus,

@@ -68,7 +68,9 @@
 				<div class="card news-card">
 					<img class="card-img-top img-fluid" src="{{Storage::url('/news/' . $singleNews->pictures )}}" alt="Card image cap">
 					<div class="card-body">
-						<h5 class="card-title">{{ $singleNews->translateTitle() }}</h5>
+						<a href="/news/{{$singleNews->id}}">
+							<h5 class="card-title">{{ $singleNews->translateTitle() }}</h5>
+						</a>
 					</div>
 				</div>
 				@endforeach

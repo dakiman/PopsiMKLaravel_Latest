@@ -11,9 +11,7 @@ body {
     }
   }
 
-  footer {
-    background-image: url("/img/background.png");
-  }
+
   
   .carousel-item {
     height: 65vh;

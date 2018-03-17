@@ -1,11 +1,11 @@
 <div class="col-md-11 mx-auto">
     <div class="items-container card border-primary">
         <div class="media">
-            <a href="/catalogue/categories/{{$category->id}}"><img class="mx-3 my-3" src="{{Storage::url('/categories/'.$category->picture)}}" alt="Generic placeholder image"></a>
             <div class="media-body my-auto px-2">
-            <h5 class="mt-0">
-                <a href="/catalogue/categories/{{$category->id}}">{{$category->translateTitle()}}</a>
-            </h5>
+                <a href="/catalogue/categories/{{$category->id}}"><img class="float-left m-3" src="{{Storage::url('/categories/'.$category->picture)}}" alt="Generic placeholder image"></a>
+                <h5 class="mt-2">
+                    <a href="/catalogue/categories/{{$category->id}}">{{$category->translateTitle()}}</a>
+                </h5>
                 {{$category->translateDescription()}}
             </div>
         </div>
