@@ -15,7 +15,11 @@ class HomepageController extends Controller
         $categories = Category::where('active', 1)->get();
         $news = News::where('active', 1)->get();
         $order = CarouselOrder::all()->take(1);
-        $pictures = unserialize($order[0]->order);
+        if(!$order->isEmpty()){
+            $pictures = unserialize($order[0]->order);
+        } else {
+            $pictures = null;
+        }
         return view('front.home', ['categories'=>$categories, 'news'=>$news, 'pictures'=>$pictures]);
     }
 
