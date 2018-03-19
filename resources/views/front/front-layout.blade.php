@@ -40,7 +40,7 @@
 						<a class="nav-link" href="/about-us">@lang('messages.about-us-title')</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/contact">@lang('messages.contact')</a>
+						<a class="nav-link" href="/contact">@lang('messages.contact-single')</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

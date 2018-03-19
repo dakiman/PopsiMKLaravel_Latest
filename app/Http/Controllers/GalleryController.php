@@ -35,4 +35,20 @@ class GalleryController extends Controller
         }
 
     }
+
+    public function update(Request $request) {
+        if($request->order != null) {
+            $allPictures = $request->order;
+            $newOrder = [];
+            foreach($allPictures as $picture) {
+                array_push($newOrder, $picture);
+            }
+            $currentOrder = CarouselOrder::all()->take(1);
+            $currentOrder[0]->order = serialize($newOrder);
+            $currentOrder[0]->save();
+            return redirect()->back()->with('message', 'Успешно променет распоред');
+        } else {
+            return redirect()->back()->with('message', 'Проблем при промена. (мора да има барем една слика во распоредот)');
+        }
+    }
 }

@@ -35767,42 +35767,71 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const $ = __webpack_require__(1);
 class GalleryView {
     constructor() {
-        this.getPictureDiv = (name) => {
+        this.getPictureDiv = (name, id) => {
             return `
         <div class="col-md-3">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <img style="width:150px;height:150px;" src="/storage//carousel/` + name + `" alt="">
-                </div>
-                <div class="cut-text panel-footer">` + name + `</div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <img class="img-responsive" style="width:150px;height:150px;" src="/storage//carousel/` + name + `" alt="">
             </div>
+            <div class="cut-text panel-footer">` + name + `</div>
+            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="remove-btn btn btn-danger m-a-1">Отстрани</button>                        
         </div>
+    </div>
         `;
         };
-        this.getPictureInputField = (name) => {
+        this.getPictureInputField = (name, id) => {
             return `
-        <input type="text" name="order[]" value="` + name + `">   
+        <input id="` + id + `" type="text" name="order[]" value="` + name + `">   
+        `;
+        };
+        this.getPicAvailableDiv = (name, id) => {
+            return `
+        <div class="col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <img class="img-responsive" style="width:150px;height:150px;" src="/storage//carousel/` + name + `" alt="">
+            </div>
+            <div class="cut-text panel-footer">` + name + `</div>
+            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="prepend-btn btn btn-primary m-a-1">Додади напред</button>
+            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="append-btn btn btn-success m-a-1">Додади позади</button>
+        </div>
+    </div>
         `;
         };
         this.prependPic = (e) => {
             let button = e.currentTarget;
             let picture = button.dataset['picture'];
-            $('.gallery-order').prepend(this.getPictureDiv(picture));
-            $('.gallery-order-form').prepend(this.getPictureInputField(picture));
+            let id = button.dataset['id'];
+            $('.gallery-order').prepend(this.getPictureDiv(picture, id));
+            $('.gallery-order-form').prepend(this.getPictureInputField(picture, id));
             $(button).parent().parent().hide();
         };
         this.appendPic = (e) => {
             let button = e.currentTarget;
             let picture = button.dataset['picture'];
-            $('.gallery-order').append(this.getPictureDiv(picture));
-            $('.gallery-order-form').append(this.getPictureInputField(picture));
+            let id = button.dataset['id'];
+            $('.gallery-order').append(this.getPictureDiv(picture, id));
+            $('.gallery-order-form').append(this.getPictureInputField(picture, id));
             $(button).parent().parent().hide();
+        };
+        this.removePic = (e) => {
+            let button = e.currentTarget;
+            let picture = button.dataset['picture'];
+            let id = button.dataset['id'];
+            $('.active-pictures').append(this.getPicAvailableDiv(picture, id));
+            $(button).parent().parent().hide();
+            $('#' + id).remove();
         };
         this.initGallery();
     }
     initGallery() {
-        $('.prepend-btn').on('click', this.prependPic);
-        $('.append-btn').on('click', this.appendPic);
+        $('.active-pictures').on('click', '.prepend-btn', this.prependPic);
+        $('.active-pictures').on('click', '.append-btn', this.appendPic);
+        $('.gallery-order').on('click', '.remove-btn', this.removePic);
+        $('.submit-order-btn').on('click', function () {
+            $('.gallery-order-form').submit();
+        });
     }
 }
 exports.default = GalleryView;

@@ -46,4 +46,5 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
     Route::get('/gallery', 'GalleryController@edit');
     Route::get('/gallery/create', 'GalleryController@create');
     Route::post('/gallery/store', 'GalleryController@store');
+    Route::post('/gallery/update', 'GalleryController@update');
 });
