@@ -22,7 +22,7 @@
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top p-1 shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand p-0 m-0" href="/">
-				<img class="d-inline-block align-top " width="100px" height="63px" id="logo" src="/img/logo.jpg" alt="">
+				<img class="d-inline-block align-top " height="80%" width="80%" id="logo" src="/img/logo.jpg" alt="">
 			</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
 			 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
 						<a class="nav-link" href="/about-us">@lang('messages.about-us-title')</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">Contact</a>
+						<a class="nav-link" href="/contact">Contact</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

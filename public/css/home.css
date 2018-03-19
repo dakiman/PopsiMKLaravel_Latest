@@ -11,6 +11,9 @@ body {
     }
   }
 
+  .sharp {
+    border-radius: 0 !important;
+  }
 
   
   .carousel-item {
@@ -103,7 +106,7 @@ body {
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .news-container {

@@ -16,10 +16,12 @@ Route::get('/catalogue', 'HomepageController@catalogue');
 Route::get('catalogue/categories/{id}', 'HomepageController@category');
 Route::get('catalogue/items/{id}', 'HomepageController@item');
 Route::get('/news/{id}', 'HomepageController@news');
-Route::get('about-us', function () {
+Route::get('/about-us', function () {
     return view('front.about-us');
 });
-
+Route::get('/contact', function () {
+    return view('front.contact');
+});
 
 
 Route::namespace('Auth')->group(function () {
