@@ -31,13 +31,16 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
+						<a class="nav-link" href="/">@lang('messages.home')</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="/catalogue">@lang('messages.catalogue')</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/about-us">@lang('messages.about-us-title')</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/contact">Contact</a>
+						<a class="nav-link" href="/contact">@lang('messages.contact')</a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,7 +75,7 @@
 				<div class="offset-md-1 col-md-4 mx-auto my-auto ">
 					<ul class="footer-info">
 						<li>@lang('messages.popsi')</li>
-						<li>бул. Кузман Јосифовски Питу бр.30 Скопје, Македонија</li>
+						<li>@lang('messages.address') @lang('messages.skopje')</li>
 						<li>@lang('messages.contact')</li>
 						<li>@lang('messages.email')</li>
 						<li>@lang('messages.phone')</li>

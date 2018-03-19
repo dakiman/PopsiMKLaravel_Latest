@@ -7,8 +7,16 @@
                 <h3 class="h3 py-3">@lang('messages.about-us-title')</h3>
                 <hr>
                 <p class="lead p-2">@lang('messages.about-us')</p>
-                <img class="mx-auto d-block img-fluid" src="http://lageri.mk/Images/PopsiTeam.bmp" alt="">
+                <img class="mx-auto d-block img-fluid mb-4" src="http://lageri.mk/Images/PopsiTeam.bmp" alt="">
             </div>
         </div>
     </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    
 @endsection
