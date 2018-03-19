@@ -41,7 +41,12 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							@lang('messages.language')
+							
+							@if (app()->getLocale() == 'mk')
+								<img class="p-1" src="http://lageri.mk/Images/mk-MK.gif" alt="">
+							@else
+								<img class="p-1" src="http://lageri.mk/Images/en-GB.gif" alt="">
+							@endif
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
 							<a class="dropdown-item" href="/changelocale/mk">Македонски</a>
