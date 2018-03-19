@@ -16,6 +16,11 @@ Route::get('/catalogue', 'HomepageController@catalogue');
 Route::get('catalogue/categories/{id}', 'HomepageController@category');
 Route::get('catalogue/items/{id}', 'HomepageController@item');
 Route::get('/news/{id}', 'HomepageController@news');
+Route::get('about-us', function () {
+    return view('front.about-us');
+});
+
+
 
 Route::namespace('Auth')->group(function () {
     Route::get('/login', 'LoginController@showLoginForm')->name('login');
