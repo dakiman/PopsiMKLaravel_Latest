@@ -4,6 +4,7 @@ return [
     'products' => 'ПРОДУКТИ',
     'news' => 'НОВОСТИ',
     'language' => 'Јазик',
+    'popsi' => 'ПОПСИ-Компани дооел',
     'contact' => 'Исконтактирајте не на: ',
     'email' => 'Е-Mail Адреса: info@popsibearings.com.mk',
     'phone' => 'Телефонски број: +389 (0)2 2460 480',

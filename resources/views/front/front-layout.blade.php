@@ -22,7 +22,7 @@
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top p-1 shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand p-0 m-0" href="/">
-				<img class="d-inline-block align-top " height="80%" width="80%" id="logo" src="/img/logo.jpg" alt="">
+				<img class="d-inline-block align-top " height="70%" width="70%" id="logo" src="/img/logo.jpg" alt="">
 			</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
 			 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +71,7 @@
 				</div>
 				<div class="offset-md-1 col-md-4 mx-auto my-auto ">
 					<ul class="footer-info">
-						<li>ПОПСИ-КОМПАНИ дооел</li>
+						<li>@lang('messages.popsi')</li>
 						<li>бул. Кузман Јосифовски Питу бр.30 Скопје, Македонија</li>
 						<li>@lang('messages.contact')</li>
 						<li>@lang('messages.email')</li>
