@@ -56,11 +56,17 @@ body {
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.5);
 }
 
-.list-group .list-group-item {
-  -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.9);
-  -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.9);
-  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.9);
+.list-group {
+  -webkit-box-shadow: 5px 3px 1px 4px rgba(57, 63, 72, 0.5);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    5px 3px 1px 4px rgba(57, 63, 72, 0.5);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         5px 3px 1px 4px rgba(57, 63, 72, 0.5); 
 }
+
+.list-group-item:hover {
+  background-color: rgb(177, 177, 177);
+  cursor: pointer;
+}
+
 
 .card > img {
   height: 180px;

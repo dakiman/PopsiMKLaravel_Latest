@@ -46,9 +46,9 @@
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							
 							@if (app()->getLocale() == 'mk')
-								<img class="p-1" src="http://lageri.mk/Images/mk-MK.gif" alt="">
+								<img class="p-1" src="{{asset('img/mk-flag.png')}}" alt="">
 							@else
-								<img class="p-1" src="http://lageri.mk/Images/en-GB.gif" alt="">
+								<img class="p-1" src="{{asset('img/en-flag.png')}}" alt="">
 							@endif
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">

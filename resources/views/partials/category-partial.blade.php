@@ -16,7 +16,7 @@
                     <div class="card item-card text-center border-muted rounded mx-auto">
                     <img class="card-img-top" src="{{Storage::url('/items/'.$item->getCoverPhoto() )}}" alt="Card image cap">
                         <div class="card-body text-center">
-                        <a href="/catalogue/items/{{$item->id}}"><div class="card-title ">{{$item->translateTitle()}}</div></a>
+                        <a href="/catalogue/items/{{$item->id}}"><div class="card-title cut-text">{{$item->translateTitle()}}</div></a>
                         </div>
                     </div>
                 </div>

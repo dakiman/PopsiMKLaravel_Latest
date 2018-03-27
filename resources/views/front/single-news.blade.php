@@ -8,7 +8,7 @@
                 <span class="h2">{{$news->translateTitle()}}</span>
                 <hr>
                 <img class="float-left p-2" src="{{Storage::url('/news/'.$news->pictures)}}" alt="">
-                <span class="lead">{{$news->translateDescription()}}</span> 
+                <span class="">{{$news->translateDescription()}}</span> 
             </div>
         </div>
     </div>

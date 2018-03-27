@@ -18,6 +18,7 @@ return [
     'skopje' => 'Skopje, Macedonia',
     'contact-greeting' => 'Send us a message!',
     'contact' => 'Contact',
+    'contact-single' => 'Contact',
     'home' => 'Home'
     
 ];

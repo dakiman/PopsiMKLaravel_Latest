@@ -18,6 +18,7 @@
 </header>
 @endif
 @include('front.categories')
+@if(!$news->isEmpty())
 <div class="container-fluid news-section">
 	<div class="row">
 		<div class="col-md-11 pt-2 mx-auto ">
@@ -28,10 +29,10 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-md-11 text-center mx-auto mt-3">
+		<div class="col-md-11 mx-auto mt-3">
 			<div class="news-container">
 				@foreach ($news as $singleNews)
-				<div class="card news-card">
+				<div class="card news-card text-center">
 					<img class="card-img-top img-fluid" src="{{Storage::url('/news/' . $singleNews->pictures )}}" alt="Card image cap">
 					<div class="card-body">
 						<a href="/news/{{$singleNews->id}}">
@@ -44,4 +45,5 @@
 		</div>
 	</div>
 </div>
+@endif
 @endsection
