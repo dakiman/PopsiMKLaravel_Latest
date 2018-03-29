@@ -1,10 +1,10 @@
 <?php
 return [
-    'catalogue' => 'Catalogue',
+    'catalogue' => 'Products',
     'products' => 'PRODUCTS',
     'news' => 'NEWS',
     'language' => 'Language',
-    'popsi' => 'POPSI-Company dooel',    
+    'popsi' => 'POPSI-Company dooel',
     'contact' => 'Contact us at: ',
     'email' => 'E-Mail address: info@popsibearings.com.mk',
     'phone' => 'Phone Number: +389 (0)2 2460 480',
@@ -19,6 +19,7 @@ return [
     'contact-greeting' => 'Send us a message!',
     'contact' => 'Contact',
     'contact-single' => 'Contact',
-    'home' => 'Home'
-    
+    'home' => 'Home',
+    'partners' => 'Partners'
+
 ];

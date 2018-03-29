@@ -4,7 +4,7 @@
             <div class="media-body my-auto px-2">
                 <a href="/catalogue/categories/{{$category->id}}"><img class="float-left m-3" src="{{Storage::url('/categories/'.$category->picture)}}" alt="Generic placeholder image"></a>
                 <h5 class="mt-2">
-                    <a href="/catalogue/categories/{{$category->id}}">{{$category->translateTitle()}}</a>
+                    <a style="font-size: 24px;" class="font-weight-bold" href="/catalogue/categories/{{$category->id}}">{{$category->translateTitle()}}</a>
                 </h5>
                 {{$category->translateDescription()}}
             </div>
@@ -16,7 +16,7 @@
                     <div class="card item-card text-center border-muted rounded mx-auto">
                     <img class="card-img-top" src="{{Storage::url('/items/'.$item->getCoverPhoto() )}}" alt="Card image cap">
                         <div class="card-body text-center">
-                        <a href="/catalogue/items/{{$item->id}}"><div class="card-title cut-text">{{$item->translateTitle()}}</div></a>
+                        <a href="/catalogue/items/{{$item->id}}"><div class="card-title cut-text ">{{$item->translateTitle()}}</div></a>
                         </div>
                     </div>
                 </div>

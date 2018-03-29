@@ -19,7 +19,7 @@
 </head>
 <body>
 	<!-- Navigation -->
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top p-1 shadow">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top p-0 shadow">
 		<div class="container-fluid">
 			<a class="navbar-brand p-0 m-0" href="/">
 				<img class="d-inline-block align-top " height="70%" width="70%" id="logo" src="/img/logo.jpg" alt="">
@@ -28,13 +28,16 @@
 			 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
+			<div class="collapse navbar-collapse p-1" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
 						<a class="nav-link" href="/">@lang('messages.home')</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/catalogue">@lang('messages.catalogue')</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/partners">@lang('messages.partners')</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/about-us">@lang('messages.about-us-title')</a>
@@ -44,11 +47,10 @@
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							
 							@if (app()->getLocale() == 'mk')
-								<img class="p-1" src="{{asset('img/mk-flag.png')}}" alt="">
+								<img class="" src="{{asset('img/mk-flag.png')}}" alt="">
 							@else
-								<img class="p-1" src="{{asset('img/en-flag.png')}}" alt="">
+								<img class="" src="{{asset('img/en-flag.png')}}" alt="">
 							@endif
 						</a>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">

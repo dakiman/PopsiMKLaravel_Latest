@@ -22,6 +22,9 @@ Route::get('/about-us', function () {
 Route::get('/contact', function () {
     return view('front.contact');
 });
+Route::get('/partners', function () {
+    return view('front.partners');
+});
 
 
 Route::namespace('Auth')->group(function () {
@@ -36,10 +39,10 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
 
     Route::resource('categories', 'CategoryController');
     Route::get('/categories/delete/{category}', 'CategoryController@delete');
-    
+
     Route::resource('items', 'ItemController');
     Route::get('/items/delete/{item}', 'ItemController@delete');
-   
+
     Route::resource('news', 'NewsController');
     Route::get('/news/delete/{news}', 'NewsController@delete');
 

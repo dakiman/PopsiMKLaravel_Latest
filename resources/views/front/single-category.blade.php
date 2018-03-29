@@ -1,4 +1,4 @@
-@extends('front.front-layout') 
+@extends('front.front-layout')
 @section('content')
 <div class="container-fluid my-4 pt-3">
     <div class="row">

@@ -1,6 +1,6 @@
 <?php
 return [
-    'catalogue' => 'Каталог',
+    'catalogue' => 'Продукти',
     'products' => 'ПРОДУКТИ',
     'news' => 'НОВОСТИ',
     'language' => 'Јазик',
@@ -18,5 +18,6 @@ return [
     'skopje' => 'Скопје, Македонија',
     'contact-greeting' => 'Испратете ни порака!',
     'contact-single' => 'Контакт',
-    'home' => 'Дома'
+    'home' => 'Дома',
+    'partners' => 'Партнери'
 ];

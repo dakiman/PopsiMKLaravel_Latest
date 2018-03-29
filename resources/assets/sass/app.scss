@@ -11,15 +11,15 @@
 }
 
 .carousel-indicators .active {
-    background-color: transparentize($primary-color, 0.3);    
+    background-color: transparentize($primary-color, 0.3);
 }
 
 .active-category {
     background: $primary-color;
     color: white;
-    -webkit-box-shadow: 3px 2px 5px 4px rgba(57, 63, 72, 0.5);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    3px 2px 5px 4px rgba(57, 63, 72, 0.5);  /* Firefox 3.5 - 3.6 */
-    box-shadow:         3px 2px 5px 4px rgba(57, 63, 72, 0.5); 
+    -webkit-box-shadow: 0 3px 5px 5px rgba(57, 63, 72, 0.5);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0 3px 5px 5px rgba(57, 63, 72, 0.5);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0 3px 5px 5px rgba(57, 63, 72, 0.5);
 }
 
 .active-category:hover {
@@ -36,13 +36,9 @@
 
 $color : rgb(12, 7, 31);
 .navbar {
-    // background: #0E062D;
     background: $color;
-    // border-bottom: 2px solid white;
-    // background: red;
 }
 footer {
-    /* background-image: url("/img/background.png"); */
     background-color: $primary-color;
 }
 .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link{

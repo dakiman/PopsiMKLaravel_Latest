@@ -4,11 +4,11 @@
     <div class="col-md-11 text-center mx-auto mt-3">
       <div class="card-deck">
         @foreach ($categories as $category)
-        <div class="category-card card border mx-2 border-primary rounded">
+        <div class="category-card card border border-primary rounded">
           <img class="card-img-top mx-auto" src="{{Storage::url('/categories/'.$category->picture)}}" alt="Card image cap">
-          <a href="/catalogue/categories/{{$category->id}}">
-            <div class="card-body text-center">
-              <div class="card-title ">{{ $category->translateTitle() }}</div>
+          <a  href="/catalogue/categories/{{$category->id}}">
+            <div class=" card-body text-center">
+              <div class="card-title">{{ $category->translateTitle() }}</div>
             </div>
           </a>
         </div>
@@ -25,7 +25,7 @@
     <div class="col-md-3">
       <div class="list-group">
         @foreach ($categories as $category)
-        <div data-target="{{$category->id}}" href="#" class="list-group-item @if($category->id == $categories[0]["id"]) active-category @endif">{{ $category->translateTitle() }}</div>
+        <div style="font-size: 16px;" data-target="{{$category->id}}" href="#" class="list-group-item @if($category->id == $categories[0]["id"]) active-category @endif font-weight-bold">{{ $category->translateTitle() }}</div>
         @endforeach
       </div>
     </div>
