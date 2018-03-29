@@ -71,6 +71,7 @@ body {
 .card > img {
   height: 192px;
   width: 290px;
+  max-width: 100%;
 }
 
 .item-card {
