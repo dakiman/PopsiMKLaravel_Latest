@@ -11,16 +11,16 @@
     },
     "devDependencies": {
         "axios": "^0.17",
-        "bootstrap": "^4.0.0-beta",
-        "cross-env": "^5.1",
-        "jquery": "^3.2.1",
-        "laravel-mix": "^1.0",
-        "lodash": "^4.17.4",
-        "popper.js": "^1.12.9"
+        "bootstrap": "^4.1.0",
+        "cross-env": "^5.1.4",
+        "jquery": "^3.3.1",
+        "laravel-mix": "^1.7.2",
+        "lodash": "^4.17.5",
+        "popper.js": "^1.14.3"
     },
     "dependencies": {
         "@types/jquery": "^3.3.1",
-        "ts-loader": "^3.1.1",
-        "typescript": "^2.6.1"
+        "ts-loader": "^3.5.0",
+        "typescript": "^2.8.1"
     }
 }

@@ -12,7 +12,7 @@
         <div class="card-body">
             <div class="row mx-auto">
                 @foreach ($category->activeItems() as $item)
-                <div class="col-md-3 px-1 py-1">
+                <div class="col px-1 py-1">
                     <div class="card item-card text-center border-muted rounded mx-auto">
                     <img class="card-img-top" src="{{Storage::url('/items/'.$item->getCoverPhoto() )}}" alt="Card image cap">
                         <div class="card-body text-center">
