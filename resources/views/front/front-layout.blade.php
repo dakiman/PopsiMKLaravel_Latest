@@ -77,10 +77,12 @@
 				<div class="offset-md-1 col-md-4 mx-auto my-auto ">
 					<ul class="footer-info">
 						<li>@lang('messages.popsi')</li>
-						<li>@lang('messages.address') @lang('messages.skopje')</li>
+						<li>@lang('messages.address') </li>
+						<li>@lang('messages.skopje')</li>
 						<li>@lang('messages.contact')</li>
 						<li>@lang('messages.email')</li>
 						<li>@lang('messages.phone')</li>
+						<li>@lang('messages.mobile')</li>
 					</ul>
 				</div>
 				<div class="col-md-1 my-auto ">

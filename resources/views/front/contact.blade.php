@@ -18,6 +18,16 @@
             <div class="card my-1" style="width: 100%;">
                 <div class="card-body">
                     <p class="card-text p-3">
+                        <span style="font-size: 20px;"><b>@lang('messages.sales')</b></span>
+                        <br> Tel: +389 (0)2 2460 316
+                        <br> Mob: +389 (0)71 279 219
+                        <br> E-Mail: info@lageri.mk
+                    </p>
+                </div>
+            </div>
+            <div class="card my-1" style="width: 100%;">
+                <div class="card-body">
+                    <p class="card-text p-3">
                         <span style="font-size: 20px;"><b>@lang('messages.aleksandar')</b></span>
                         <br><span class="text-muted">@lang('messages.CEO')</span>
                         <br>тел: +389 (0)2 2460 480

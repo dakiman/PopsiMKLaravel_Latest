@@ -51,4 +51,14 @@ class GalleryController extends Controller
             return redirect()->back()->with('message', 'Проблем при промена. (мора да има барем една слика во распоредот)');
         }
     }
+
+    public function delete(CarouselPic $carouselPic) {
+       try {
+        $carouselPic->delete();
+       } catch(Exception $e) {
+        return redirect()->back()->with('message', 'Бришењето не беше успешно.');
+       }
+       return redirect()->back()->with('message', 'Успешно избришана слика.');
+       
+    }
 }

@@ -4,7 +4,7 @@
             <div class="media-body my-auto px-2">
                 <a href="/catalogue/categories/{{$category->id}}"><img @mobile style="width: 90%;" @endmobile class="float-left m-3" src="{{Storage::url('/categories/'.$category->picture)}}" alt="Generic placeholder image"></a>
                 <h5 class="mt-2">
-                    <a style="font-size: 24px;" class="font-weight-bold" href="/catalogue/categories/{{$category->id}}">{{$category->translateTitle()}}</a>
+                    <a style="font-size: 24px;" class="font-weight-bold" href="/catalogue/categories/{{$category->id}}">{{ucfirst($category->translateTitle())}}</a>
                 </h5>
                 {{$category->translateDescription()}}
             </div>

@@ -6,7 +6,7 @@
             <div class="pl-3 mx-auto btn-group" role="group" aria-label="Basic example">
                 <a href="/catalogue"><button type="button" class="btn btn-secondary">@lang('messages.catalogue') </button></a>
                 <i class="my-auto font-primary mx-2 fas fa-angle-right"></i>
-                <button type="button" class="btn btn-primary">{{$category->translateTitle()}}</button>
+                <button type="button" class="btn btn-primary">{{ucfirst($category->translateTitle())}}</button>
             </div>
         </div>
     </div>

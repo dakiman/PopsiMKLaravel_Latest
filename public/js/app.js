@@ -38625,6 +38625,7 @@ class GalleryView {
             <div class="cut-text panel-footer">` + name + `</div>
             <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="prepend-btn btn btn-primary m-a-1">Додади напред</button>
             <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="append-btn btn btn-success m-a-1">Додади позади</button>
+            <a href="/admin/gallery/delete/` + id + `"><button  style="white-space:normal;" class="btn btn-danger m-a-1">Избриши</button></a>
         </div>
     </div>
         `;

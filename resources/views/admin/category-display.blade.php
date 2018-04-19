@@ -5,7 +5,7 @@
         @foreach ($categories as $category)
         <div class="col-md-2 panel text-center m-x-2">
             <div class="panel-body">
-                <img style="height:150px;width:150px;" src="{{Storage::url('/categories/'.$category->picture)}}" alt="">
+                <img style="height:150px;width:100%;" src="{{Storage::url('/categories/'.$category->picture)}}" alt="">
                 <div>{{$category->title_mk}}</div>
                 <a href="/admin/categories/{{$category->id}}/edit"><button class="btn btn-success btn-block m-b-1"><i class="fas fa-edit"></i> Промени</button></a>
                 <a href="/admin/categories/delete/{{$category->id}}"><button class="btn btn-danger btn-block m-b-1"><i class="fas fa-trash-alt"></i> Избриши</button></a>

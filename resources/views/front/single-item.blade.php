@@ -153,7 +153,7 @@
       <div class="pl-3 mx-auto btn-group" role="group" aria-label="Basic example">
         <a href="/catalogue"><button type="button" class="btn btn-secondary">@lang('messages.catalogue') </button></a>
         <i class="my-auto font-primary mx-2 fas fa-angle-right"></i>
-        <a href="/catalogue/categories/{{$item->category->id}}"><button type="button" class="btn btn-secondary">{{$item->category->translateTitle()}}</button></a>
+        <a href="/catalogue/categories/{{$item->category->id}}"><button type="button" class="btn btn-secondary">{{ucfirst($item->category->translateTitle())}}</button></a>
         <i class="my-auto font-primary mx-2 fas fa-angle-right"></i>
         <button type="button" class="btn btn-primary cut-text">{{$item->translateTitle()}}</button>
       </div>
