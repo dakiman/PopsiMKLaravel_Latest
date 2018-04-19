@@ -24,7 +24,7 @@ class GalleryView {
                 <img class="img-responsive" style="width:150px;height:150px;" src="/storage//carousel/` + name + `" alt="">
             </div>
             <div class="cut-text panel-footer">` + name + `</div>
-            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="remove-btn btn btn-danger m-a-1">Отстрани</button>                        
+            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="remove-btn btn btn-danger m-a-1">Отстрани</button>
         </div>
     </div>
         `
@@ -32,7 +32,7 @@ class GalleryView {
 
     getPictureInputField = (name: string, id: string) => {
         return `
-        <input id="`+ id + `" type="text" name="order[]" value="` + name + `">   
+        <input id="`+ id + `" type="text" name="order[]" value="` + name + `">
         `
     }
 
@@ -46,7 +46,6 @@ class GalleryView {
             <div class="cut-text panel-footer">` + name + `</div>
             <button style="white-space:normal;" data-id="`+ id + `" data-picture="` + name + `" class="prepend-btn btn btn-primary m-a-1">Додади напред</button>
             <button style="white-space:normal;" data-id="`+ id + `" data-picture="` + name + `" class="append-btn btn btn-success m-a-1">Додади позади</button>
-            <a href="/admin/gallery/delete/` + id + `"><button  style="white-space:normal;" class="btn btn-danger m-a-1">Избриши</button></a>
         </div>
     </div>
         `
