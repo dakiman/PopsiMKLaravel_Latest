@@ -90,6 +90,16 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
+        if(isset($request->cat_img)) {
+            $pictures = array();
+            foreach($request->cat_img as $image)
+            {
+                $imageName = uniqid('img_') . '.' . $image->getClientOriginalExtension();
+                Storage::disk('local')->put('/public/items/'.$imageName, file_get_contents($image));
+                array_push($pictures, $imageName);
+            }
+            $item->pictures = serialize($pictures);
+        }
         if($item->fill($request->all()) && $item->save()){
             $message = "Податоците се подесени.";
         } else {

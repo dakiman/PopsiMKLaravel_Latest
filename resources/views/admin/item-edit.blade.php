@@ -33,6 +33,15 @@
                                 <textarea rows="6"  class="form-control" type="text" name="description_mk" id="description_mk" required>{{$item->description_mk}}</textarea>
                             </div>
                         </div>
+                        <div class="form-group ">
+                            <button class="btn btn-success btn-block pic-btn" type="button">
+                                    +Слика
+                            </button>
+                            <label for="cat_img" >Додади слика: </label>
+                            <div id="append-helper">
+                                <input class="form-control m-b-3" type="file" name="cat_img[]">
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
@@ -43,4 +52,10 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('optional-scripts')
+<script>
+    App.getItemsView();
+</script>
 @endsection

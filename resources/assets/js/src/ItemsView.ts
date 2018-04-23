@@ -29,7 +29,7 @@ class ItemsView {
     }    
 
     addPictureField = () => {
-        $('#pic-label').append(this.fileInput);
+        $('#append-helper').append(this.fileInput);
     }
     
 }

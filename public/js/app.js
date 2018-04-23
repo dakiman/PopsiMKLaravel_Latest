@@ -38547,7 +38547,7 @@ class ItemsView {
             window.location.replace('/admin/items?cat=' + $(select).val());
         };
         this.addPictureField = () => {
-            $('#pic-label').append(this.fileInput);
+            $('#append-helper').append(this.fileInput);
         };
         this.initItems();
     }
