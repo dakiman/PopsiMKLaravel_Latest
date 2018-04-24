@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\News;
 use App\Item;
+use App\User;
 use App\CarouselOrder;
+// use Mail;
+use App\Mail\ContactMessage;
+use App\Mail\ContactUs;
 
 
 class HomepageController extends Controller
@@ -30,7 +34,7 @@ class HomepageController extends Controller
 
     public function category($id) {
         $category = Category::find($id);
-        return view('front.single-category', ['category'=>$category]);        
+        return view('front.single-category', ['category'=>$category]);
     }
 
     public function item($id) {
@@ -50,5 +54,15 @@ class HomepageController extends Controller
         return view ('front.single-news', ['news'=>$news]);
     }
 
-
+    public function contact(Request $request) {
+      $data = request()->all();
+      try {
+        \Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
+          ->send(new ContactUs($data));
+        return redirect()->back()->with('message', 'Sent!');
+      }
+      catch (Exception $e) {
+        return redirect()->back()->with('message', 'Failed.');
+      }
+    }
 }

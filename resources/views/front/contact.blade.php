@@ -1,4 +1,4 @@
-@extends('front.front-layout') 
+@extends('front.front-layout')
 @section('content')
 <div class="container my-4">
     <div class="row ">
@@ -50,21 +50,23 @@
         </div>
         <div class="offset-md-2 col-md-6 mx-auto my-auto">
             <div class="bg-white p-4 ">
+                <h1 class="text-center text-success">{{session('message')}}</h1>
                 <h1 class="mb-4 text-center">@lang('messages.contact-greeting')</h1>
-                <form>
+                <form method="POST" action="/contact">
+                  {{ csrf_field() }}
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">Email</label>
-                            <input type="email" class="sharp form-control" id="inputEmail4" placeholder="Email" required>
+                            <label for="email">Email</label>
+                            <input type="email" class="sharp form-control" id="email" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputName4">Name</label>
-                            <input type="Name" class="sharp form-control" id="inputName4" placeholder="Name" required>
+                            <label for="name">Name</label>
+                            <input type="Name" class="sharp form-control" id="name" name="name" placeholder="Name" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Message</label>
-                        <textarea class="sharp form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                        <label for="message">Message</label>
+                        <textarea class="sharp form-control" id="message" name="body" rows="5"></textarea>
                     </div>
                     <button type="submit" class="sharp btn btn-block btn-primary">Send</button>
                 </form>

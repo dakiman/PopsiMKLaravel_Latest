@@ -61,7 +61,7 @@
 </style>
 <body class="text-center">
     @if(session("invalid"))
-    Hey! {{ session("invalid") }} 
+    Hey! {{ session("invalid") }}
     @endif
     <form class="form-signin" method="POST" action="/login">
         {{csrf_field()}}

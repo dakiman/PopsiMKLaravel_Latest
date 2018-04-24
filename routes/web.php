@@ -22,6 +22,7 @@ Route::get('/about-us', function () {
 Route::get('/contact', function () {
     return view('front.contact');
 });
+Route::post('/contact', 'HomepageController@contact');
 Route::get('/partners', function () {
     return view('front.partners');
 });
