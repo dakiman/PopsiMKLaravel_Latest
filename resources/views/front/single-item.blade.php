@@ -151,11 +151,15 @@
   <div class="row">
     <div class="col-md-11 mx-auto">
       <div class="pl-3 mx-auto btn-group" role="group" aria-label="Basic example">
-        <a href="/catalogue"><button type="button" class="btn btn-secondary">@lang('messages.catalogue') </button></a>
-        <i class="my-auto font-primary mx-2 fas fa-angle-right"></i>
-        <a href="/catalogue/categories/{{$item->category->id}}"><button type="button" class="btn btn-secondary">{{ucfirst($item->category->translateTitle())}}</button></a>
-        <i class="my-auto font-primary mx-2 fas fa-angle-right"></i>
-        <button type="button" class="btn btn-primary cut-text">{{$item->translateTitle()}}</button>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/catalogue">@lang('messages.catalogue')</a></li>
+            <li class="breadcrumb-item"><a href="/catalogue/categories/{{$item->category->id}}">{{ucfirst($item->category->translateTitle())}}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{$item->translateTitle()}}</li>
+          </ol>
+        </nav>
+
+
       </div>
     </div>
   </div>
