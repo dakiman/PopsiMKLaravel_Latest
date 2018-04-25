@@ -180,4 +180,12 @@ body {
     /* width: 150px; */
   }
 }
+@media (max-width: 360px) {
+  .item-card > img {
+    max-width: 240px;
+  }
+  .category-card > img {
+    max-width: 260px;
+  }
+}
 

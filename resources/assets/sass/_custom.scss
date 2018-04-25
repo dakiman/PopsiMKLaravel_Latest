@@ -24,6 +24,7 @@ $green:   #469408 !default;
 $teal:    #20c997 !default;
 $cyan:    #029ACF !default;
 
+$breadcrumb-divider: quote(">");
 
 // DOESNT WORK PROPERLY
 // BEST LEAVE ALL COLORS PRESENT IN THE MAP
@@ -38,7 +39,7 @@ $theme-colors: (
   dark: $gray-800,
   any-custom-color: #bcaa9a,
   any-other-custom-color: $pink
-  
+
 );
 
 
