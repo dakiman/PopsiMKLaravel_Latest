@@ -38507,6 +38507,7 @@ const axios_1 = __webpack_require__(3);
 const $ = __webpack_require__(1);
 class CategoriesView {
     constructor() {
+        this.item = '';
         this.activateitem = (e) => {
             let checker = e.currentTarget;
             let id = $(checker).attr('id');
@@ -38514,10 +38515,24 @@ class CategoriesView {
                 .then((result) => { })
                 .catch((error) => console.log(error));
         };
+        this.prepItem = (e) => {
+            let btn = e.currentTarget;
+            this.item = btn.dataset['id'];
+        };
+        this.deleteItem = () => {
+            axios_1.default.post('/api/category/delete/' + this.item)
+                .then(result => {
+                console.log(result);
+                $('.' + this.item).hide();
+            })
+                .catch(error => console.log(error));
+        };
         this.initCategories();
     }
     initCategories() {
         $('.active-check').on('click', this.activateitem);
+        $('.btn-delete').on('click', this.prepItem);
+        $('#btn-confirm').on('click', this.deleteItem);
     }
 }
 exports.default = CategoriesView;
@@ -38535,6 +38550,7 @@ const $ = __webpack_require__(1);
 class ItemsView {
     constructor() {
         this.fileInput = '<input class="form-control m-b-3" type="file" name="cat_img[]" id="cat_img" >';
+        this.item = '';
         this.activateItem = (e) => {
             let checker = e.currentTarget;
             let id = $(checker).attr('id');
@@ -38549,12 +38565,26 @@ class ItemsView {
         this.addPictureField = () => {
             $('#append-helper').append(this.fileInput);
         };
+        this.prepItem = (e) => {
+            let btn = e.currentTarget;
+            this.item = btn.dataset['id'];
+        };
+        this.deleteItem = () => {
+            axios_1.default.post('/api/item/delete/' + this.item)
+                .then(result => {
+                console.log(result);
+                $('.' + this.item).hide();
+            })
+                .catch(error => console.log(error));
+        };
         this.initItems();
     }
     initItems() {
         $('.active-check').on('click', this.activateItem);
         $('#selector').on('change', this.getItems);
         $('.pic-btn').on('click', this.addPictureField);
+        $('.btn-delete').on('click', this.prepItem);
+        $('#btn-confirm').on('click', this.deleteItem);
     }
 }
 exports.default = ItemsView;
@@ -38571,6 +38601,7 @@ const axios_1 = __webpack_require__(3);
 const $ = __webpack_require__(1);
 class NewsView {
     constructor() {
+        this.item = '';
         this.activateitem = (e) => {
             let checker = e.currentTarget;
             let id = $(checker).attr('id');
@@ -38578,10 +38609,24 @@ class NewsView {
                 .then((result) => { })
                 .catch((error) => console.log(error));
         };
+        this.prepItem = (e) => {
+            let btn = e.currentTarget;
+            this.item = btn.dataset['id'];
+        };
+        this.deleteItem = () => {
+            axios_1.default.post('/api/news/delete/' + this.item)
+                .then(result => {
+                console.log(result);
+                $('.' + this.item).hide();
+            })
+                .catch(error => console.log(error));
+        };
         this.initNews();
     }
     initNews() {
         $('.active-check').on('click', this.activateitem);
+        $('.btn-delete').on('click', this.prepItem);
+        $('#btn-confirm').on('click', this.deleteItem);
     }
 }
 exports.default = NewsView;
@@ -38594,9 +38639,11 @@ exports.default = NewsView;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+const axios_1 = __webpack_require__(3);
 const $ = __webpack_require__(1);
 class GalleryView {
     constructor() {
+        this.item = '';
         this.getPictureDiv = (name, id) => {
             return `
         <div class="col-md-3">
@@ -38653,6 +38700,18 @@ class GalleryView {
             $(button).parent().parent().hide();
             $('#' + id).remove();
         };
+        this.prepItem = (e) => {
+            let btn = e.currentTarget;
+            this.item = btn.dataset['id'];
+        };
+        this.deleteItem = () => {
+            axios_1.default.post('/api/gallery/delete/' + this.item)
+                .then(result => {
+                console.log(result);
+                $('.' + this.item).hide();
+            })
+                .catch(error => console.log(error));
+        };
         this.initGallery();
     }
     initGallery() {
@@ -38662,6 +38721,8 @@ class GalleryView {
         $('.submit-order-btn').on('click', function () {
             $('.gallery-order-form').submit();
         });
+        $('.btn-delete').on('click', this.prepItem);
+        $('#btn-confirm').on('click', this.deleteItem);
     }
 }
 exports.default = GalleryView;

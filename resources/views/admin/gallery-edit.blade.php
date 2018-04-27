@@ -1,4 +1,4 @@
-@extends('admin.admin-layout') 
+@extends('admin.admin-layout')
 @section('content')
 <div class="container-fluid">
     <div class="row">
@@ -15,9 +15,9 @@
         <div class="col-md-6 text-center">
             <span class="center-text font-size-40">ДОСТАПНИ СЛИКИ</span>
             <div class="row active-pictures">
-                @foreach ($allPictures as $picture) 
+                @foreach ($allPictures as $picture)
                 @if(!in_array($picture->name, $activePictures))
-                <div class="col-md-3">
+				<div class="{{$picture->id}} col-md-3">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <img class="img-responsive" style="width:150px;height:150px;" src="{{Storage::url('/carousel/'.$picture->name)}}" alt="">
@@ -25,10 +25,10 @@
                         <div class="cut-text panel-footer">{{$picture->name}}</div>
                         <button style="white-space:normal;" data-id="{{$picture->id}}" data-picture="{{$picture->name}}" class="prepend-btn btn btn-primary m-a-1">Додади напред</button>
                         <button style="white-space:normal;" data-id="{{$picture->id}}" data-picture="{{$picture->name}}" class="append-btn btn btn-success m-a-1">Додади позади</button>
-                        <a href="/admin/gallery/delete/{{$picture->id}}"><button  style="white-space:normal;" class="btn btn-danger m-a-1">Избриши</button></a>
+						<button data-toggle="modal" data-target="#ticket-modal" data-id="{{$picture->id}}" style="white-space:normal;" class="btn btn-delete btn-danger m-a-1">Избриши</button>
                     </div>
                 </div>
-                @endif 
+                @endif
                 @endforeach
             </div>
         </div>
@@ -43,10 +43,10 @@
                             <img class="img-responsive" style="width:150px;height:150px;" src="{{Storage::url('/carousel/'.$picture->name)}}" alt="">
                         </div>
                         <div class="cut-text panel-footer">{{$picture->name}}</div>
-                        <button style="white-space:normal;" data-id="{{$picture->id}}" data-picture="{{$picture->name}}" class="remove-btn btn btn-danger m-a-1">Отстрани</button>                        
+                        <button style="white-space:normal;" data-id="{{$picture->id}}" data-picture="{{$picture->name}}" class="remove-btn btn btn-danger m-a-1">Отстрани</button>
                     </div>
                 </div>
-                @endif 
+                @endif
                 @endforeach
             </div>
         </div>
@@ -54,14 +54,16 @@
 </div>
 <form method="POST" class="gallery-order-form" style="display:none;" action="/admin/gallery/update">
     {{ csrf_field() }}
-    @foreach ($allPictures as $picture) 
+    @foreach ($allPictures as $picture)
     @if(in_array($picture->name, $activePictures))
-    <input name="order[]" type="text" id="{{$picture->id}}" value="{{$picture->name}}"> 
-    @endif 
+    <input name="order[]" type="text" id="{{$picture->id}}" value="{{$picture->name}}">
+    @endif
     @endforeach
 </form>
+
+@include('partials.modal')
 @endsection
- 
+
 @section('optional-scripts')
 <script>
     App.getGalleryView();

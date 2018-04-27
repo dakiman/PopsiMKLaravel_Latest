@@ -2,7 +2,8 @@ import axios from 'axios';
 import $ = require('jquery');
 
 class GalleryView {
-
+    
+    item:string = '';
     constructor() {
         this.initGallery();
     }
@@ -14,6 +15,8 @@ class GalleryView {
         $('.submit-order-btn').on('click', function() {
             $('.gallery-order-form').submit();
         })
+        $('.btn-delete').on('click', this.prepItem)
+        $('#btn-confirm').on('click', this.deleteItem)
     }
 
     getPictureDiv = (name: string, id: string) => {
@@ -76,6 +79,20 @@ class GalleryView {
         $('.active-pictures').append(this.getPicAvailableDiv(picture, id));
         $(button).parent().parent().hide();
         $('#' + id).remove();
+    }
+
+    prepItem = (e:JQuery.Event) =>  {
+        let btn = e.currentTarget as HTMLButtonElement
+        this.item = btn.dataset['id'] as string;
+    }
+
+    deleteItem = () => {
+        axios.post('/api/gallery/delete/' + this.item)
+        .then(result => {
+            console.log(result)
+            $('.' + this.item).hide();
+        })
+        .catch(error => console.log(error))
     }
 
 }

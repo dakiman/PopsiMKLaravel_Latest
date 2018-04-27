@@ -11,7 +11,7 @@ use App\CarouselOrder;
 class GalleryController extends Controller
 {
     public function edit() {
-        $order = CarouselOrder::all()->take(1);        
+        $order = CarouselOrder::all()->take(1);
         $activePictures = unserialize($order[0]->order);
         $allPictures = CarouselPic::all();
         return view('admin.gallery-edit', ['activePictures'=>$activePictures, 'allPictures'=>$allPictures]);
@@ -53,12 +53,11 @@ class GalleryController extends Controller
     }
 
     public function delete(CarouselPic $carouselPic) {
-       try {
-        $carouselPic->delete();
-       } catch(Exception $e) {
-        return redirect()->back()->with('message', 'Бришењето не беше успешно.');
-       }
-       return redirect()->back()->with('message', 'Успешно избришана слика.');
-       
+        try {
+            $carouselPic->delete();
+            return response(['message'=>'Item was deleted'], 200);
+        } catch(Exception $e) {
+            return response(['message' => 'Item was NOT deleted'], 401);
+        }
     }
 }

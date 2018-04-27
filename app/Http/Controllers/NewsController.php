@@ -94,8 +94,12 @@ class NewsController extends Controller
 
 
     public function delete(News $news) {
-        $news->delete();
-        return redirect()->back();
+        try {
+            $news->delete();
+            return response(['message'=>'Category was deleted'], 200);
+        } catch(Exception $e) {
+            return response(['message' => 'Category was NOT deleted'], 401);
+        }
     }
 
     /**

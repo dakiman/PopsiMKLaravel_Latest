@@ -26,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admin.category-add');        
+        return view('admin.category-add');
     }
 
     /**
@@ -96,8 +96,12 @@ class CategoryController extends Controller
     }
 
     public function delete(Category $category) {
-        $category->delete();
-        return redirect()->back();
+        try {
+            $category->delete();
+            return response(['message'=>'Category was deleted'], 200);
+        } catch(Exception $e) {
+            return response(['message' => 'Category was NOT deleted'], 401);
+        }
     }
 
     /**

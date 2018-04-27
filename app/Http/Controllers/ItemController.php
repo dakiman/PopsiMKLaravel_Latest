@@ -7,7 +7,6 @@ use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-
 class ItemController extends Controller
 {
     /**
@@ -30,7 +29,7 @@ class ItemController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('admin.item-add', ['categories' => $categories]);        
+        return view('admin.item-add', ['categories' => $categories]);
     }
 
     /**
@@ -44,14 +43,13 @@ class ItemController extends Controller
         $item = Item::create($request->all());
         $pictures = array();
         $i = 0;
-        foreach($request->cat_img as $image)
-        {
+        foreach ($request->cat_img as $image) {
             $imageName = uniqid('img_') . '.' . $image->getClientOriginalExtension();
             Storage::disk('local')->put('/public/items/'.$imageName, file_get_contents($image));
             array_push($pictures, $imageName);
         }
         $item->pictures = serialize($pictures);
-        if($item->save()){
+        if ($item->save()) {
             $message = "Успешно додадено.";
         } else {
             $message = "Имаше проблем при додавање.";
@@ -67,7 +65,7 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+//
     }
 
     /**
@@ -90,29 +88,33 @@ class ItemController extends Controller
      */
     public function update(Request $request, Item $item)
     {
-        if(isset($request->cat_img)) {
+        if (isset($request->cat_img)) {
             $pictures = array();
-            foreach($request->cat_img as $image)
-            {
+            foreach ($request->cat_img as $image) {
                 $imageName = uniqid('img_') . '.' . $image->getClientOriginalExtension();
                 Storage::disk('local')->put('/public/items/'.$imageName, file_get_contents($image));
                 array_push($pictures, $imageName);
             }
             $item->pictures = serialize($pictures);
         }
-        if($item->fill($request->all()) && $item->save()){
+        if ($item->fill($request->all()) && $item->save()) {
             $message = "Податоците се подесени.";
         } else {
             $message = "Проблем при промени.";
         }
         return redirect()->back()->with([
-            'message' => $message,
-        ]);
+                'message' => $message,
+            ]);
     }
 
-    public function delete(Item $item) {
-        $item->delete();
-        return redirect()->back();
+    public function delete(Item $item)
+    {
+        try {
+            $item->delete();
+            return response(['message'=>'Item was deleted'], 200);
+        } catch(Exception $e) {
+            return response(['message' => 'Item was NOT deleted'], 401);
+        }
     }
 
     /**
@@ -123,15 +125,16 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+//
     }
 
-    public function toggle(Item $item) {
-        try{
+    public function toggle(Item $item)
+    {
+        try {
             $item->active = !$item->active;
             $item->save();
             return $item->active ? 1 : 0;
-        } catch( \Exception $e ) {
+        } catch (\Exception $e) {
             return $e->getMessage();
         }
     }

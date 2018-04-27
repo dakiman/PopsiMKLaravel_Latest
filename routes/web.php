@@ -39,17 +39,17 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'AdminController@index');
 
     Route::resource('categories', 'CategoryController');
-    Route::get('/categories/delete/{category}', 'CategoryController@delete');
+    // Route::get('/categories/delete/{category}', 'CategoryController@delete');
 
     Route::resource('items', 'ItemController');
-    Route::get('/items/delete/{item}', 'ItemController@delete');
+    // Route::get('/items/delete/{item}', 'ItemController@delete');
 
     Route::resource('news', 'NewsController');
-    Route::get('/news/delete/{news}', 'NewsController@delete');
+    // Route::get('/news/delete/{news}', 'NewsController@delete');
 
     Route::get('/gallery', 'GalleryController@edit');
     Route::get('/gallery/create', 'GalleryController@create');
     Route::post('/gallery/store', 'GalleryController@store');
     Route::post('/gallery/update', 'GalleryController@update');
-    Route::get('/gallery/delete/{carouselPic}', 'GalleryController@delete');
+    // Route::get('/gallery/delete/{carouselPic}', 'GalleryController@delete');
 });

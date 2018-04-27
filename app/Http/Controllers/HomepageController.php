@@ -12,14 +12,14 @@ use App\CarouselOrder;
 use App\Mail\ContactMessage;
 use App\Mail\ContactUs;
 
-
 class HomepageController extends Controller
 {
-    public function home() {
+    public function home()
+    {
         $categories = Category::where('active', 1)->get();
         $news = News::where('active', 1)->get();
         $order = CarouselOrder::all()->take(1);
-        if(!$order->isEmpty()){
+        if (!$order->isEmpty()) {
             $pictures = unserialize($order[0]->order);
         } else {
             $pictures = null;
@@ -27,42 +27,47 @@ class HomepageController extends Controller
         return view('front.home', ['categories'=>$categories, 'news'=>$news, 'pictures'=>$pictures]);
     }
 
-    public function catalogue() {
+    public function catalogue()
+    {
         $categories = Category::where('active', 1)->get();
         return view('front.catalogue', ['categories'=>$categories]);
     }
 
-    public function category($id) {
+    public function category($id)
+    {
         $category = Category::find($id);
         return view('front.single-category', ['category'=>$category]);
     }
 
-    public function item($id) {
+    public function item($id)
+    {
         $item = Item::find($id);
         return view('front.single-item', ['item'=>$item, 'pictures'=>$item->getPictures()]);
     }
 
-    public function changeLocale($locale = null) {
-        if($locale != null) {
+    public function changeLocale($locale = null)
+    {
+        if ($locale != null) {
             cookie()->forever('locale', $locale);
         }
         return redirect()->back()->withCookie('locale', $locale);
     }
 
-    public function news($id) {
+    public function news($id)
+    {
         $news = News::find($id);
-        return view ('front.single-news', ['news'=>$news]);
+        return view('front.single-news', ['news'=>$news]);
     }
 
-    public function contact(Request $request) {
-      $data = request()->all();
-      try {
-        \Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
-          ->send(new ContactUs($data));
-        return redirect()->back()->with('message', 'Sent!');
-      }
-      catch (Exception $e) {
-        return redirect()->back()->with('message', 'Failed.');
-      }
+    public function contact(Request $request)
+    {   
+        $data = request()->all();
+        try {
+            \Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
+                    ->send(new ContactUs($data));
+            return redirect()->back()->with('message', 'Sent!');
+        } catch (Exception $e) {
+            return redirect()->back()->with('message', 'Failed.');
+        }
     }
 }

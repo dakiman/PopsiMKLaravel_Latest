@@ -20,3 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/category/{category}', 'CategoryController@toggle');
 Route::post('/item/{item}', 'ItemController@toggle');
 Route::post('/news/{news}', 'NewsController@toggle');
+
+Route::post('/item/delete/{item}', 'ItemController@delete');
+Route::post('/category/delete/{category}', 'CategoryController@delete');
+Route::post('/news/delete/{news}', 'NewsController@delete');
+Route::post('/gallery/delete/{carouselPic}', 'GalleryController@delete');
