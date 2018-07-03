@@ -25,3 +25,12 @@ Route::post('/item/delete/{item}', 'ItemController@delete');
 Route::post('/category/delete/{category}', 'CategoryController@delete');
 Route::post('/news/delete/{news}', 'NewsController@delete');
 Route::post('/gallery/delete/{carouselPic}', 'GalleryController@delete');
+
+Route::get('/testing', function() {
+	return response(auth()->user(), 200);
+	try{
+		$user = auth()->user();
+	} catch (Exception $e){
+		return response(['message' => $e->getMessage()], 400);
+	}
+});

@@ -9,18 +9,16 @@
 	<link rel="stylesheet" href="{{asset('css/app.css')}}">
 	<link rel="stylesheet" href="{{asset('css/home.css')}}">
 	{{--  <script src="https://use.fontawesome.com/daa2b1f496.js"></script>  --}}
-<link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
-<link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
+	<link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
+	<link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
 
 	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-
 </head>
 <body>
 	<!-- Navigation -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top p-0 shadow">
-		<div class="container-fluid">
+		<div class="container-fluid px-1">
 			<a class="navbar-brand p-0 m-0" href="/">
 				<img class="d-inline-block align-top " height="70%" width="70%" id="logo" src="/img/logo.jpg" alt="">
 			</a>

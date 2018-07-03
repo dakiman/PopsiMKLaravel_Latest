@@ -133,9 +133,9 @@ class ItemController extends Controller
         try {
             $item->active = !$item->active;
             $item->save();
-            return $item->active ? 1 : 0;
+            return response(['message' => 'Item was toggled'], 200);
         } catch (\Exception $e) {
-            return $e->getMessage();
+            return response(['message' => $e->getMessage()], 400);
         }
     }
 }

@@ -10729,10 +10729,6 @@ a.text-any-other-custom-color:focus {
 .active-category {
   background: #12073D;
   color: white;
-  -webkit-box-shadow: 0 3px 5px 5px rgba(57, 63, 72, 0.5);
-  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  /* Firefox 3.5 - 3.6 */
-  box-shadow: 0 3px 5px 5px rgba(57, 63, 72, 0.5);
 }
 
 .active-category:hover {
@@ -10766,7 +10762,7 @@ footer {
 }
 
 .cut-text {
-  text-overflow: ellipsis;
+  text-overflow: clip;
   white-space: nowrap;
   overflow: hidden;
 }

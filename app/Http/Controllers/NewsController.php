@@ -90,7 +90,7 @@ class NewsController extends Controller
         return redirect()->back()->with([
             'message' => $message,
         ]);
-    }
+	}
 
 
     public function delete(News $news) {

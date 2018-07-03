@@ -1,13 +1,13 @@
 @extends('front.front-layout') 
-@section('content') 
-@if(!empty($pictures))
-@php $i = 0; @endphp
+@section('content') @if(!empty($pictures)) @php $i = 0; 
+@endphp
 <header class=" d-none d-sm-block">
 	<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
 		<ol class="carousel-indicators ">
 			@foreach ($pictures as $picture)
 			<li data-target="#carouselExampleIndicators" data-slide-to="{{$i}}" class="@if($picture == $pictures[0]) active @endif"></li>
-			@php $i++; @endphp @endforeach
+			@php $i++; 
+@endphp @endforeach
 		</ol>
 		<div class="carousel-inner" role="listbox">
 			@foreach ($pictures as $picture)
@@ -17,7 +17,19 @@
 	</div>
 </header>
 @endif
-@include('front.categories')
+
+<div class="pt-2 container-fluid categories-section">
+	<div class="@mobile text-center @endmobile">
+		<span style="font-size: 28px;" class="@notmobile ml-4 @endnotmobile @mobile ml-1 @endmobile font-weight-bold"><i class="fas fa-shopping-cart"></i> Продажна Програма</span>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col">
+			@include('front.categories')
+		</div>
+	</div>
+</div>
+
 @if(!$news->isEmpty())
 <div class="container-fluid news-section">
 	<div class="row">
@@ -32,8 +44,8 @@
 		<div class="col-md-11 mx-auto mt-3">
 			<div class="news-container">
 				@foreach ($news as $singleNews)
-				<div class="card news-card text-center">
-					<img class="card-img-top img-fluid" src="{{Storage::url('/news/' . $singleNews->pictures )}}" alt="Card image cap">
+				<div class="card sharp news-card text-center">
+					<img class="card-img-top sharp img-fluid" src="{{Storage::url('/news/' . $singleNews->pictures )}}" alt="Card image cap">
 					<div class="card-body">
 						<a href="/news/{{$singleNews->id}}">
 							<h5 class="cut-text card-title">{{ $singleNews->translateTitle() }}</h5>

@@ -10746,6 +10746,12 @@ return jQuery;
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(18);
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
 var g;
@@ -10770,12 +10776,6 @@ try {
 
 module.exports = g;
 
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(18);
 
 /***/ }),
 /* 4 */
@@ -11195,7 +11195,7 @@ global.$ = global.jQuery = __webpack_require__(1);
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(3);
+window.axios = __webpack_require__(2);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -11227,7 +11227,7 @@ if (token) {
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
 
 /***/ }),
 /* 13 */
@@ -28332,7 +28332,7 @@ if (token) {
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(14)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(14)(module)))
 
 /***/ }),
 /* 14 */
@@ -34820,7 +34820,7 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
 
 /***/ }),
 /* 17 */
@@ -37355,7 +37355,7 @@ return Popper;
 })));
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
 /* 18 */
@@ -38503,7 +38503,7 @@ exports.default = HomeView;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(3);
+const axios_1 = __webpack_require__(2);
 const $ = __webpack_require__(1);
 class CategoriesView {
     constructor() {
@@ -38545,7 +38545,7 @@ exports.default = CategoriesView;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(3);
+const axios_1 = __webpack_require__(2);
 const $ = __webpack_require__(1);
 class ItemsView {
     constructor() {
@@ -38597,7 +38597,7 @@ exports.default = ItemsView;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(3);
+const axios_1 = __webpack_require__(2);
 const $ = __webpack_require__(1);
 class NewsView {
     constructor() {
@@ -38639,7 +38639,7 @@ exports.default = NewsView;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(3);
+const axios_1 = __webpack_require__(2);
 const $ = __webpack_require__(1);
 class GalleryView {
     constructor() {
