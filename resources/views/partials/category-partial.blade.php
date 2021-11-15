@@ -14,7 +14,7 @@
 				@foreach ($category->activeItems() as $item)
 				<div class="col px-1 py-1">
 					<div class="sharp card item-card text-center border-muted mx-auto">
-						<img class="card-img-top  " src="{{Storage::url('/items/'.$item->getCoverPhoto() )}}" alt="Card image cap">
+						<img class="card-img-top  " src="{{Storage::url('items/'.$item->getCoverPhoto() )}}" alt="Card image cap">
 						<div class="card-body text-center">
 							<a href="/catalogue/items/{{$item->id}}">
 								<div class="card-title cut-text ">{{$item->translateTitle()}}</div>

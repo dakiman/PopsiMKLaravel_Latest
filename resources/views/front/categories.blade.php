@@ -5,7 +5,7 @@
 			<div class="card-deck">
 				@foreach ($categories as $category)
 				<div class="category-card card sharp">
-					<img class="card-img-top mx-auto" src="{{Storage::url('/categories/'.$category->picture)}}" alt="Card image cap">
+					<img class="card-img-top mx-auto" src="{{Storage::url('categories/'.$category->picture)}}" alt="Card image cap">
 					<a href="/catalogue/categories/{{$category->id}}">
 						<div class=" card-body text-center">
 							<div class="card-title">{{ ucfirst($category->translateTitle()) }}</div>
