@@ -18,7 +18,7 @@ class ItemsView {
         $('#btn-confirm').on('click', this.deleteItem)
     }
 
-    activateItem = (e:JQuery.Event) => {
+    activateItem = (e:JQuery.TriggeredEvent) => {
         let checker = e.currentTarget as HTMLInputElement;
         let id = $(checker).attr('id');
         axios.post('/api/item/' + id)
@@ -26,16 +26,16 @@ class ItemsView {
         .catch((error)=>console.log(error));
     }
 
-    getItems = (e:JQuery.Event) => {
+    getItems = (e:JQuery.TriggeredEvent) => {
         let select = e.currentTarget as HTMLSelectElement;
         window.location.replace('/admin/items?cat=' + $(select).val());
-    }    
+    }
 
     addPictureField = () => {
         $('#append-helper').append(this.fileInput);
     }
 
-    prepItem = (e:JQuery.Event) =>  {
+    prepItem = (e:JQuery.TriggeredEvent) =>  {
         let btn = e.currentTarget as HTMLButtonElement
         this.item = btn.dataset['id'] as string;
     }

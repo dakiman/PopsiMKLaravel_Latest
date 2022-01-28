@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ = require('jquery');
 
 class GalleryView {
-    
+
     item:string = '';
     constructor() {
         this.initGallery();
@@ -54,7 +54,7 @@ class GalleryView {
         `
     }
 
-    prependPic = (e: JQuery.Event) => {
+    prependPic = (e: JQuery.TriggeredEvent) => {
         let button = e.currentTarget as HTMLButtonElement;
         let picture = button.dataset['picture'] as string;
         let id = button.dataset['id'] as string;
@@ -63,7 +63,7 @@ class GalleryView {
         $(button).parent().parent().hide();
     }
 
-    appendPic = (e: JQuery.Event) => {
+    appendPic = (e: JQuery.TriggeredEvent) => {
         let button = e.currentTarget as HTMLButtonElement;
         let picture = button.dataset['picture'] as string;
         let id = button.dataset['id'] as string;
@@ -72,7 +72,7 @@ class GalleryView {
         $(button).parent().parent().hide();
     }
 
-    removePic = (e: JQuery.Event) => {
+    removePic = (e: JQuery.TriggeredEvent) => {
         let button = e.currentTarget as HTMLButtonElement;
         let picture = button.dataset['picture'] as string;
         let id = button.dataset['id'] as string;
@@ -81,7 +81,7 @@ class GalleryView {
         $('#' + id).remove();
     }
 
-    prepItem = (e:JQuery.Event) =>  {
+    prepItem = (e:JQuery.TriggeredEvent) =>  {
         let btn = e.currentTarget as HTMLButtonElement
         this.item = btn.dataset['id'] as string;
     }

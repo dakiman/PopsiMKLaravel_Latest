@@ -10,8 +10,8 @@ class HomeView {
     initHome() {
         $('.list-group-item').on('click', this.displayItems);
     }
-    
-    displayItems = (e:JQuery.Event) => {
+
+    displayItems = (e:JQuery.TriggeredEvent) => {
         let currentCard = e.currentTarget as HTMLDivElement;
         let itemsToShow = '.' + currentCard.dataset['target'];
         if(!$(currentCard).hasClass('active-category')){
@@ -24,7 +24,7 @@ class HomeView {
             $(itemsToShow).addClass('active-items');
         }
     }
-    
+
 }
 
 export default HomeView;

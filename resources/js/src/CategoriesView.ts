@@ -2,7 +2,7 @@ import axios from 'axios';
 import $ = require('jquery');
 
 class CategoriesView {
-    
+
     item:string = '';
     constructor() {
         this.initCategories();
@@ -14,7 +14,7 @@ class CategoriesView {
         $('#btn-confirm').on('click', this.deleteItem)
     }
 
-    activateitem = (e:JQuery.Event) => {
+    activateitem = (e:JQuery.TriggeredEvent) => {
         let checker = e.currentTarget as HTMLInputElement;
         let id = $(checker).attr('id');
         axios.post('/api/category/' + id)
@@ -22,7 +22,7 @@ class CategoriesView {
         .catch((error)=>console.log(error));
     }
 
-    prepItem = (e:JQuery.Event) =>  {
+    prepItem = (e:JQuery.TriggeredEvent) =>  {
         let btn = e.currentTarget as HTMLButtonElement
         this.item = btn.dataset['id'] as string;
     }
@@ -34,8 +34,8 @@ class CategoriesView {
         })
         .catch(error => console.log(error))
     }
-    
-    
+
+
 }
 
 export default CategoriesView;
