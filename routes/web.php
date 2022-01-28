@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', 'HomepageController@home');
 Route::get('/catalogue', 'HomepageController@catalogue');
 Route::get('catalogue/categories/{id}', 'HomepageController@category');
