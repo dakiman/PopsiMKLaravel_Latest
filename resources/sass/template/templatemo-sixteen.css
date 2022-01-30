@@ -16,6 +16,17 @@ https://templatemo.com/tm-546-sixteen-clothing
     font-size: 9px;
 }
 
+.item-description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-img {
+    height: 192px;
+    width: 290px;
+}
+
 /*<--End custom -->*/
 body {
   font-family: 'Poppins', sans-serif;
@@ -417,7 +428,6 @@ header .navbar {
 }
 
 .product-item .down-content {
-	/*padding: ;*/
 	position: relative;
 }
 

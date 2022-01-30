@@ -16,7 +16,6 @@ mix.autoload({
     'popper.js/dist/umd/popper.js': ['Popper']
 })
     .js('resources/js/app.js', 'public/js')
-    // .js('resources/js/template/*', 'public/js/homepage.js')
     .js([
         'resources/js/template/jquery.min.js',
         'resources/js/template/bootstrap.bundle.min.js',
