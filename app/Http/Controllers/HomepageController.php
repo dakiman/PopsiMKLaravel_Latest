@@ -8,9 +8,11 @@ use App\News;
 use App\Item;
 use App\User;
 use App\CarouselOrder;
+
 // use Mail;
 use App\Mail\ContactMessage;
 use App\Mail\ContactUs;
+use Mail;
 
 class HomepageController extends Controller
 {
@@ -24,7 +26,7 @@ class HomepageController extends Controller
         } else {
             $pictures = null;
         }
-        return view('front.home', ['categories'=>$categories, 'news'=>$news, 'pictures'=>$pictures]);
+        return view('front.home', ['categories' => $categories, 'news' => $news, 'pictures' => $pictures]);
     }
 
     public function home_new()
@@ -37,25 +39,25 @@ class HomepageController extends Controller
         } else {
             $pictures = null;
         }
-        return view('front.home_new', ['categories'=>$categories, 'news'=>$news, 'pictures'=>$pictures]);
+        return view('front.home_new', ['categories' => $categories, 'news' => $news, 'pictures' => $pictures]);
     }
 
     public function catalogue()
     {
         $categories = Category::where('active', 1)->get();
-        return view('front.catalogue', ['categories'=>$categories]);
+        return view('front.catalogue', ['categories' => $categories]);
     }
 
     public function category($id)
     {
         $category = Category::find($id);
-        return view('front.single-category', ['category'=>$category]);
+        return view('front.single-category', ['category' => $category]);
     }
 
     public function item($id)
     {
         $item = Item::find($id);
-        return view('front.single-item', ['item'=>$item, 'pictures'=>$item->getPictures()]);
+        return view('front.single-item', ['item' => $item, 'pictures' => $item->getPictures()]);
     }
 
     public function changeLocale($locale = null)
@@ -69,15 +71,15 @@ class HomepageController extends Controller
     public function news($id)
     {
         $news = News::find($id);
-        return view('front.single-news', ['news'=>$news]);
+        return view('front.single-news', ['news' => $news]);
     }
 
     public function contact(Request $request)
     {
         $data = request()->all();
         try {
-            \Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
-                    ->send(new ContactUs($data));
+            Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
+                ->send(new ContactUs($data));
             return redirect()->back()->with('message', 'Sent!');
         } catch (Exception $e) {
             return redirect()->back()->with('message', 'Failed.');

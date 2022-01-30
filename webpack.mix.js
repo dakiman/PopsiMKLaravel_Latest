@@ -20,7 +20,7 @@ mix.autoload({
     .js([
         'resources/js/template/jquery.min.js',
         'resources/js/template/bootstrap.bundle.min.js',
-        'resources/js/template/isotope.js',
+        // 'resources/js/template/isotope.js',
         'resources/js/template/owl.js',
         'resources/js/template/slick.js',
         'resources/js/template/accordions.js',
