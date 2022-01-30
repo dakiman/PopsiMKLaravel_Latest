@@ -35,6 +35,11 @@ class HomepageController extends Controller
         return view('front-new.products', ['categories' => $categories]);
     }
 
+    public function about()
+    {
+        return view('front-new.about');
+    }
+
     /*================================================*/
 
     public function item($id)

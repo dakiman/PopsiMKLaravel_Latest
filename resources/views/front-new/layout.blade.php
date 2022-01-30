@@ -50,11 +50,24 @@
                     <li class="nav-item @if(Request::is('products')) active @endif">
                         <a class="nav-link" href="/products">Our Products</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                    <li class="nav-item @if(Request::is('about')) active @endif">
+                        <a class="nav-link" href="/about">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @if (app()->getLocale() == 'mk')
+                                <img class="" src="{{asset('img/mk-flag.png')}}" alt="">
+                            @else
+                                <img class="" src="{{asset('img/en-flag.png')}}" alt="">
+                            @endif
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                            <a class="dropdown-item" href="/changelocale/mk">Македонски</a>
+                            <a class="dropdown-item" href="/changelocale/en">English</a>
+                        </div>
                     </li>
                 </ul>
             </div>
