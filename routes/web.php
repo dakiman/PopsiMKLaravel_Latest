@@ -14,8 +14,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomepageController@home');
-Route::get('/new', 'HomepageController@home_new');
-Route::get('/catalogue', 'HomepageController@catalogue');
+Route::get('/products', 'HomepageController@products');
+/*===================================*/
+//Route::get('/', 'HomepageController@home');
+//Route::get('/catalogue', 'HomepageController@catalogue');
 Route::get('catalogue/categories/{id}', 'HomepageController@category');
 Route::get('catalogue/items/{id}', 'HomepageController@item');
 Route::get('/news/{id}', 'HomepageController@news');
