@@ -27,6 +27,19 @@ class HomepageController extends Controller
         return view('front.home', ['categories'=>$categories, 'news'=>$news, 'pictures'=>$pictures]);
     }
 
+    public function home_new()
+    {
+        $categories = Category::where('active', 1)->get();
+        $news = News::where('active', 1)->get();
+        $order = CarouselOrder::all()->take(1);
+        if (!$order->isEmpty()) {
+            $pictures = unserialize($order[0]->order);
+        } else {
+            $pictures = null;
+        }
+        return view('front.home_new', ['categories'=>$categories, 'news'=>$news, 'pictures'=>$pictures]);
+    }
+
     public function catalogue()
     {
         $categories = Category::where('active', 1)->get();
@@ -60,7 +73,7 @@ class HomepageController extends Controller
     }
 
     public function contact(Request $request)
-    {   
+    {
         $data = request()->all();
         try {
             \Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
