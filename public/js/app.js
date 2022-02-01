@@ -1,97 +1,11 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ({
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
   \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/lib/axios.js");
 
@@ -101,8 +15,7 @@ module.exports = __webpack_require__(/*! ./lib/axios */ "./node_modules/axios/li
 /*!************************************************!*\
   !*** ./node_modules/axios/lib/adapters/xhr.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -293,8 +206,7 @@ module.exports = function xhrAdapter(config) {
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/axios.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -349,7 +261,7 @@ axios.spread = __webpack_require__(/*! ./helpers/spread */ "./node_modules/axios
 module.exports = axios;
 
 // Allow use of default import syntax in TypeScript
-module.exports.default = axios;
+module.exports["default"] = axios;
 
 
 /***/ }),
@@ -358,8 +270,7 @@ module.exports.default = axios;
 /*!*************************************************!*\
   !*** ./node_modules/axios/lib/cancel/Cancel.js ***!
   \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -389,8 +300,7 @@ module.exports = Cancel;
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/cancel/CancelToken.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -458,8 +368,7 @@ module.exports = CancelToken;
 /*!***************************************************!*\
   !*** ./node_modules/axios/lib/cancel/isCancel.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -475,8 +384,7 @@ module.exports = function isCancel(value) {
 /*!**********************************************!*\
   !*** ./node_modules/axios/lib/core/Axios.js ***!
   \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -581,8 +489,7 @@ module.exports = Axios;
 /*!***********************************************************!*\
   !*** ./node_modules/axios/lib/core/InterceptorManager.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -645,8 +552,7 @@ module.exports = InterceptorManager;
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/core/buildFullPath.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -677,8 +583,7 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/createError.js ***!
   \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -707,8 +612,7 @@ module.exports = function createError(message, config, code, request, response) 
 /*!********************************************************!*\
   !*** ./node_modules/axios/lib/core/dispatchRequest.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -798,8 +702,7 @@ module.exports = function dispatchRequest(config) {
 /*!*****************************************************!*\
   !*** ./node_modules/axios/lib/core/enhanceError.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -852,8 +755,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/core/mergeConfig.js ***!
   \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -937,8 +839,7 @@ module.exports = function mergeConfig(config1, config2) {
 /*!***********************************************!*\
   !*** ./node_modules/axios/lib/core/settle.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -974,8 +875,7 @@ module.exports = function settle(resolve, reject, response) {
 /*!******************************************************!*\
   !*** ./node_modules/axios/lib/core/transformData.js ***!
   \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1006,11 +906,11 @@ module.exports = function transformData(data, headers, fns) {
 /*!********************************************!*\
   !*** ./node_modules/axios/lib/defaults.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
+
 
 var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
 var normalizeHeaderName = __webpack_require__(/*! ./helpers/normalizeHeaderName */ "./node_modules/axios/lib/helpers/normalizeHeaderName.js");
@@ -1108,7 +1008,6 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -1116,8 +1015,7 @@ module.exports = defaults;
 /*!************************************************!*\
   !*** ./node_modules/axios/lib/helpers/bind.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -1139,8 +1037,7 @@ module.exports = function bind(fn, thisArg) {
 /*!****************************************************!*\
   !*** ./node_modules/axios/lib/helpers/buildURL.js ***!
   \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1222,8 +1119,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 /*!*******************************************************!*\
   !*** ./node_modules/axios/lib/helpers/combineURLs.js ***!
   \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -1248,8 +1144,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 /*!***************************************************!*\
   !*** ./node_modules/axios/lib/helpers/cookies.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1313,8 +1208,7 @@ module.exports = (
 /*!*********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isAbsoluteURL.js ***!
   \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -1339,8 +1233,7 @@ module.exports = function isAbsoluteURL(url) {
 /*!***********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/isURLSameOrigin.js ***!
   \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1419,8 +1312,7 @@ module.exports = (
 /*!***************************************************************!*\
   !*** ./node_modules/axios/lib/helpers/normalizeHeaderName.js ***!
   \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1443,8 +1335,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 /*!********************************************************!*\
   !*** ./node_modules/axios/lib/helpers/parseHeaders.js ***!
   \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1508,8 +1399,7 @@ module.exports = function parseHeaders(headers) {
 /*!**************************************************!*\
   !*** ./node_modules/axios/lib/helpers/spread.js ***!
   \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module) => {
 
 "use strict";
 
@@ -1547,8 +1437,7 @@ module.exports = function spread(callback) {
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/utils.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 
@@ -1899,12 +1788,535 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./resources/js/main.ts":
+/*!******************************!*\
+  !*** ./resources/js/main.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.getGalleryView = exports.getNewsView = exports.getCategoriesView = exports.getItemsView = exports.getHomeView = void 0;
+
+var HomeView_1 = __webpack_require__(/*! ./src/HomeView */ "./resources/js/src/HomeView.ts");
+
+var CategoriesView_1 = __webpack_require__(/*! ./src/CategoriesView */ "./resources/js/src/CategoriesView.ts");
+
+var ItemsView_1 = __webpack_require__(/*! ./src/ItemsView */ "./resources/js/src/ItemsView.ts");
+
+var NewsView_1 = __webpack_require__(/*! ./src/NewsView */ "./resources/js/src/NewsView.ts");
+
+var GalleryView_1 = __webpack_require__(/*! ./src/GalleryView */ "./resources/js/src/GalleryView.ts");
+
+function getHomeView() {
+  return new HomeView_1["default"]();
+}
+
+exports.getHomeView = getHomeView;
+
+function getItemsView() {
+  return new ItemsView_1["default"]();
+}
+
+exports.getItemsView = getItemsView;
+
+function getCategoriesView() {
+  return new CategoriesView_1["default"]();
+}
+
+exports.getCategoriesView = getCategoriesView;
+
+function getNewsView() {
+  return new NewsView_1["default"]();
+}
+
+exports.getNewsView = getNewsView;
+
+function getGalleryView() {
+  return new GalleryView_1["default"]();
+}
+
+exports.getGalleryView = getGalleryView;
+
+/***/ }),
+
+/***/ "./resources/js/src/CategoriesView.ts":
+/*!********************************************!*\
+  !*** ./resources/js/src/CategoriesView.ts ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+var CategoriesView = /*#__PURE__*/function () {
+  function CategoriesView() {
+    var _this = this;
+
+    _classCallCheck(this, CategoriesView);
+
+    this.item = '';
+
+    this.activateitem = function (e) {
+      var checker = e.currentTarget;
+      var id = $(checker).attr('id');
+      axios_1["default"].post('/api/category/' + id).then(function (result) {})["catch"](function (error) {
+        return console.log(error);
+      });
+    };
+
+    this.prepItem = function (e) {
+      var btn = e.currentTarget;
+      _this.item = btn.dataset['id'];
+    };
+
+    this.deleteItem = function () {
+      axios_1["default"].post('/api/category/delete/' + _this.item).then(function (result) {
+        console.log(result);
+        $('.' + _this.item).hide();
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    };
+
+    this.initCategories();
+  }
+
+  _createClass(CategoriesView, [{
+    key: "initCategories",
+    value: function initCategories() {
+      $('.active-check').on('click', this.activateitem);
+      $('.btn-delete').on('click', this.prepItem);
+      $('#btn-confirm').on('click', this.deleteItem);
+    }
+  }]);
+
+  return CategoriesView;
+}();
+
+exports["default"] = CategoriesView;
+
+/***/ }),
+
+/***/ "./resources/js/src/GalleryView.ts":
+/*!*****************************************!*\
+  !*** ./resources/js/src/GalleryView.ts ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+var GalleryView = /*#__PURE__*/function () {
+  function GalleryView() {
+    var _this = this;
+
+    _classCallCheck(this, GalleryView);
+
+    this.item = '';
+
+    this.getPictureDiv = function (name, id) {
+      return "\n        <div class=\"col-md-3\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-body\">\n                <img class=\"img-responsive\" style=\"width:150px;height:150px;\" src=\"/storage//carousel/" + name + "\" alt=\"\">\n            </div>\n            <div class=\"cut-text panel-footer\">" + name + "</div>\n            <button style=\"white-space:normal;\" data-id=\"" + id + "\" data-picture=\"" + name + "\" class=\"remove-btn btn btn-danger m-a-1\">\u041E\u0442\u0441\u0442\u0440\u0430\u043D\u0438</button>\n        </div>\n    </div>\n        ";
+    };
+
+    this.getPictureInputField = function (name, id) {
+      return "\n        <input id=\"" + id + "\" type=\"text\" name=\"order[]\" value=\"" + name + "\">\n        ";
+    };
+
+    this.getPicAvailableDiv = function (name, id) {
+      return "\n        <div class=\"col-md-3\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-body\">\n                <img class=\"img-responsive\" style=\"width:150px;height:150px;\" src=\"/storage//carousel/" + name + "\" alt=\"\">\n            </div>\n            <div class=\"cut-text panel-footer\">" + name + "</div>\n            <button style=\"white-space:normal;\" data-id=\"" + id + "\" data-picture=\"" + name + "\" class=\"prepend-btn btn btn-primary m-a-1\">\u0414\u043E\u0434\u0430\u0434\u0438 \u043D\u0430\u043F\u0440\u0435\u0434</button>\n            <button style=\"white-space:normal;\" data-id=\"" + id + "\" data-picture=\"" + name + "\" class=\"append-btn btn btn-success m-a-1\">\u0414\u043E\u0434\u0430\u0434\u0438 \u043F\u043E\u0437\u0430\u0434\u0438</button>\n        </div>\n    </div>\n        ";
+    };
+
+    this.prependPic = function (e) {
+      var button = e.currentTarget;
+      var picture = button.dataset['picture'];
+      var id = button.dataset['id'];
+      $('.gallery-order').prepend(_this.getPictureDiv(picture, id));
+      $('.gallery-order-form').prepend(_this.getPictureInputField(picture, id));
+      $(button).parent().parent().hide();
+    };
+
+    this.appendPic = function (e) {
+      var button = e.currentTarget;
+      var picture = button.dataset['picture'];
+      var id = button.dataset['id'];
+      $('.gallery-order').append(_this.getPictureDiv(picture, id));
+      $('.gallery-order-form').append(_this.getPictureInputField(picture, id));
+      $(button).parent().parent().hide();
+    };
+
+    this.removePic = function (e) {
+      var button = e.currentTarget;
+      var picture = button.dataset['picture'];
+      var id = button.dataset['id'];
+      $('.active-pictures').append(_this.getPicAvailableDiv(picture, id));
+      $(button).parent().parent().hide();
+      $('#' + id).remove();
+    };
+
+    this.prepItem = function (e) {
+      var btn = e.currentTarget;
+      _this.item = btn.dataset['id'];
+    };
+
+    this.deleteItem = function () {
+      axios_1["default"].post('/api/gallery/delete/' + _this.item).then(function (result) {
+        console.log(result);
+        $('.' + _this.item).hide();
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    };
+
+    this.initGallery();
+  }
+
+  _createClass(GalleryView, [{
+    key: "initGallery",
+    value: function initGallery() {
+      $('.active-pictures').on('click', '.prepend-btn', this.prependPic);
+      $('.active-pictures').on('click', '.append-btn', this.appendPic);
+      $('.gallery-order').on('click', '.remove-btn', this.removePic);
+      $('.submit-order-btn').on('click', function () {
+        $('.gallery-order-form').submit();
+      });
+      $('.btn-delete').on('click', this.prepItem);
+      $('#btn-confirm').on('click', this.deleteItem);
+    }
+  }]);
+
+  return GalleryView;
+}();
+
+exports["default"] = GalleryView;
+
+/***/ }),
+
+/***/ "./resources/js/src/HomeView.ts":
+/*!**************************************!*\
+  !*** ./resources/js/src/HomeView.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+var HomeView = /*#__PURE__*/function () {
+  function HomeView() {
+    _classCallCheck(this, HomeView);
+
+    this.displayItems = function (e) {
+      var currentCard = e.currentTarget;
+      var itemsToShow = '.' + currentCard.dataset['target'];
+
+      if (!$(currentCard).hasClass('active-category')) {
+        $('.active-category').removeClass('active-category');
+        $(currentCard).addClass('active-category');
+        $('.active-items').hide();
+        $('.active-items').removeClass('active-items');
+        $(itemsToShow).show();
+        $(itemsToShow).addClass('active-items');
+      }
+    };
+
+    this.initHome();
+  }
+
+  _createClass(HomeView, [{
+    key: "initHome",
+    value: function initHome() {
+      $('.list-group-item').on('click', this.displayItems);
+    }
+  }]);
+
+  return HomeView;
+}();
+
+exports["default"] = HomeView;
+
+/***/ }),
+
+/***/ "./resources/js/src/ItemsView.ts":
+/*!***************************************!*\
+  !*** ./resources/js/src/ItemsView.ts ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+var ItemsView = /*#__PURE__*/function () {
+  function ItemsView() {
+    var _this = this;
+
+    _classCallCheck(this, ItemsView);
+
+    this.fileInput = '<input class="form-control m-b-3" type="file" name="cat_img[]" id="cat_img" >';
+    this.item = '';
+
+    this.activateItem = function (e) {
+      var checker = e.currentTarget;
+      var id = $(checker).attr('id');
+      axios_1["default"].post('/api/item/' + id).then(function (result) {
+        console.log(result);
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    };
+
+    this.getItems = function (e) {
+      var select = e.currentTarget;
+      window.location.replace('/admin/items?cat=' + $(select).val());
+    };
+
+    this.addPictureField = function () {
+      $('#append-helper').append(_this.fileInput);
+    };
+
+    this.prepItem = function (e) {
+      var btn = e.currentTarget;
+      _this.item = btn.dataset['id'];
+    };
+
+    this.deleteItem = function () {
+      axios_1["default"].post('/api/item/delete/' + _this.item).then(function (result) {
+        console.log(result);
+        $('.' + _this.item).hide();
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    };
+
+    this.initItems();
+  }
+
+  _createClass(ItemsView, [{
+    key: "initItems",
+    value: function initItems() {
+      $('.active-check').on('click', this.activateItem);
+      $('#selector').on('change', this.getItems);
+      $('.pic-btn').on('click', this.addPictureField);
+      $('.btn-delete').on('click', this.prepItem);
+      $('#btn-confirm').on('click', this.deleteItem);
+    }
+  }]);
+
+  return ItemsView;
+}();
+
+exports["default"] = ItemsView;
+
+/***/ }),
+
+/***/ "./resources/js/src/NewsView.ts":
+/*!**************************************!*\
+  !*** ./resources/js/src/NewsView.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+
+var axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+
+var NewsView = /*#__PURE__*/function () {
+  function NewsView() {
+    var _this = this;
+
+    _classCallCheck(this, NewsView);
+
+    this.item = '';
+
+    this.activateitem = function (e) {
+      var checker = e.currentTarget;
+      var id = $(checker).attr('id');
+      axios_1["default"].post('/api/news/' + id).then(function (result) {})["catch"](function (error) {
+        return console.log(error);
+      });
+    };
+
+    this.prepItem = function (e) {
+      var btn = e.currentTarget;
+      _this.item = btn.dataset['id'];
+    };
+
+    this.deleteItem = function () {
+      axios_1["default"].post('/api/news/delete/' + _this.item).then(function (result) {
+        console.log(result);
+        $('.' + _this.item).hide();
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    };
+
+    this.initNews();
+  }
+
+  _createClass(NewsView, [{
+    key: "initNews",
+    value: function initNews() {
+      $('.active-check').on('click', this.activateitem);
+      $('.btn-delete').on('click', this.prepItem);
+      $('#btn-confirm').on('click', this.deleteItem);
+    }
+  }]);
+
+  return NewsView;
+}();
+
+exports["default"] = NewsView;
+
+/***/ }),
+
+/***/ "./resources/js/app.js":
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+/**
+ * First, we will load all of this project's Javascript utilities and other
+ * dependencies. Then, we will be ready to develop a robust and powerful
+ * application frontend using useful Laravel and JavaScript libraries.
+ */
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+window.App = __webpack_require__(/*! ./main */ "./resources/js/main.ts");
+
+/***/ }),
+
+/***/ "./resources/js/bootstrap.js":
+/*!***********************************!*\
+  !*** ./resources/js/bootstrap.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var popper_js_dist_umd_popper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! popper.js/dist/umd/popper.js */ "./node_modules/popper.js/dist/umd/popper.js");
+/* harmony import */ var popper_js_dist_umd_popper_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(popper_js_dist_umd_popper_js__WEBPACK_IMPORTED_MODULE_0__);
+window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
+__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+
+
+window.Popper = (popper_js_dist_umd_popper_js__WEBPACK_IMPORTED_MODULE_0___default());
+__webpack_require__.g.$ = __webpack_require__.g.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+// import Echo from 'laravel-echo'
+// window.Pusher = require('pusher-js');
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: 'your-pusher-key'
+// });
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 /*!
   * Bootstrap v4.6.1 (https://getbootstrap.com/)
@@ -1913,7 +2325,7 @@ module.exports = {
   */
 (function (global, factory) {
    true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
-  undefined;
+  0;
 })(this, (function (exports, $, Popper) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
@@ -6270,8 +6682,7 @@ module.exports = {
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery JavaScript Library v3.6.0
@@ -17117,7 +17528,7 @@ if ( true ) {
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
 		return jQuery;
 	}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 }
 
 
@@ -17163,10 +17574,10 @@ return jQuery;
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
   \***************************************/
-/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
+/* module decorator */ module = __webpack_require__.nmd(module);
+var __WEBPACK_AMD_DEFINE_RESULT__;/**
  * @license
  * Lodash <https://lodash.com/>
  * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
@@ -17595,7 +18006,7 @@ return jQuery;
       freeParseInt = parseInt;
 
   /** Detect free variable `global` from Node.js. */
-  var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+  var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
 
   /** Detect free variable `self`. */
   var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -17607,7 +18018,7 @@ return jQuery;
   var freeExports =  true && exports && !exports.nodeType && exports;
 
   /** Detect free variable `module`. */
-  var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+  var freeModule = freeExports && "object" == 'object' && module && !module.nodeType && module;
 
   /** Detect the popular CommonJS extension `module.exports`. */
   var moduleExports = freeModule && freeModule.exports === freeExports;
@@ -34362,13 +34773,38 @@ return jQuery;
     !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
       return _;
     }).call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
   }
   // Check for `exports` after `define` in case a build optimizer adds it.
   else {}
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./resources/sass/app.scss":
+/*!*********************************!*\
+  !*** ./resources/sass/app.scss ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/sass/homepage.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/homepage.scss ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -34376,12 +34812,14 @@ return jQuery;
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {/**!
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.1
  * @license
@@ -36991,14 +37429,13 @@ var Popper = function () {
  */
 
 
-Popper.Utils = (typeof window !== 'undefined' ? window : global).PopperUtils;
+Popper.Utils = (typeof window !== 'undefined' ? window : __webpack_require__.g).PopperUtils;
 Popper.placements = placements;
 Popper.Defaults = Defaults;
 
-/* harmony default export */ __webpack_exports__["default"] = (Popper);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -37006,10 +37443,9 @@ Popper.Defaults = Defaults;
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/umd/popper.js ***!
   \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {/**!
+/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.1
  * @license
@@ -37035,7 +37471,7 @@ Popper.Defaults = Defaults;
  */
 (function (global, factory) {
 	 true ? module.exports = factory() :
-	undefined;
+	0;
 }(this, (function () { 'use strict';
 
 var isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined' && typeof navigator !== 'undefined';
@@ -39624,7 +40060,7 @@ var Popper = function () {
  */
 
 
-Popper.Utils = (typeof window !== 'undefined' ? window : global).PopperUtils;
+Popper.Utils = (typeof window !== 'undefined' ? window : __webpack_require__.g).PopperUtils;
 Popper.placements = placements;
 Popper.Defaults = Defaults;
 
@@ -39633,7 +40069,6 @@ return Popper;
 })));
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
 
 /***/ }),
 
@@ -39641,8 +40076,7 @@ return Popper;
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
   \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ ((module) => {
 
 // shim for using process in browser
 var process = module.exports = {};
@@ -39830,512 +40264,199 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/module.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = function(module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function() {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-
-/***/ }),
-
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * First, we will load all of this project's Javascript utilities and other
- * dependencies. Then, we will be ready to develop a robust and powerful
- * application frontend using useful Laravel and JavaScript libraries.
- */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
-window.App = __webpack_require__(/*! ./main */ "./resources/js/main.ts");
-
-/***/ }),
-
-/***/ "./resources/js/bootstrap.js":
-/*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
-  \***********************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var popper_js_dist_umd_popper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! popper.js/dist/umd/popper.js */ "./node_modules/popper.js/dist/umd/popper.js");
-/* harmony import */ var popper_js_dist_umd_popper_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(popper_js_dist_umd_popper_js__WEBPACK_IMPORTED_MODULE_0__);
-window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-__webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
-
-
-window.Popper = popper_js_dist_umd_popper_js__WEBPACK_IMPORTED_MODULE_0___default.a;
-global.$ = global.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
-
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
-
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-// import Echo from 'laravel-echo'
-// window.Pusher = require('pusher-js');
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
-// });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./resources/js/main.ts":
-/*!******************************!*\
-  !*** ./resources/js/main.ts ***!
-  \******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getGalleryView = exports.getNewsView = exports.getCategoriesView = exports.getItemsView = exports.getHomeView = void 0;
-const HomeView_1 = __webpack_require__(/*! ./src/HomeView */ "./resources/js/src/HomeView.ts");
-const CategoriesView_1 = __webpack_require__(/*! ./src/CategoriesView */ "./resources/js/src/CategoriesView.ts");
-const ItemsView_1 = __webpack_require__(/*! ./src/ItemsView */ "./resources/js/src/ItemsView.ts");
-const NewsView_1 = __webpack_require__(/*! ./src/NewsView */ "./resources/js/src/NewsView.ts");
-const GalleryView_1 = __webpack_require__(/*! ./src/GalleryView */ "./resources/js/src/GalleryView.ts");
-function getHomeView() {
-    return new HomeView_1.default();
-}
-exports.getHomeView = getHomeView;
-function getItemsView() {
-    return new ItemsView_1.default();
-}
-exports.getItemsView = getItemsView;
-function getCategoriesView() {
-    return new CategoriesView_1.default();
-}
-exports.getCategoriesView = getCategoriesView;
-function getNewsView() {
-    return new NewsView_1.default();
-}
-exports.getNewsView = getNewsView;
-function getGalleryView() {
-    return new GalleryView_1.default();
-}
-exports.getGalleryView = getGalleryView;
-
-
-/***/ }),
-
-/***/ "./resources/js/src/CategoriesView.ts":
-/*!********************************************!*\
-  !*** ./resources/js/src/CategoriesView.ts ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-const $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-class CategoriesView {
-    constructor() {
-        this.item = '';
-        this.activateitem = (e) => {
-            let checker = e.currentTarget;
-            let id = $(checker).attr('id');
-            axios_1.default.post('/api/category/' + id)
-                .then((result) => { })
-                .catch((error) => console.log(error));
-        };
-        this.prepItem = (e) => {
-            let btn = e.currentTarget;
-            this.item = btn.dataset['id'];
-        };
-        this.deleteItem = () => {
-            axios_1.default.post('/api/category/delete/' + this.item)
-                .then(result => {
-                console.log(result);
-                $('.' + this.item).hide();
-            })
-                .catch(error => console.log(error));
-        };
-        this.initCategories();
-    }
-    initCategories() {
-        $('.active-check').on('click', this.activateitem);
-        $('.btn-delete').on('click', this.prepItem);
-        $('#btn-confirm').on('click', this.deleteItem);
-    }
-}
-exports.default = CategoriesView;
-
-
-/***/ }),
-
-/***/ "./resources/js/src/GalleryView.ts":
-/*!*****************************************!*\
-  !*** ./resources/js/src/GalleryView.ts ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-const $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-class GalleryView {
-    constructor() {
-        this.item = '';
-        this.getPictureDiv = (name, id) => {
-            return `
-        <div class="col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <img class="img-responsive" style="width:150px;height:150px;" src="/storage//carousel/` + name + `" alt="">
-            </div>
-            <div class="cut-text panel-footer">` + name + `</div>
-            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="remove-btn btn btn-danger m-a-1">Отстрани</button>
-        </div>
-    </div>
-        `;
-        };
-        this.getPictureInputField = (name, id) => {
-            return `
-        <input id="` + id + `" type="text" name="order[]" value="` + name + `">
-        `;
-        };
-        this.getPicAvailableDiv = (name, id) => {
-            return `
-        <div class="col-md-3">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <img class="img-responsive" style="width:150px;height:150px;" src="/storage//carousel/` + name + `" alt="">
-            </div>
-            <div class="cut-text panel-footer">` + name + `</div>
-            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="prepend-btn btn btn-primary m-a-1">Додади напред</button>
-            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="append-btn btn btn-success m-a-1">Додади позади</button>
-        </div>
-    </div>
-        `;
-        };
-        this.prependPic = (e) => {
-            let button = e.currentTarget;
-            let picture = button.dataset['picture'];
-            let id = button.dataset['id'];
-            $('.gallery-order').prepend(this.getPictureDiv(picture, id));
-            $('.gallery-order-form').prepend(this.getPictureInputField(picture, id));
-            $(button).parent().parent().hide();
-        };
-        this.appendPic = (e) => {
-            let button = e.currentTarget;
-            let picture = button.dataset['picture'];
-            let id = button.dataset['id'];
-            $('.gallery-order').append(this.getPictureDiv(picture, id));
-            $('.gallery-order-form').append(this.getPictureInputField(picture, id));
-            $(button).parent().parent().hide();
-        };
-        this.removePic = (e) => {
-            let button = e.currentTarget;
-            let picture = button.dataset['picture'];
-            let id = button.dataset['id'];
-            $('.active-pictures').append(this.getPicAvailableDiv(picture, id));
-            $(button).parent().parent().hide();
-            $('#' + id).remove();
-        };
-        this.prepItem = (e) => {
-            let btn = e.currentTarget;
-            this.item = btn.dataset['id'];
-        };
-        this.deleteItem = () => {
-            axios_1.default.post('/api/gallery/delete/' + this.item)
-                .then(result => {
-                console.log(result);
-                $('.' + this.item).hide();
-            })
-                .catch(error => console.log(error));
-        };
-        this.initGallery();
-    }
-    initGallery() {
-        $('.active-pictures').on('click', '.prepend-btn', this.prependPic);
-        $('.active-pictures').on('click', '.append-btn', this.appendPic);
-        $('.gallery-order').on('click', '.remove-btn', this.removePic);
-        $('.submit-order-btn').on('click', function () {
-            $('.gallery-order-form').submit();
-        });
-        $('.btn-delete').on('click', this.prepItem);
-        $('#btn-confirm').on('click', this.deleteItem);
-    }
-}
-exports.default = GalleryView;
-
-
-/***/ }),
-
-/***/ "./resources/js/src/HomeView.ts":
-/*!**************************************!*\
-  !*** ./resources/js/src/HomeView.ts ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-class HomeView {
-    constructor() {
-        this.displayItems = (e) => {
-            let currentCard = e.currentTarget;
-            let itemsToShow = '.' + currentCard.dataset['target'];
-            if (!$(currentCard).hasClass('active-category')) {
-                $('.active-category').removeClass('active-category');
-                $(currentCard).addClass('active-category');
-                $('.active-items').hide();
-                $('.active-items').removeClass('active-items');
-                $(itemsToShow).show();
-                $(itemsToShow).addClass('active-items');
-            }
-        };
-        this.initHome();
-    }
-    initHome() {
-        $('.list-group-item').on('click', this.displayItems);
-    }
-}
-exports.default = HomeView;
-
-
-/***/ }),
-
-/***/ "./resources/js/src/ItemsView.ts":
-/*!***************************************!*\
-  !*** ./resources/js/src/ItemsView.ts ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-const $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-class ItemsView {
-    constructor() {
-        this.fileInput = '<input class="form-control m-b-3" type="file" name="cat_img[]" id="cat_img" >';
-        this.item = '';
-        this.activateItem = (e) => {
-            let checker = e.currentTarget;
-            let id = $(checker).attr('id');
-            axios_1.default.post('/api/item/' + id)
-                .then((result) => { console.log(result); })
-                .catch((error) => console.log(error));
-        };
-        this.getItems = (e) => {
-            let select = e.currentTarget;
-            window.location.replace('/admin/items?cat=' + $(select).val());
-        };
-        this.addPictureField = () => {
-            $('#append-helper').append(this.fileInput);
-        };
-        this.prepItem = (e) => {
-            let btn = e.currentTarget;
-            this.item = btn.dataset['id'];
-        };
-        this.deleteItem = () => {
-            axios_1.default.post('/api/item/delete/' + this.item)
-                .then(result => {
-                console.log(result);
-                $('.' + this.item).hide();
-            })
-                .catch(error => console.log(error));
-        };
-        this.initItems();
-    }
-    initItems() {
-        $('.active-check').on('click', this.activateItem);
-        $('#selector').on('change', this.getItems);
-        $('.pic-btn').on('click', this.addPictureField);
-        $('.btn-delete').on('click', this.prepItem);
-        $('#btn-confirm').on('click', this.deleteItem);
-    }
-}
-exports.default = ItemsView;
-
-
-/***/ }),
-
-/***/ "./resources/js/src/NewsView.ts":
-/*!**************************************!*\
-  !*** ./resources/js/src/NewsView.ts ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", { value: true });
-const axios_1 = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-const $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-class NewsView {
-    constructor() {
-        this.item = '';
-        this.activateitem = (e) => {
-            let checker = e.currentTarget;
-            let id = $(checker).attr('id');
-            axios_1.default.post('/api/news/' + id)
-                .then((result) => { })
-                .catch((error) => console.log(error));
-        };
-        this.prepItem = (e) => {
-            let btn = e.currentTarget;
-            this.item = btn.dataset['id'];
-        };
-        this.deleteItem = () => {
-            axios_1.default.post('/api/news/delete/' + this.item)
-                .then(result => {
-                console.log(result);
-                $('.' + this.item).hide();
-            })
-                .catch(error => console.log(error));
-        };
-        this.initNews();
-    }
-    initNews() {
-        $('.active-check').on('click', this.activateitem);
-        $('.btn-delete').on('click', this.prepItem);
-        $('#btn-confirm').on('click', this.deleteItem);
-    }
-}
-exports.default = NewsView;
-
-
-/***/ }),
-
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/sass/homepage.scss":
-/*!**************************************!*\
-  !*** ./resources/sass/homepage.scss ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
-/*!********************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/homepage.scss ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! C:\Users\DAKI\Projects\PopsiMKLaravel_Latest\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\DAKI\Projects\PopsiMKLaravel_Latest\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\DAKI\Projects\PopsiMKLaravel_Latest\resources\sass\homepage.scss */"./resources/sass/homepage.scss");
-
-
 /***/ })
 
-/******/ });
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/app": 0,
+/******/ 			"css/homepage": 0,
+/******/ 			"css/app": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/homepage","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/homepage","css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/homepage","css/app"], () => (__webpack_require__("./resources/sass/homepage.scss")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
 //# sourceMappingURL=app.js.map
