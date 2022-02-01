@@ -3,7 +3,8 @@ import $ = require('jquery');
 
 class NewsView {
 
-    item:string = '';
+    item: string = '';
+
     constructor() {
         this.initNews();
     }
@@ -14,25 +15,23 @@ class NewsView {
         $('#btn-confirm').on('click', this.deleteItem)
     }
 
-    activateitem = (e:JQuery.TriggeredEvent) => {
+    activateitem = (e: JQuery.TriggeredEvent) => {
         let checker = e.currentTarget as HTMLInputElement;
         let id = $(checker).attr('id');
-        axios.post('/api/news/' + id)
-        .then((result)=> {})
-        .catch((error)=>console.log(error));
+        axios.post('/admin/news/' + id)
+            .catch((error) => console.log(error));
     }
 
-    prepItem = (e:JQuery.TriggeredEvent) =>  {
+    prepItem = (e: JQuery.TriggeredEvent) => {
         let btn = e.currentTarget as HTMLButtonElement
         this.item = btn.dataset['id'] as string;
     }
     deleteItem = () => {
-        axios.post('/api/news/delete/' + this.item)
-        .then(result => {
-            console.log(result)
-            $('.' + this.item).hide();
-        })
-        .catch(error => console.log(error))
+        axios.post('/admin/news/delete/' + this.item)
+            .then(result => {
+                $('.' + this.item).hide();
+            })
+            .catch(error => console.log(error))
     }
 }
 

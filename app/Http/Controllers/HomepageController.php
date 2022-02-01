@@ -62,11 +62,10 @@ class HomepageController extends Controller
         return view('front-new.single-product', ['item' => $item, 'pictures' => $item->getPictures()]);
     }
 
-    public function changeLocale($locale = null)
+    public function changeLocale($locale)
     {
-        if ($locale != null) {
-            cookie()->forever('locale', $locale);
-        }
+        cookie()->forever('locale', $locale);
+
         return redirect()->back()->withCookie('locale', $locale);
     }
 

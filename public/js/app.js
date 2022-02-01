@@ -1878,7 +1878,7 @@ var CategoriesView = /*#__PURE__*/function () {
     this.activateitem = function (e) {
       var checker = e.currentTarget;
       var id = $(checker).attr('id');
-      axios_1["default"].post('/api/category/' + id).then(function (result) {})["catch"](function (error) {
+      axios_1["default"].post('/admin/category/' + id).then(function (result) {})["catch"](function (error) {
         return console.log(error);
       });
     };
@@ -1889,7 +1889,7 @@ var CategoriesView = /*#__PURE__*/function () {
     };
 
     this.deleteItem = function () {
-      axios_1["default"].post('/api/category/delete/' + _this.item).then(function (result) {
+      axios_1["default"].post('/admin/category/delete/' + _this.item).then(function (result) {
         console.log(result);
         $('.' + _this.item).hide();
       })["catch"](function (error) {
@@ -1956,7 +1956,7 @@ var GalleryView = /*#__PURE__*/function () {
     };
 
     this.getPicAvailableDiv = function (name, id) {
-      return "\n        <div class=\"col-md-3\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-body\">\n                <img class=\"img-responsive\" style=\"width:150px;height:150px;\" src=\"/storage//carousel/" + name + "\" alt=\"\">\n            </div>\n            <div class=\"cut-text panel-footer\">" + name + "</div>\n            <button style=\"white-space:normal;\" data-id=\"" + id + "\" data-picture=\"" + name + "\" class=\"prepend-btn btn btn-primary m-a-1\">\u0414\u043E\u0434\u0430\u0434\u0438 \u043D\u0430\u043F\u0440\u0435\u0434</button>\n            <button style=\"white-space:normal;\" data-id=\"" + id + "\" data-picture=\"" + name + "\" class=\"append-btn btn btn-success m-a-1\">\u0414\u043E\u0434\u0430\u0434\u0438 \u043F\u043E\u0437\u0430\u0434\u0438</button>\n        </div>\n    </div>\n        ";
+      return "\n        <div class=\"col-md-3\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-body\">\n                <img class=\"img-responsive\" style=\"width:150px;height:150px;\" src=\"/storage//carousel/" + name + "\" alt=\"\">\n            </div>\n            <div class=\"cut-text panel-footer\">" + name + "</div>\n            <button style=\"white-space:normal;\" data-id=\"" + id + "\" data-picture=\"" + name + "\" class=\"prepend-btn btn btn-primary m-a-1\">\u0414\u043E\u0434\u0430\u0434\u0438 \u043D\u0430\u043F\u0440\u0435\u0434</button>\n            <button style=\"white-space:normal;\" data-id=\"" + id + "\" data-picture=\"" + name + "\" class=\"append-btn btn btn-success m-a-1\">\u0414\u043E\u0434\u0430\u0434\u0438 \u043F\u043E\u0437\u0430\u0434\u0438</button>\n            <button data-toggle=\"modal\" data-target=\"#ticket-modal\" data-id=\"{{$picture->id}}\"\n                style=\"white-space:normal;\" class=\"btn btn-delete btn-danger m-a-1\">\u0418\u0437\u0431\u0440\u0438\u0448\u0438\n            </button>\n        </div>\n    </div>\n        ";
     };
 
     this.prependPic = function (e) {
@@ -1992,8 +1992,7 @@ var GalleryView = /*#__PURE__*/function () {
     };
 
     this.deleteItem = function () {
-      axios_1["default"].post('/api/gallery/delete/' + _this.item).then(function (result) {
-        console.log(result);
+      axios_1["default"].post('/admin/gallery/delete/' + _this.item).then(function () {
         $('.' + _this.item).hide();
       })["catch"](function (error) {
         return console.log(error);
@@ -2115,9 +2114,7 @@ var ItemsView = /*#__PURE__*/function () {
     this.activateItem = function (e) {
       var checker = e.currentTarget;
       var id = $(checker).attr('id');
-      axios_1["default"].post('/api/item/' + id).then(function (result) {
-        console.log(result);
-      })["catch"](function (error) {
+      axios_1["default"].post('/admin/item/' + id)["catch"](function (error) {
         return console.log(error);
       });
     };
@@ -2137,8 +2134,7 @@ var ItemsView = /*#__PURE__*/function () {
     };
 
     this.deleteItem = function () {
-      axios_1["default"].post('/api/item/delete/' + _this.item).then(function (result) {
-        console.log(result);
+      axios_1["default"].post('/admin/item/delete/' + _this.item).then(function () {
         $('.' + _this.item).hide();
       })["catch"](function (error) {
         return console.log(error);
@@ -2200,7 +2196,7 @@ var NewsView = /*#__PURE__*/function () {
     this.activateitem = function (e) {
       var checker = e.currentTarget;
       var id = $(checker).attr('id');
-      axios_1["default"].post('/api/news/' + id).then(function (result) {})["catch"](function (error) {
+      axios_1["default"].post('/admin/news/' + id)["catch"](function (error) {
         return console.log(error);
       });
     };
@@ -2211,8 +2207,7 @@ var NewsView = /*#__PURE__*/function () {
     };
 
     this.deleteItem = function () {
-      axios_1["default"].post('/api/news/delete/' + _this.item).then(function (result) {
-        console.log(result);
+      axios_1["default"].post('/admin/news/delete/' + _this.item).then(function (result) {
         $('.' + _this.item).hide();
       })["catch"](function (error) {
         return console.log(error);

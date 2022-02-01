@@ -29,8 +29,8 @@
                                                          src="{{ Storage::url('items/' . $item->getCoverPhoto() )}}"
                                                          alt=""></a>
                                         <div class="down-content">
-                                            <a href="/products/{{$item->id}}"><h4 class="item-title">{{$item->translateTitle()}}</h4></a>
-                                            <p class="item-description">{{ $item->translateDescription() }}</p>
+                                            <a href="/products/{{$item->id}}"><h4 class="item-title mt-1">{{$item->translateTitle()}}</h4></a>
+{{--                                            <p class="item-description">{{ $item->translateDescription() }}</p>--}}
                                         </div>
                                     </div>
                                 </div>

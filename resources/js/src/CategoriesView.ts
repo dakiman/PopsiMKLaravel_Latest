@@ -17,7 +17,7 @@ class CategoriesView {
     activateitem = (e:JQuery.TriggeredEvent) => {
         let checker = e.currentTarget as HTMLInputElement;
         let id = $(checker).attr('id');
-        axios.post('/api/category/' + id)
+        axios.post('/admin/category/' + id)
         .then((result)=> {})
         .catch((error)=>console.log(error));
     }
@@ -27,7 +27,7 @@ class CategoriesView {
         this.item = btn.dataset['id'] as string;
     }
     deleteItem = () => {
-        axios.post('/api/category/delete/' + this.item)
+        axios.post('/admin/category/delete/' + this.item)
         .then(result => {
             console.log(result)
             $('.' + this.item).hide();

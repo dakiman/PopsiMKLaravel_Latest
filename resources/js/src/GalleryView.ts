@@ -3,7 +3,8 @@ import $ = require('jquery');
 
 class GalleryView {
 
-    item:string = '';
+    item: string = '';
+
     constructor() {
         this.initGallery();
     }
@@ -12,7 +13,7 @@ class GalleryView {
         $('.active-pictures').on('click', '.prepend-btn', this.prependPic);
         $('.active-pictures').on('click', '.append-btn', this.appendPic);
         $('.gallery-order').on('click', '.remove-btn', this.removePic);
-        $('.submit-order-btn').on('click', function() {
+        $('.submit-order-btn').on('click', function () {
             $('.gallery-order-form').submit();
         })
         $('.btn-delete').on('click', this.prepItem)
@@ -35,7 +36,7 @@ class GalleryView {
 
     getPictureInputField = (name: string, id: string) => {
         return `
-        <input id="`+ id + `" type="text" name="order[]" value="` + name + `">
+        <input id="` + id + `" type="text" name="order[]" value="` + name + `">
         `
     }
 
@@ -44,11 +45,14 @@ class GalleryView {
         <div class="col-md-3">
         <div class="panel panel-default">
             <div class="panel-body">
-                <img class="img-responsive" style="width:150px;height:150px;" src="/storage//carousel/`+ name + `" alt="">
+                <img class="img-responsive" style="width:150px;height:150px;" src="/storage//carousel/` + name + `" alt="">
             </div>
             <div class="cut-text panel-footer">` + name + `</div>
-            <button style="white-space:normal;" data-id="`+ id + `" data-picture="` + name + `" class="prepend-btn btn btn-primary m-a-1">Додади напред</button>
-            <button style="white-space:normal;" data-id="`+ id + `" data-picture="` + name + `" class="append-btn btn btn-success m-a-1">Додади позади</button>
+            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="prepend-btn btn btn-primary m-a-1">Додади напред</button>
+            <button style="white-space:normal;" data-id="` + id + `" data-picture="` + name + `" class="append-btn btn btn-success m-a-1">Додади позади</button>
+            <button data-toggle="modal" data-target="#ticket-modal" data-id="{{$picture->id}}"
+                style="white-space:normal;" class="btn btn-delete btn-danger m-a-1">Избриши
+            </button>
         </div>
     </div>
         `
@@ -81,18 +85,17 @@ class GalleryView {
         $('#' + id).remove();
     }
 
-    prepItem = (e:JQuery.TriggeredEvent) =>  {
+    prepItem = (e: JQuery.TriggeredEvent) => {
         let btn = e.currentTarget as HTMLButtonElement
         this.item = btn.dataset['id'] as string;
     }
 
     deleteItem = () => {
-        axios.post('/api/gallery/delete/' + this.item)
-        .then(result => {
-            console.log(result)
-            $('.' + this.item).hide();
-        })
-        .catch(error => console.log(error))
+        axios.post('/admin/gallery/delete/' + this.item)
+            .then(() => {
+                $('.' + this.item).hide();
+            })
+            .catch(error => console.log(error))
     }
 
 }

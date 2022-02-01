@@ -40,17 +40,22 @@ Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
     Route::get('/', 'AdminController@index');
 
     Route::resource('categories', 'CategoryController');
-    // Route::get('/categories/delete/{category}', 'CategoryController@delete');
 
     Route::resource('items', 'ItemController');
-    // Route::get('/items/delete/{item}', 'ItemController@delete');
 
     Route::resource('news', 'NewsController');
-    // Route::get('/news/delete/{news}', 'NewsController@delete');
 
     Route::get('/gallery', 'GalleryController@edit');
     Route::get('/gallery/create', 'GalleryController@create');
     Route::post('/gallery/store', 'GalleryController@store');
     Route::post('/gallery/update', 'GalleryController@update');
-    // Route::get('/gallery/delete/{carouselPic}', 'GalleryController@delete');
+
+    Route::post('/category/{category}', 'CategoryController@toggle');
+    Route::post('/item/{item}', 'ItemController@toggle');
+    Route::post('/news/{news}', 'NewsController@toggle');
+
+    Route::post('/item/delete/{item}', 'ItemController@delete');
+    Route::post('/category/delete/{category}', 'CategoryController@delete');
+    Route::post('/news/delete/{news}', 'NewsController@delete');
+    Route::post('/gallery/delete/{carouselPic}', 'GalleryController@delete');
 });
