@@ -11,22 +11,17 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.autoload({
+mix
+    .autoload({
     jquery: ['$', 'window.jQuery', 'jQuery'],
     'popper.js/dist/umd/popper.js': ['Popper']
 })
     .js('resources/js/app.js', 'public/js')
-    .js([
-        'resources/js/template/jquery.min.js',
-        'resources/js/template/bootstrap.bundle.min.js',
-        // 'resources/js/template/isotope.js',
-        'resources/js/template/owl.js',
-        'resources/js/template/slick.js',
-        'resources/js/template/accordions.js',
-        'resources/js/template/custom.js',
-    ], 'public/js/homepage.js')
     .sass('resources/sass/app.scss', 'public/css')
+
+    .js('resources/js/homepage.js', 'public/js/homepage.js')
     .sass('resources/sass/homepage.scss', 'public/css/homepage.css')
+
     .webpackConfig({
         module: {
             rules: [

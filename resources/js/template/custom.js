@@ -5,11 +5,9 @@ jQuery(document).ready(function ($) {
 
     "use strict";
 
-
     $(function () {
         $("#tabs").tabs();
     });
-
 
     // Page loading animation
 
@@ -22,10 +20,10 @@ jQuery(document).ready(function ($) {
     });
 
 
-    $(window).scroll(function () {
-        var scroll = $(window).scrollTop();
-        var box = $('.header-text').height();
-        var header = $('header').height();
+    $(window).on('scroll', () => {
+        const scroll = $(window).scrollTop();
+        const box = $('.header-text').height();
+        const header = $('header').height();
 
         if (scroll >= box - header) {
             $("header").addClass("background-header");
@@ -33,6 +31,7 @@ jQuery(document).ready(function ($) {
             $("header").removeClass("background-header");
         }
     });
+
     if ($('.owl-clients').length) {
         $('.owl-clients').owlCarousel({
             loop: true,
@@ -63,36 +62,7 @@ jQuery(document).ready(function ($) {
             }
         });
     }
-    if ($('.owl-testimonials').length) {
-        $('.owl-testimonials').owlCarousel({
-            loop: true,
-            nav: false,
-            dots: true,
-            items: 1,
-            margin: 30,
-            autoplay: false,
-            smartSpeed: 700,
-            autoplayTimeout: 6000,
-            responsive: {
-                0: {
-                    items: 1,
-                    margin: 0
-                },
-                460: {
-                    items: 1,
-                    margin: 0
-                },
-                576: {
-                    items: 2,
-                    margin: 20
-                },
-                992: {
-                    items: 2,
-                    margin: 30
-                }
-            }
-        });
-    }
+
     if ($('.owl-banner').length) {
         $('.owl-banner').owlCarousel({
             loop: true,
@@ -123,22 +93,6 @@ jQuery(document).ready(function ($) {
             }
         });
     }
-
-    $(".Modern-Slider").slick({
-        autoplay: true,
-        autoplaySpeed: 10000,
-        speed: 600,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        pauseOnHover: false,
-        dots: true,
-        pauseOnDotsHover: true,
-        cssEase: 'linear',
-        // fade:true,
-        draggable: false,
-        prevArrow: '<button class="PrevArrow"></button>',
-        nextArrow: '<button class="NextArrow"></button>',
-    });
 
     let filters = $('.filters ul li');
 
