@@ -93,8 +93,8 @@
 {{--                <div class="left-content">--}}
 {{--                    <h4>Looking for the best products?</h4>--}}
 {{--                    <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This--}}
-{{--                            template</a> is free to use for your business websites. However, you have no permission to--}}
-{{--                        redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow"--}}
+{{--                            src</a> is free to use for your business websites. However, you have no permission to--}}
+{{--                        redistribute the downloadable ZIP file on any src collection website. <a rel="nofollow"--}}
 {{--                                                                                                      href="https://templatemo.com/contact">Contact--}}
 {{--                            us</a> for more info.</p>--}}
 {{--                    <ul class="featured-list">--}}
@@ -156,6 +156,7 @@
 
 
 <script src="{{asset('js/homepage.js')}}"></script>
+@yield('scripts')
 </body>
 
 </html>

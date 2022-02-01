@@ -11,10 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix
+    /*OLD HOME / ADMIN*/
+    .js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
+
+    /*NEW HOME*/
     .js('resources/js/homepage.js', 'public/js/homepage.js')
     .sass('resources/sass/homepage.scss', 'public/css/homepage.css')
+
     .webpackConfig({
         module: {
             rules: [

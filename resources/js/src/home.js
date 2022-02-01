@@ -5,10 +5,6 @@ jQuery(document).ready(function ($) {
 
     "use strict";
 
-    $(function () {
-        $("#tabs").tabs();
-    });
-
     // Page loading animation
 
     $("#preloader").animate({
@@ -18,7 +14,6 @@ jQuery(document).ready(function ($) {
             $("#preloader").css("visibility", "hidden").fadeOut();
         }, 300);
     });
-
 
     $(window).on('scroll', () => {
         const scroll = $(window).scrollTop();
@@ -96,47 +91,29 @@ jQuery(document).ready(function ($) {
 
     let filters = $('.filters ul li');
 
-    filters.click(function () {
-        $('.filters ul li').removeClass('active');
-        $(this).addClass('active');
-
-        var data = $(this).attr('data-filter');
-
-        $grid.arrange({
-            filter: data
-        })
-    });
-
-    let defaultFilter = filters[0].dataset.filter;
-    filters.removeClass('active');
-    filters.first().addClass('active');
-
-    let $grid = new Isotope('.grid', {
-        itemSelector: ".all",
-        percentPosition: true,
-        masonry: {
-            columnWidth: ".all"
-        },
-        filter: defaultFilter
-    })
-
-    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
-
-    $('.accordion a').click(function (j) {
-        var dropDown = $(this).closest('li').find('.content');
-
-        $(this).closest('.accordion').find('.content').not(dropDown).slideUp();
-
-        if ($(this).hasClass('active')) {
-            $(this).removeClass('active');
-        } else {
-            $(this).closest('.accordion').find('a.active').removeClass('active');
+    if(filters.length) {
+        filters.click(function () {
+            $('.filters ul li').removeClass('active');
             $(this).addClass('active');
-        }
 
-        dropDown.stop(false, true).slideToggle();
+            let data = $(this).attr('data-filter');
 
-        j.preventDefault();
-    });
+            $grid.arrange({
+                filter: data
+            })
+        });
 
+        let defaultFilter = filters[0].dataset.filter;
+        filters.removeClass('active');
+        filters.first().addClass('active');
+
+        let $grid = new Isotope('.grid', {
+            itemSelector: ".all",
+            percentPosition: true,
+            masonry: {
+                columnWidth: ".all"
+            },
+            filter: defaultFilter
+        })
+    }
 });
