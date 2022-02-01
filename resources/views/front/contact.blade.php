@@ -53,7 +53,7 @@
 						</div>
 						<div class="form-group col-md-6">
 							<label for="name">Name</label>
-							<input type="Name" class="sharp form-control" id="name" name="name" placeholder="Name" required>
+							<input type="text" class="sharp form-control" id="name" name="name" placeholder="Name" required>
 						</div>
 					</div>
 					<div class="form-group">

@@ -40,6 +40,22 @@ class HomepageController extends Controller
         return view('front-new.about');
     }
 
+    public function contact()
+    {
+        return view('front-new.contact');
+    }
+
+    public function sendContactMessage()
+    {
+        $data = request()->all();
+        try {
+            Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
+                ->send(new ContactUs($data));
+            return redirect()->back()->with('message', 'Sent!');
+        } catch (Exception $e) {
+            return redirect()->back()->with('message', 'Failed.');
+        }
+    }
     /*================================================*/
 
     public function item($id)
@@ -62,15 +78,5 @@ class HomepageController extends Controller
         return view('front.single-news', ['news' => $news]);
     }
 
-    public function contact(Request $request)
-    {
-        $data = request()->all();
-        try {
-            Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
-                ->send(new ContactUs($data));
-            return redirect()->back()->with('message', 'Sent!');
-        } catch (Exception $e) {
-            return redirect()->back()->with('message', 'Failed.');
-        }
-    }
+
 }

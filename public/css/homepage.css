@@ -2274,7 +2274,7 @@ header .navbar {
 }
 
 .best-features .container .row {
-	border-bottom: 1px solid #eee;
+	/*border-bottom: 1px solid #eee;*/
 	padding-bottom: 60px;
 }
 

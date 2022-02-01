@@ -16,19 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomepageController@home');
 Route::get('/products', 'HomepageController@products');
 Route::get('/about', 'HomepageController@about');
+Route::get('/contact', 'HomepageController@contact');
+Route::post('/contact', 'HomepageController@sendContactMessage');
 /*===================================*/
-//Route::get('/', 'HomepageController@home');
-//Route::get('/catalogue', 'HomepageController@catalogue');
-//Route::get('/about-us', function () {
-//    return view('front.about-us');
-//});
 Route::get('catalogue/categories/{id}', 'HomepageController@category');
 Route::get('catalogue/items/{id}', 'HomepageController@item');
 Route::get('/news/{id}', 'HomepageController@news');
-Route::get('/contact', function () {
-    return view('front.contact');
-});
-Route::post('/contact', 'HomepageController@contact');
+
 Route::get('/partners', function () {
     return view('front.partners');
 });

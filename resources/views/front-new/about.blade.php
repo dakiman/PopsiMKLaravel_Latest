@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-heading">
-                        <h2>Our Background</h2>
+                        <h2>@lang('messages.about-us-title')</h2>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -29,7 +29,6 @@
                 </div>
                 <div class="col-md-6">
                     <div class="left-content">
-                        <h4>@lang('messages.about-us-title')</h4>
                         <p>@lang('messages.about-us')</p>
                         <ul class="social-icons">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
