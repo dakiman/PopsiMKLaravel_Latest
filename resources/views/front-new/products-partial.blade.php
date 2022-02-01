@@ -25,11 +25,11 @@
                             @foreach($category->activeItems() as $item)
                                 <div class="col-lg-4 col-md-4 all {{Str::slug($category->title_en)}}">
                                     <div class="product-item text-center">
-                                        <a href="#"><img class="item-img"
+                                        <a href="/products/{{$item->id}}"><img class="item-img"
                                                          src="{{ Storage::url('items/' . $item->getCoverPhoto() )}}"
                                                          alt=""></a>
                                         <div class="down-content">
-                                            <a href="#"><h4 class="item-title">{{$item->translateTitle()}}</h4></a>
+                                            <a href="/products/{{$item->id}}"><h4 class="item-title">{{$item->translateTitle()}}</h4></a>
                                             <p class="item-description">{{ $item->translateDescription() }}</p>
                                         </div>
                                     </div>

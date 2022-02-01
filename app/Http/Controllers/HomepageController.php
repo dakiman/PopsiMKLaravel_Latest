@@ -61,7 +61,6 @@ class HomepageController extends Controller
     {
         return view('front-new.single-product', ['item' => $item, 'pictures' => $item->getPictures()]);
     }
-    /*================================================*/
 
     public function changeLocale($locale = null)
     {
@@ -76,6 +75,5 @@ class HomepageController extends Controller
         $news = News::find($id);
         return view('front.single-news', ['news' => $news]);
     }
-
 
 }
