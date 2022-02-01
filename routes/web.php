@@ -18,6 +18,7 @@ Route::get('/products', 'HomepageController@products');
 Route::get('/about', 'HomepageController@about');
 Route::get('/contact', 'HomepageController@contact');
 Route::post('/contact', 'HomepageController@sendContactMessage');
+Route::get('/products/{item}', 'HomepageController@item');
 /*===================================*/
 Route::get('catalogue/categories/{id}', 'HomepageController@category');
 Route::get('catalogue/items/{id}', 'HomepageController@item');

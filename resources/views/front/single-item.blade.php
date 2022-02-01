@@ -154,7 +154,6 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/catalogue">@lang('messages.catalogue')</a></li>
-            <li class="breadcrumb-item"><a href="/catalogue/categories/{{$item->category->id}}">{{ucfirst($item->category->translateTitle())}}</a></li>
             <li class="breadcrumb-item active" aria-current="page">{{$item->translateTitle()}}</li>
           </ol>
         </nav>

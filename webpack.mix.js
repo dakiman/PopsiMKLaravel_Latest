@@ -20,6 +20,10 @@ mix
     .js('resources/js/homepage.js', 'public/js/homepage.js')
     .sass('resources/sass/homepage.scss', 'public/css/homepage.css')
 
+    /*CAROUSEL FOR PRODUCTS*/
+    .js('resources/js/product-carousel.js', 'public/js/product-carousel.js')
+    .css('resources/sass/product-carousel.css', 'public/css/product-carousel.css')
+
     .webpackConfig({
         module: {
             rules: [

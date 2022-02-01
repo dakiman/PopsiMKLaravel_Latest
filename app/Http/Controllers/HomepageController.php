@@ -56,13 +56,12 @@ class HomepageController extends Controller
             return redirect()->back()->with('message', 'Failed.');
         }
     }
-    /*================================================*/
 
-    public function item($id)
+    public function item(Item $item)
     {
-        $item = Item::find($id);
-        return view('front.single-item', ['item' => $item, 'pictures' => $item->getPictures()]);
+        return view('front-new.single-product', ['item' => $item, 'pictures' => $item->getPictures()]);
     }
+    /*================================================*/
 
     public function changeLocale($locale = null)
     {

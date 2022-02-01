@@ -16,7 +16,7 @@
     <link href="{{asset('css/homepage.css')}}" rel="stylesheet">
     <link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
-
+    @yield('styles')
 </head>
 
 <body>
