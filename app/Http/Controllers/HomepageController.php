@@ -7,6 +7,7 @@ use App\Category;
 use App\Item;
 use App\Mail\ContactUs;
 use App\News;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Mailable;
 use Illuminate\Support\Facades\Log;
@@ -36,6 +37,7 @@ class HomepageController extends Controller
 
     public function about()
     {
+        throw new Exception();
         return view('front-new.about');
     }
 
