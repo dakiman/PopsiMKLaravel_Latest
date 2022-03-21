@@ -2,17 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Category;
-use App\News;
-use App\Item;
-use App\User;
 use App\CarouselOrder;
-
-// use Mail;
-use App\Mail\ContactMessage;
+use App\Category;
+use App\Item;
 use App\Mail\ContactUs;
+use App\News;
 use Mail;
+
 
 class HomepageController extends Controller
 {

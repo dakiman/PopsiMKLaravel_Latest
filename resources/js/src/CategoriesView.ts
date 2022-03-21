@@ -3,7 +3,8 @@ import $ = require('jquery');
 
 class CategoriesView {
 
-    item:string = '';
+    item: string = '';
+
     constructor() {
         this.initCategories();
     }
@@ -14,25 +15,26 @@ class CategoriesView {
         $('#btn-confirm').on('click', this.deleteItem)
     }
 
-    activateitem = (e:JQuery.TriggeredEvent) => {
+    activateitem = (e: JQuery.TriggeredEvent) => {
         let checker = e.currentTarget as HTMLInputElement;
         let id = $(checker).attr('id');
         axios.post('/admin/category/' + id)
-        .then((result)=> {})
-        .catch((error)=>console.log(error));
+            .then(() => {
+            })
+            .catch((error) => console.log(error));
     }
 
-    prepItem = (e:JQuery.TriggeredEvent) =>  {
+    prepItem = (e: JQuery.TriggeredEvent) => {
         let btn = e.currentTarget as HTMLButtonElement
         this.item = btn.dataset['id'] as string;
     }
     deleteItem = () => {
         axios.post('/admin/category/delete/' + this.item)
-        .then(result => {
-            console.log(result)
-            $('.' + this.item).hide();
-        })
-        .catch(error => console.log(error))
+            .then(result => {
+                console.log(result)
+                $('.' + this.item).hide();
+            })
+            .catch(error => console.log(error))
     }
 
 

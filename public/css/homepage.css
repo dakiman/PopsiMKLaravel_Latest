@@ -1799,7 +1799,8 @@
 
 .item-title {
     text-transform: uppercase;
-    font-size: 9px;
+    font-size: 11px!important;
+    font-weight: bold;
 }
 
 .item-description {
@@ -2132,6 +2133,9 @@ header .navbar {
     font-family: 'FontAwesome';
 }
 
+.breadcrumb-item {
+    text-transform: capitalize;
+}
 
 /* Banner Style */
 .banner {
@@ -2141,7 +2145,7 @@ header .navbar {
 }
 
 .banner-item {
-    padding: 300px 0px;
+    padding: 200px 0px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;

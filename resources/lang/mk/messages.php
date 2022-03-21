@@ -21,5 +21,6 @@ return [
     'contact-single' => 'Контакт',
     'home' => 'Дома',
     'partners' => 'Партнери',
-    'sales' => 'Продажба'
+    'sales' => 'Продажба',
+    'full-name' => 'Име и презиме',
 ];

@@ -1878,7 +1878,7 @@ var CategoriesView = /*#__PURE__*/function () {
     this.activateitem = function (e) {
       var checker = e.currentTarget;
       var id = $(checker).attr('id');
-      axios_1["default"].post('/admin/category/' + id).then(function (result) {})["catch"](function (error) {
+      axios_1["default"].post('/admin/category/' + id).then(function () {})["catch"](function (error) {
         return console.log(error);
       });
     };

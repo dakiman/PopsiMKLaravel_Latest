@@ -14,9 +14,22 @@
     <title>Popsi Lageri</title>
 
     <link href="{{asset('css/homepage.css')}}" rel="stylesheet">
-    <link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
-    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />
+    <link rel="icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon"/>
     @yield('styles')
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EP7E2GM9ZY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-EP7E2GM9ZY');
+    </script>
 </head>
 
 <body>
@@ -58,7 +71,8 @@
                         <a class="nav-link" href="/contact">@lang('messages.contact-single')</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
                             @if (app()->getLocale() == 'mk')
                                 <img class="" src="{{asset('img/mk-flag.png')}}" alt="">
                             @else
