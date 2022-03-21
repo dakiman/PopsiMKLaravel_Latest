@@ -37,7 +37,6 @@ class HomepageController extends Controller
 
     public function about()
     {
-        throw new Exception();
         return view('front-new.about');
     }
 
