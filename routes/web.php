@@ -19,6 +19,8 @@ Route::get('/about', 'HomepageController@about');
 Route::get('/contact', 'HomepageController@contact');
 Route::post('/contact', 'HomepageController@sendContactMessage');
 Route::get('/products/{item}', 'HomepageController@item');
+//TODO replace/rethink
+Route::get('/catalogue/items/{item}', 'HomepageController@item');
 /*===================================*/
 
 
