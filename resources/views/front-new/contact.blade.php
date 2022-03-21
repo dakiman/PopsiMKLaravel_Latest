@@ -46,6 +46,71 @@
         </div>
     </div>
 
+    <div class="team-members">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>@lang('messages.our-team')</h2>
+                    </div>
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <div class="team-member">
+                        <div class="thumb-container">
+                            <img src="assets/images/team_01.jpg" alt="">
+                            <div class="hover-effect">
+                                <div class="hover-content">
+                                    <ul class="social-icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>@lang('messages.aleksandar')</h4>
+                            <span>@lang('messages.CEO')</span>
+{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>--}}
+                            <ul>
+                                <li>tel: +389 (0)2 2460 480</li>
+                                <li>fax: +389 (0)2 2403 348</li>
+                                <li>mob: +389 (0)71 279 219</li>
+                                <li>e-mail: popsicom@t.mk</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="team-member">
+                        <div class="thumb-container">
+                            <img src="assets/images/team_01.jpg" alt="">
+                            <div class="hover-effect">
+                                <div class="hover-content">
+                                    <ul class="social-icons">
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="down-content">
+                            <h4>@lang('messages.vladimir')</h4>
+                            <span>@lang('messages.CFO')</span>
+{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>--}}
+                            <ul>
+                                <li>tel/fax: +389 (0)2 2460 316</li>
+                                <li>e-mail: vladimir.p@popsibearings.com.mk</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="send-message">
 {{--        {{ session('message') }}--}}
@@ -56,7 +121,7 @@
                         <h2>@lang('messages.contact-greeting')</h2>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-6">
                     <div class="contact-form">
                         <form id="contact" action="/contact" method="post">
                             {{ csrf_field() }}
@@ -64,25 +129,24 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <fieldset>
                                         <input name="name" type="text" class="form-control" id="name"
-                                               placeholder="Full Name" required="">
+                                               placeholder="@lang("messages.full-name")" required="">
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <fieldset>
                                         <input name="email" type="text" class="form-control" id="email"
-                                               placeholder="E-Mail Address" required="">
+                                               placeholder="E-Mail" required="">
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
                                         <textarea name="body" rows="6" class="form-control" id="message"
-                                                  placeholder="Your Message" required=""></textarea>
+                                                  placeholder="@lang('messages.your-message')" required=""></textarea>
                                     </fieldset>
                                 </div>
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="filled-button">Send Message
-                                        </button>
+                                        <button type="submit" id="form-submit" class="filled-button">@lang('messages.send-message')</button>
                                     </fieldset>
                                 </div>
                             </div>
