@@ -20,13 +20,6 @@ Route::get('/contact', 'HomepageController@contact');
 Route::post('/contact', 'HomepageController@sendContactMessage');
 Route::get('/products/{item}', 'HomepageController@item');
 /*===================================*/
-Route::get('catalogue/categories/{id}', 'HomepageController@category');
-Route::get('catalogue/items/{id}', 'HomepageController@item');
-Route::get('/news/{id}', 'HomepageController@news');
-
-Route::get('/partners', function () {
-    return view('front.partners');
-});
 
 
 Route::namespace('Auth')->group(function () {
@@ -34,6 +27,7 @@ Route::namespace('Auth')->group(function () {
     Route::post('/login', 'LoginController@login');
     Route::get('/logout', 'LoginController@logoutUser');
 });
+
 Route::get('/changelocale/{locale}', 'HomepageController@changeLocale');
 
 Route::group(['prefix' => '/admin', 'middleware' => 'auth'], function() {
