@@ -2,7 +2,10 @@
 
 namespace App\Exceptions;
 
+use App\Mail\ExceptionOccurred;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Mail;
+use Symfony\Component\ErrorHandler\Exception\FlattenException;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -35,7 +38,8 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->reportable(function (Throwable $e) {
-            //
+            Mail::to('dvancov@hotmail.com')
+                ->send(new ExceptionOccurred($e->getTraceAsString()));
         });
     }
 }
