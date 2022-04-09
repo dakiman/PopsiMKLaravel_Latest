@@ -47,6 +47,11 @@ class HomepageController extends Controller
 
     public function sendContactMessage(Request $request)
     {
+        if(!env('CONTACT_ENABLED')){
+            Log::info("Message received", $request->toArray());
+            return redirect()->back()->with('message', 'Sent!');
+        }
+
         if($request->faxonly) {
             Log::info("Spam prevented", $request->toArray());
             return redirect()->back()->with('message', 'Sent!');
