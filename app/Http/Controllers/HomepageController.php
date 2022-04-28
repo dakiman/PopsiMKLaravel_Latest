@@ -68,6 +68,8 @@ class HomepageController extends Controller
 
     public function item(Item $item)
     {
+        if(!$item->category()->exists())
+            return redirect()->home();
         return view('front-new.single-product', ['item' => $item, 'pictures' => $item->getPictures()]);
     }
 
