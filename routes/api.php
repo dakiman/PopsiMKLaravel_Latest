@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,22 +16,4 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
-
-Route::post('/category/{category}', 'CategoryController@toggle');
-Route::post('/item/{item}', 'ItemController@toggle');
-Route::post('/news/{news}', 'NewsController@toggle');
-
-Route::post('/item/delete/{item}', 'ItemController@delete');
-Route::post('/category/delete/{category}', 'CategoryController@delete');
-Route::post('/news/delete/{news}', 'NewsController@delete');
-Route::post('/gallery/delete/{carouselPic}', 'GalleryController@delete');
-
-Route::get('/testing', function() {
-	return response(auth()->user(), 200);
-	try{
-		$user = auth()->user();
-	} catch (Exception $e){
-		return response(['message' => $e->getMessage()], 400);
-	}
 });

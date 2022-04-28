@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -57,7 +58,7 @@ class GalleryController extends Controller
             $carouselPic->delete();
             return response(['message'=>'Item was deleted'], 200);
         } catch(Exception $e) {
-            return response(['message' => 'Item was NOT deleted'], 401);
+            return response(['message' => 'Item was NOT deleted'], 400);
         }
     }
 }

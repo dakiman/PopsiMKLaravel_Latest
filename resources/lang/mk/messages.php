@@ -21,5 +21,12 @@ return [
     'contact-single' => 'Контакт',
     'home' => 'Дома',
     'partners' => 'Партнери',
-    'sales' => 'Продажба'
+    'sales' => 'Продажба',
+    'full-name' => 'Име и презиме',
+    'your-message' => 'Вашата порака',
+    'send-message' => 'Испратете порака',
+    'our-team' => 'Нашиот тим',
+    'our-company' => 'Нашата компанија',
+    'best-offer' => 'Најдобри цени',
+    'check-out-catalogue' => 'Разгледајте го нашиот каталог'
 ];

@@ -1,4 +1,4 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,13 +11,19 @@ let mix = require('laravel-mix');
  |
  */
 
+mix
+    /*OLD HOME / ADMIN*/
+    .js('resources/js/app.js', 'public/js')
+    .sass('resources/sass/app.scss', 'public/css')
 
-    mix.autoload({
-        jquery: ['$', 'window.jQuery', 'jQuery'],
-        'popper.js/dist/umd/popper.js': ['Popper']
-    })
-    .js('resources/assets/js/app.js', 'public/js')
-    .sass('resources/assets/sass/app.scss', 'public/css')
+    /*NEW HOME*/
+    .js('resources/js/homepage.js', 'public/js/homepage.js')
+    .sass('resources/sass/homepage.scss', 'public/css/homepage.css')
+
+    /*CAROUSEL FOR PRODUCTS*/
+    .js('resources/js/product-carousel.js', 'public/js/product-carousel.js')
+    .css('resources/sass/product-carousel.css', 'public/css/product-carousel.css')
+
     .webpackConfig({
         module: {
             rules: [
@@ -33,4 +39,3 @@ let mix = require('laravel-mix');
         },
         devtool: 'source-map'
     });
-    
