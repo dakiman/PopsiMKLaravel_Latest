@@ -7,6 +7,10 @@ use App\Category;
 use App\Item;
 use App\Mail\ContactUs;
 use App\News;
+use Exception;
+use Illuminate\Http\Request;
+use Illuminate\Mail\Mailable;
+use Illuminate\Support\Facades\Log;
 use Mail;
 
 
@@ -41,12 +45,21 @@ class HomepageController extends Controller
         return view('front-new.contact');
     }
 
-    public function sendContactMessage()
+    public function sendContactMessage(Request $request)
     {
-        $data = request()->all();
+        if(!env('CONTACT_ENABLED')){
+            Log::info("Message received", $request->toArray());
+            return redirect()->back()->with('message', 'Sent!');
+        }
+
+        if($request->faxonly) {
+            Log::info("Spam prevented", $request->toArray());
+            return redirect()->back()->with('message', 'Sent!');
+        }
+
         try {
             Mail::to(['dvancov@hotmail.com', 'info@lageri.mk'])
-                ->send(new ContactUs($data));
+                ->send(new ContactUs($request->all()));
             return redirect()->back()->with('message', 'Sent!');
         } catch (Exception $e) {
             return redirect()->back()->with('message', 'Failed.');
@@ -55,6 +68,8 @@ class HomepageController extends Controller
 
     public function item(Item $item)
     {
+        if(!$item->category()->exists())
+            return redirect()->home();
         return view('front-new.single-product', ['item' => $item, 'pictures' => $item->getPictures()]);
     }
 

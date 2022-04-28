@@ -72,7 +72,7 @@
                         <div class="down-content">
                             <h4>@lang('messages.aleksandar')</h4>
                             <span>@lang('messages.CEO')</span>
-{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>--}}
+                            {{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>--}}
                             <ul>
                                 <li>tel: +389 (0)2 2460 480</li>
                                 <li>fax: +389 (0)2 2403 348</li>
@@ -100,7 +100,7 @@
                         <div class="down-content">
                             <h4>@lang('messages.vladimir')</h4>
                             <span>@lang('messages.CFO')</span>
-{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>--}}
+                            {{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>--}}
                             <ul>
                                 <li>tel/fax: +389 (0)2 2460 316</li>
                                 <li>e-mail: vladimir.p@popsibearings.com.mk</li>
@@ -113,7 +113,7 @@
     </div>
 
     <div class="send-message">
-{{--        {{ session('message') }}--}}
+        {{--        {{ session('message') }}--}}
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -134,7 +134,7 @@
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12">
                                     <fieldset>
-                                        <input name="email" type="text" class="form-control" id="email"
+                                        <input name="email" type="email" class="form-control" id="email"
                                                placeholder="E-Mail" required="">
                                     </fieldset>
                                 </div>
@@ -144,57 +144,22 @@
                                                   placeholder="@lang('messages.your-message')" required=""></textarea>
                                     </fieldset>
                                 </div>
+                                <div class="form-group" style="display: none;">
+                                    <label for="faxonly">Fax Only
+                                        <input type="checkbox" name="faxonly" id="faxonly" />
+                                    </label>
+                                </div>
                                 <div class="col-lg-12">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="filled-button">@lang('messages.send-message')</button>
+                                        <button type="submit" id="form-submit"
+                                                class="filled-button">@lang('messages.send-message')</button>
                                     </fieldset>
                                 </div>
                             </div>
                         </form>
                     </div>
-{{--                </div>--}}
-{{--                <div class="col-md-4">--}}
-{{--                    <ul class="accordion">--}}
-{{--                        <li>--}}
-{{--                            <a>Accordion Title One</a>--}}
-{{--                            <div class="content">--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester--}}
-{{--                                    consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur--}}
-{{--                                    adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti--}}
-{{--                                    elite.</p>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a>Second Title Here</a>--}}
-{{--                            <div class="content">--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester--}}
-{{--                                    consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur--}}
-{{--                                    adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti--}}
-{{--                                    elite.</p>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a>Accordion Title Three</a>--}}
-{{--                            <div class="content">--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester--}}
-{{--                                    consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur--}}
-{{--                                    adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti--}}
-{{--                                    elite.</p>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                        <li>--}}
-{{--                            <a>Fourth Accordion Title</a>--}}
-{{--                            <div class="content">--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester--}}
-{{--                                    consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur--}}
-{{--                                    adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti--}}
-{{--                                    elite.</p>--}}
-{{--                            </div>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </div>--}}
+                </div>
             </div>
         </div>
-    </div>
 
 @endsection

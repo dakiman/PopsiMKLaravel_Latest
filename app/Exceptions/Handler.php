@@ -2,7 +2,10 @@
 
 namespace App\Exceptions;
 
+use App\Mail\ExceptionOccurred;
+use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Mail;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -34,8 +37,28 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        $this->reportable(function (Exception $e) {
+            $this->sendEmail($e);
         });
+    }
+
+    public function report(Throwable $e)
+    {
+        if (app()->bound('sentry') && $this->shouldReport($e)) {
+            app('sentry')->captureException($e);
+        }
+
+        parent::report($e);
+    }
+
+    /**
+     * Sends an email to the developer about the exception.
+     *
+     * @return void
+     */
+    public function sendEmail(Exception $exception)
+    {
+        Mail::to('dvancov@hotmail.com')
+            ->send(new ExceptionOccurred($exception));
     }
 }

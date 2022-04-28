@@ -654,6 +654,7 @@ footer .inner-content p a {
 .products .filters ul li:hover {
     color: black;
     background-color: var(--primary-popsi);
+    text-decoration: underline;
 }
 
 /*.products .filters ul li {*/
