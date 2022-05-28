@@ -4,10 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
+    public function __construct()
+    {
+        Cache::forget('categories');
+    }
+
     /**
      * Display a listing of the resource.
      *
