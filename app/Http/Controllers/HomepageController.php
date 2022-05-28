@@ -9,7 +9,7 @@ use App\Mail\ContactUs;
 use App\News;
 use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Mail\Mailable;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Mail;
 
@@ -18,20 +18,25 @@ class HomepageController extends Controller
 {
     public function home()
     {
-        $categories = Category::where('active', 1)->get();
-        $news = News::where('active', 1)->get();
-        $order = CarouselOrder::all()->take(1);
-        if (!$order->isEmpty()) {
-            $pictures = unserialize($order[0]->order);
+        $categories = Cache::rememberForever('categories', fn() => Category::where('active', 1)->get());
+
+        $carouselOrder = Cache::rememberForever('carouselOrder', fn() => CarouselOrder::first());
+
+        if ($carouselOrder) {
+            $pictures = unserialize($carouselOrder->order);
         } else {
             $pictures = null;
         }
-        return view('front-new.home', ['categories' => $categories, 'news' => $news, 'pictures' => $pictures]);
+
+        return view('front-new.home', [
+            'categories' => $categories,
+            'pictures' => $pictures
+        ]);
     }
 
     public function products()
     {
-        $categories = Category::where('active', 1)->get();
+        $categories = Cache::rememberForever('categories', fn() => Category::where('active', 1)->get());
         return view('front-new.products', ['categories' => $categories]);
     }
 
@@ -47,12 +52,12 @@ class HomepageController extends Controller
 
     public function sendContactMessage(Request $request)
     {
-        if(!env('CONTACT_ENABLED')){
+        if (!env('CONTACT_ENABLED')) {
             Log::info("Message received", $request->toArray());
             return redirect()->back()->with('message', 'Sent!');
         }
 
-        if($request->faxonly) {
+        if ($request->faxonly) {
             Log::info("Spam prevented", $request->toArray());
             return redirect()->back()->with('message', 'Sent!');
         }
@@ -68,7 +73,7 @@ class HomepageController extends Controller
 
     public function item(Item $item)
     {
-        if(!$item->category()->exists())
+        if (!$item->category()->exists())
             return redirect()->home();
         return view('front-new.single-product', ['item' => $item, 'pictures' => $item->getPictures()]);
     }
