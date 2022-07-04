@@ -152,6 +152,7 @@
 {{--    </div>--}}
 {{--</div>--}}
 
+@include('cookieConsent::index')
 
 <footer>
     <div class="container">
