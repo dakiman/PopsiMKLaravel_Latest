@@ -1,5 +1,5 @@
 <div class="banner header-text">
-    <div class="owl-banner owl-carousel">
+    <div class=".d-sm-none .d-md-block owl-banner owl-carousel">
         @foreach ($pictures as $picture)
             <div class="banner-item" style="background-image: url({{Storage::url('/carousel/' . $picture )}})">
                 <div class="text-content">
