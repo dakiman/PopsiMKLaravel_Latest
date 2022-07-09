@@ -27,5 +27,6 @@ return [
     'our-team' => 'Our team',
     'our-company' => 'Our company',
     'best-offer' => 'Best offer',
-    'check-out-catalogue' => 'Check out our catalogue'
+    'check-out-catalogue' => 'Check out our catalogue',
+    'cookie-policy' => 'Privacy & Cookie Policy'
 ];
