@@ -93,8 +93,6 @@
 
 @yield('content')
 
-@include('cookieConsent::index')
-
 <footer>
     <div class="container">
         <div class="row">
