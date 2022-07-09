@@ -99,7 +99,11 @@
             <div class="col-md-12">
                 <div class="inner-content">
                     <p>Copyright &copy; {{ now()->format('Y') }} Popsi Company</p>
-                    <p style="font-size: 10px;" class="text-light"><a href="{{Storage::url('documents/Privacy_Policy_Popsi.docx')}}">@lang('messages.cookie-policy')</a></p>
+                    <p style="font-size: 10px;" class="text-light">
+                        <a href="https://docs.google.com/viewer?url=http://lageri.mk/storage/documents/Privacy_Policy_Popsi.docx">
+                            @lang('messages.cookie-policy')
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
